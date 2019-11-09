@@ -15,6 +15,7 @@
     label {
         font-size: smaller;
         color: var(--ion-color-step-700);
+        margin-bottom: 0;
     }
 }
 
@@ -79,6 +80,10 @@
 
         td {
             padding: 5px 12px;
+        }
+
+        th {
+            color: var(--ion-color-step-700);
         }
     }
 
