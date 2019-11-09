@@ -1,0 +1,68 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>market</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ul class="nav nav-tabs" style="justify-content: space-around;">
+        <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#VND">VND</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#USDT">USDT</a>
+        </li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div class="tab-pane container active" id="VND" style="padding: 0;">
+            <table class="table table-dark">
+                <thead style="font-size: x-small;">
+                    <tr>
+                        <th>Coin</th>
+                        <th>Last Price</th>
+                        <th style="width: 25%">Change 24h</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="align-middle mt-0 pd-0">
+                            <p>BTC</p>
+                            <p class="volumn">
+                                Vol 1.2354565
+                            </p>
+                        </td>
+                        <td class="align-middle mt-0 pd-0">
+                            <p>213,000,000</p>
+                        </td>
+                        <td class="align-middle mt-0 pd-0">
+                            <p>
+                                <span class="badge badge-success w-100 p-1"
+                                    >+2.5%</span
+                                >
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="align-middle mt-0 pd-0">
+                            <p>ETH</p>
+                            <p class="volumn">Vol 35.265124</p>
+                        </td>
+                        <td class="align-middle mt-0 pd-0">
+                            <p>4,213,000</p>
+                        </td>
+                        <td class="align-middle mt-0 pd-0">
+                            <p>
+                                <span class="badge badge-danger w-100 p-1"
+                                    >-1.7%</span
+                                >
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="tab-pane container fade" id="USDT">...</div>
+    </div>
+</ion-content>

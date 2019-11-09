@@ -1,0 +1,7 @@
+{
+  "name": "test_tab",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
