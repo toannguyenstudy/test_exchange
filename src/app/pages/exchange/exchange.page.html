@@ -18,215 +18,237 @@
 </ion-header>
 
 <ion-content>
-    <div class="container">
-        <div class="row buy-sell-order">
-            <div class="col-6">
-                <label for="Price">Price</label>
-                <div class="input-group mb-1 input-group-sm">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text">-</span>
-                    </div>
-                    <input
-                        type="text"
-                        class="form-control text-right"
-                        id="usr"
-                        name="username"
-                        value="9.5"
-                    />
-                    <div class="input-group-append">
-                        <span class="input-group-text">+</span>
-                    </div>
-                </div>
-                <label for="Amount">Amount</label>
-                <div class="input-group mb-3 input-group-sm">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text">-</span>
-                    </div>
-                    <input
-                        type="text"
-                        class="form-control text-right"
-                        id="usr"
-                        name="username"
-                        value="9.5"
-                    />
-                    <div class="input-group-append">
-                        <span class="input-group-text">+</span>
-                    </div>
-                </div>
-                <button
-                    type="button"
-                    class="btn btn-success form-control border-0"
-                >
-                    BUY
-                </button>
-            </div>
-            <div class="col-6">
-                <label for="Price">Price</label>
-                <div class="input-group mb-1 input-group-sm">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text">-</span>
-                    </div>
-                    <input
-                        type="text"
-                        class="form-control text-right"
-                        id="usr"
-                        name="username"
-                        value="9.5"
-                    />
-                    <div class="input-group-append">
-                        <span class="input-group-text">+</span>
-                    </div>
-                </div>
-                <label for="Amount">Amount</label>
-                <div class="input-group mb-3 input-group-sm">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text">-</span>
-                    </div>
-                    <input
-                        type="text"
-                        class="form-control text-right"
-                        id="usr"
-                        name="username"
-                        value="9.5"
-                    />
-                    <div class="input-group-append">
-                        <span class="input-group-text">+</span>
-                    </div>
-                </div>
-                <button
-                    type="button"
-                    class="btn btn-danger form-control border-0"
-                >
-                    SELL
-                </button>
-            </div>
-        </div>
+    <ul class="nav nav-tabs" style="justify-content: space-around;">
+        <li class="nav-item w-50">
+            <a class="nav-link active" data-toggle="tab" href="#Trade">Trade</a>
+        </li>
+        <li class="nav-item w-50">
+            <a class="nav-link" data-toggle="tab" href="#Open">Open Order</a>
+        </li>
+    </ul>
 
-        <div class="row mt-3 buy-sell-order-table mr-0">
-            <div class="col-6">
-                <table class="table table-dark table-borderless sell-table">
-                    <thead>
-                        <tr>
-                            <th class="text-left">Price(VND)</th>
-                            <th class="text-right">Amount(BTC)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="text-left price">230,000,000</td>
-                            <td class="text-right">0.1234567</td>
-                        </tr>
-                        <tr>
-                            <td class="text-left price">230,000,000</td>
-                            <td class="text-right">0.1234567</td>
-                        </tr>
-                        <tr>
-                            <td class="text-left price">230,000,000</td>
-                            <td class="text-right">0.1234567</td>
-                        </tr>
-                        <tr>
-                            <td class="text-left price">230,000,000</td>
-                            <td class="text-right">0.1234567</td>
-                        </tr>
-                        <tr>
-                            <td class="text-left price">230,000,000</td>
-                            <td class="text-right">0.1234567</td>
-                        </tr>
-                        <tr>
-                            <td class="text-left price">230,000,000</td>
-                            <td class="text-right">0.1234567</td>
-                        </tr>
-                        <tr>
-                            <td class="text-left price">230,000,000</td>
-                            <td class="text-right">0.1234567</td>
-                        </tr>
-                        <tr>
-                            <td class="text-left price">230,000,000</td>
-                            <td class="text-right">0.1234567</td>
-                        </tr>
-                        <tr>
-                            <td class="text-left price">230,000,000</td>
-                            <td class="text-right">0.1234567</td>
-                        </tr>
-                        <tr>
-                            <td class="text-left price">230,000,000</td>
-                            <td class="text-right">0.1234567</td>
-                        </tr>
-                        <tr>
-                            <td class="text-left price">230,000,000</td>
-                            <td class="text-right">0.1234567</td>
-                        </tr>
-                        <tr>
-                            <td class="text-left price">230,000,000</td>
-                            <td class="text-right">0.1234567</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="col-6">
-                <table class="table table-dark table-borderless buy-table">
-                    <thead>
-                        <tr>
-                            <th class="text-left">Price(VND)</th>
-                            <th class="text-right">Amount(BTC)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="text-left price">230,000,000</td>
-                            <td class="text-right">0.1234567</td>
-                        </tr>
-                        <tr>
-                            <td class="text-left price">230,000,000</td>
-                            <td class="text-right">0.1234567</td>
-                        </tr>
-                        <tr>
-                            <td class="text-left price">230,000,000</td>
-                            <td class="text-right">0.1234567</td>
-                        </tr>
-                        <tr>
-                            <td class="text-left price">230,000,000</td>
-                            <td class="text-right">0.1234567</td>
-                        </tr>
-                        <tr>
-                            <td class="text-left price">230,000,000</td>
-                            <td class="text-right">0.1234567</td>
-                        </tr>
-                        <tr>
-                            <td class="text-left price">230,000,000</td>
-                            <td class="text-right">0.12345</td>
-                        </tr>
-                        <tr>
-                            <td class="text-left price">230,000,000</td>
-                            <td class="text-right">0.12345</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div class="tab-pane container active" id="Trade" style="padding: 0;">
+            <div class="container">
+                <div class="row buy-sell-order">
+                    <div class="col-6">
+                        <label for="Price">Price</label>
+                        <div class="input-group mb-1 input-group-sm">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">–</span>
+                            </div>
+                            <input
+                                type="text"
+                                class="form-control text-right"
+                                id="usr"
+                                name="username"
+                                value="9.5"
+                            />
+                            <div class="input-group-append">
+                                <span class="input-group-text">+</span>
+                            </div>
+                        </div>
+                        <label for="Amount">Amount</label>
+                        <div class="input-group mb-3 input-group-sm">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">–</span>
+                            </div>
+                            <input
+                                type="text"
+                                class="form-control text-right"
+                                id="usr"
+                                name="username"
+                                value="9.5"
+                            />
+                            <div class="input-group-append">
+                                <span class="input-group-text">+</span>
+                            </div>
+                        </div>
+                        <button
+                            type="button"
+                            class="btn btn-success form-control border-0"
+                        >
+                            BUY
+                        </button>
+                    </div>
+                    <div class="col-6">
+                        <label for="Price">Price</label>
+                        <div class="input-group mb-1 input-group-sm">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">–</span>
+                            </div>
+                            <input
+                                type="text"
+                                class="form-control text-right"
+                                id="usr"
+                                name="username"
+                                value="9.5"
+                            />
+                            <div class="input-group-append">
+                                <span class="input-group-text">+</span>
+                            </div>
+                        </div>
+                        <label for="Amount">Amount</label>
+                        <div class="input-group mb-3 input-group-sm">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">–</span>
+                            </div>
+                            <input
+                                type="text"
+                                class="form-control text-right"
+                                id="usr"
+                                name="username"
+                                value="9.5"
+                            />
+                            <div class="input-group-append">
+                                <span class="input-group-text">+</span>
+                            </div>
+                        </div>
+                        <button
+                            type="button"
+                            class="btn btn-danger form-control border-0"
+                        >
+                            SELL
+                        </button>
+                    </div>
+                </div>
 
-        <div class="row">
-            <div class="col">
-                <ion-list>
-                    <ion-item>
-                        <ion-label>Decimal</ion-label>
-                        <ion-select>
-                            <ion-select-option value="4 digit"
-                                >4 Digit</ion-select-option
-                            >
-                            <ion-select-option value="6 digit"
-                                >6 Digit</ion-select-option
-                            >
-                            <ion-select-option value="8 digit"
-                                >8 Digit</ion-select-option
-                            >
-                            <ion-select-option value="default" selected
-                                >Default</ion-select-option
-                            >
-                        </ion-select>
-                    </ion-item>
-                </ion-list>
+                <div class="row mt-3 buy-sell-order-table mr-0">
+                    <!-- table for sell order -->
+                    <div class="col-6">
+                        <table
+                            class="table table-dark table-borderless sell-table"
+                        >
+                            <thead>
+                                <tr>
+                                    <th class="text-left">Price(VND)</th>
+                                    <th class="text-right pl-0">Amount(BTC)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-left price">230,000,000</td>
+                                    <td class="text-right">0.1234567</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left price">230,000,000</td>
+                                    <td class="text-right">0.1234567</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left price">230,000,000</td>
+                                    <td class="text-right">0.1234567</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left price">230,000,000</td>
+                                    <td class="text-right">0.1234567</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left price">230,000,000</td>
+                                    <td class="text-right">0.1234567</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left price">230,000,000</td>
+                                    <td class="text-right">0.1234567</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left price">230,000,000</td>
+                                    <td class="text-right">0.1234567</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left price">230,000,000</td>
+                                    <td class="text-right">0.1234567</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left price">230,000,000</td>
+                                    <td class="text-right">0.1234567</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left price">230,000,000</td>
+                                    <td class="text-right">0.1234567</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left price">230,000,000</td>
+                                    <td class="text-right">0.1234567</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left price">230,000,000</td>
+                                    <td class="text-right">0.1234567</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- table for buy order -->
+                    <div class="col-6">
+                        <table
+                            class="table table-dark table-borderless buy-table"
+                        >
+                            <thead>
+                                <tr>
+                                    <th class="text-left">Price(VND)</th>
+                                    <th class="text-right">Amount(BTC)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-left price">230,000,000</td>
+                                    <td class="text-right">0.1234567</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left price">230,000,000</td>
+                                    <td class="text-right">0.1234567</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left price">230,000,000</td>
+                                    <td class="text-right">0.1234567</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left price">230,000,000</td>
+                                    <td class="text-right">0.1234567</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left price">230,000,000</td>
+                                    <td class="text-right">0.1234567</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left price">230,000,000</td>
+                                    <td class="text-right">0.12345</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left price">230,000,000</td>
+                                    <td class="text-right">0.12345</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <ion-list>
+                            <ion-item>
+                                <ion-label>Decimal</ion-label>
+                                <ion-select>
+                                    <ion-select-option value="4 digit"
+                                        >4 Digit</ion-select-option
+                                    >
+                                    <ion-select-option value="6 digit"
+                                        >6 Digit</ion-select-option
+                                    >
+                                    <ion-select-option value="8 digit"
+                                        >8 Digit</ion-select-option
+                                    >
+                                    <ion-select-option value="default" selected
+                                        >Default</ion-select-option
+                                    >
+                                </ion-select>
+                            </ion-item>
+                        </ion-list>
+                    </div>
+                </div>
             </div>
         </div>
+        <div class="tab-pane container fade" id="Open">...</div>
     </div>
 </ion-content>
