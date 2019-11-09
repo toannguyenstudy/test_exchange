@@ -18,12 +18,18 @@
 </ion-header>
 
 <ion-content>
-    <ul class="nav nav-tabs" style="justify-content: space-around;">
-        <li class="nav-item w-50">
+    <ul
+        class="nav nav-tabs nav-tab-list"
+        style="justify-content: space-around;"
+    >
+        <li class="nav-item">
             <a class="nav-link active" data-toggle="tab" href="#Trade">Trade</a>
         </li>
-        <li class="nav-item w-50">
+        <li class="nav-item">
             <a class="nav-link" data-toggle="tab" href="#Open">Open Order</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#History">History</a>
         </li>
     </ul>
 
@@ -249,6 +255,7 @@
                 </div>
             </div>
         </div>
-        <div class="tab-pane container fade" id="Open">...</div>
+        <div class="tab-pane container fade" id="Open">Open order</div>
+        <div class="tab-pane container fade" id="History">History</div>
     </div>
 </ion-content>

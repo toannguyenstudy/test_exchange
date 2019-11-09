@@ -94,3 +94,10 @@
         }
     }
 }
+
+.nav-tab-list {
+    flex-direction: row;
+    li {
+        flex: 1;
+    }
+}
