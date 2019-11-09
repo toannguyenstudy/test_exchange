@@ -84,7 +84,8 @@
 
     table.sell-table {
         tbody tr td.price {
-            color: #db026c;
+            // color: #db026c;
+            color: #e2054f;
         }
     }
 
@@ -97,6 +98,7 @@
 
 .nav-tab-list {
     flex-direction: row;
+    border: 0 !important;
     li {
         flex: 1;
         text-align: center;
