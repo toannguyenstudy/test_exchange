@@ -1,12 +1,5 @@
 <ion-header>
     <ion-toolbar>
-        <!-- <div class="form-group" style="margin: 0 auto; width: 50%;">
-            <select class="form-control form-control-md" name="" id="">
-                <option>BTC</option>
-                <option>ETH</option>
-                <option>DOGE</option>
-            </select>
-        </div> -->
         <div class="box">
             <select>
                 <option>BTC/VND</option>
@@ -44,21 +37,21 @@
                     <!-- FORM SELL -->
                     <div class="col-6">
                         <label for="Price">Price</label>
-                        <div class="input-group mb-1 input-group-sm">
+                        <div class="input-group input-group-sm">
                             <div class="input-group-prepend">
                                 <span class="input-group-text">–</span>
                             </div>
                             <input
                                 type="text"
-                                class="form-control text-right"
-                                id="usr"
-                                name="username"
+                                class="form-control text-center"
+                                name="txtSellPrice"
                                 value="9.5"
                             />
                             <div class="input-group-append">
                                 <span class="input-group-text">+</span>
                             </div>
                         </div>
+
                         <label for="Amount">Amount</label>
                         <div class="input-group input-group-sm">
                             <div class="input-group-prepend">
@@ -66,10 +59,9 @@
                             </div>
                             <input
                                 type="text"
-                                class="form-control text-right"
-                                id="usr"
-                                name="username"
-                                placeholder="0.0"
+                                class="form-control text-center"
+                                name="txtSellAmount"
+                                value="0.0"
                             />
                             <div class="input-group-append">
                                 <span class="input-group-text">+</span>
@@ -80,14 +72,10 @@
                         <div class="input-group mb-3 input-group-sm">
                             <input
                                 type="text"
-                                class="form-control text-right"
-                                id="usr"
-                                name="username"
-                                placeholder="0.0"
+                                class="form-control text-center"
+                                placeholder="Total(VND)"
+                                name="txtSellTotal"
                             />
-                            <div class="input-group-append">
-                                <span class="input-group-text">VND</span>
-                            </div>
                         </div>
 
                         <button
@@ -102,16 +90,15 @@
                     <!-- FORM BUY -->
                     <div class="col-6">
                         <label for="Price">Price</label>
-                        <div class="input-group mb-1 input-group-sm">
+                        <div class="input-group input-group-sm">
                             <div class="input-group-prepend">
                                 <span class="input-group-text">–</span>
                             </div>
                             <input
                                 type="text"
-                                class="form-control text-right"
-                                id="usr"
-                                name="username"
-                                value="9.5"
+                                class="form-control text-center"
+                                name="txtBuyPrice"
+                                value="0.0"
                             />
                             <div class="input-group-append">
                                 <span class="input-group-text">+</span>
@@ -124,9 +111,8 @@
                             </div>
                             <input
                                 type="text"
-                                class="form-control text-right rounded-0"
-                                id="usr"
-                                name="username"
+                                class="form-control text-center rounded-0"
+                                name="txtBuyAmount"
                                 value="9.5"
                             />
                             <div class="input-group-append">
@@ -138,14 +124,10 @@
                         <div class="input-group mb-3 input-group-sm">
                             <input
                                 type="text"
-                                class="form-control text-right"
-                                id="usr"
-                                name="username"
-                                placeholder="0.0"
+                                class="form-control text-center"
+                                name="txtBuyTotal"
+                                placeholder="Total(VND)"
                             />
-                            <div class="input-group-append">
-                                <span class="input-group-text">VND</span>
-                            </div>
                         </div>
                         <button
                             type="button"

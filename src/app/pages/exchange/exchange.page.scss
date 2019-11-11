@@ -1,15 +1,38 @@
 .buy-sell-order {
+    input {
+        background-color: #364352;
+        color: white;
+        border-color: #57637d;
+        border-radius: 0;
+        text-align: center;
+    }
+
+    .input-group {
+        height: 25px;
+    }
+    .input-group * {
+        height: 100%;
+    }
+
     .input-group-prepend span {
+        background-color: #57637d;
+        color: white;
+        border: 0;
+        font-weight: bold;
         border-radius: 0;
     }
     .input-group-append span {
+        background-color: #57637d;
+        color: white;
+        border: 0;
+        font-weight: bold;
         border-radius: 0;
     }
 
     .btn {
         border-radius: 0;
         padding: 0;
-        height: 30px;
+        height: 25px;
     }
 
     label {
