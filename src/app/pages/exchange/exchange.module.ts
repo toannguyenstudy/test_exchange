@@ -6,21 +6,27 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { ExchangePage } from './exchange.page';
+import { ExchangeTradeComponent } from 'src/app/components/exchange-trade/exchange-trade.component';
+import { ExchangeOpenOrderComponent } from 'src/app/components/exchange-open-order/exchange-open-order.component';
 
 const routes: Routes = [
-  {
-    path: '',
-    component: ExchangePage
-  }
+    {
+        path: '',
+        component: ExchangePage
+    }
 ];
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    RouterModule.forChild(routes)
-  ],
-  declarations: [ExchangePage]
+    imports: [
+        CommonModule,
+        FormsModule,
+        IonicModule,
+        RouterModule.forChild(routes)
+    ],
+    declarations: [
+        ExchangePage,
+        ExchangeTradeComponent,
+        ExchangeOpenOrderComponent
+    ]
 })
 export class ExchangePageModule {}
