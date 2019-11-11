@@ -1,0 +1,35 @@
+.open-order {
+    padding: 0;
+    ul {
+        flex-direction: row;
+        li {
+            flex: 1;
+            text-align: center;
+            a {
+                border-radius: 0;
+            }
+        }
+    }
+
+    .tab-content {
+        padding-top: 10px;
+        .open-sell {
+            table {
+                th {
+                    font-size: small;
+                    color: var(--ion-color-step-700);
+                    vertical-align: middle;
+                }
+                td {
+                    font-size: small;
+                    color: white;
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+
+    .tab-content > div {
+        padding: 0;
+    }
+}
