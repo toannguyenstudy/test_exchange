@@ -1,36 +1,63 @@
 .open-order {
+  padding: 0;
+  ul {
+    flex-direction: row;
+    li {
+      flex: 1;
+      text-align: center;
+      a {
+        border-radius: 0;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .nav-link.active {
+    background-color: #f3bc07;
+  }
+
+  .tab-content {
+    padding-top: 10px;
+    .open-sell,
+    .open-buy {
+      table {
+        th {
+          font-size: small;
+          color: var(--ion-color-step-700);
+          vertical-align: middle;
+        }
+        td {
+          font-size: small;
+          color: white;
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+
+  .tab-content > div {
     padding: 0;
-    ul {
-        flex-direction: row;
-        li {
-            flex: 1;
-            text-align: center;
-            a {
-                border-radius: 0;
-            }
-        }
+  }
+
+  .open-buy {
+    overflow-y: auto;
+    height: 50vh;
+
+    thead th {
+      position: sticky;
+      top: 0;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
     }
 
-    .tab-content {
-        padding-top: 10px;
-        .open-sell,
-        .open-buy {
-            table {
-                th {
-                    font-size: small;
-                    color: var(--ion-color-step-700);
-                    vertical-align: middle;
-                }
-                td {
-                    font-size: small;
-                    color: white;
-                    vertical-align: middle;
-                }
-            }
-        }
+    .btn-remove {
+      background-color: transparent;
+      border-color: transparent;
+      i {
+        color: #caa72b;
+      }
     }
-
-    .tab-content > div {
-        padding: 0;
-    }
+  }
 }
