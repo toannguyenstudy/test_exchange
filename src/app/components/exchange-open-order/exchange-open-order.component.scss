@@ -1,74 +1,134 @@
 .open-order {
-  padding: 0;
-  ul {
-    flex-direction: row;
-    li {
-      flex: 1;
-      text-align: center;
-      a {
-        border-radius: 0;
-        font-weight: bold;
-      }
-    }
-  }
-
-  .nav-link.active {
-    background-color: #f3bc07;
-  }
-
-  .tab-content {
-    padding-top: 10px;
-    .open-sell,
-    .open-buy {
-      table {
-        th {
-          font-size: small;
-          color: var(--ion-color-step-700);
-          vertical-align: middle;
-        }
-        td {
-          font-size: small;
-          color: white;
-          vertical-align: middle;
-        }
-      }
-    }
-  }
-
-  .tab-content > div {
     padding: 0;
-  }
-
-  .open-buy,
-  .open-sell {
-    overflow-y: auto;
-    height: 50vh;
-
-    thead th {
-      position: sticky;
-      top: 0;
+    ul {
+        flex-direction: row;
+        li {
+            flex: 1;
+            text-align: center;
+            a {
+                border-radius: 0;
+                font-weight: bold;
+            }
+        }
     }
+
+    .nav-link.active {
+        background-color: #f3bc07;
+    }
+
+    .tab-content {
+        padding-top: 10px;
+        .open-sell,
+        .open-buy {
+            table {
+                th {
+                    font-size: small;
+                    color: var(--ion-color-step-700);
+                    vertical-align: middle;
+                }
+                td {
+                    font-size: small;
+                    color: white;
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+
+    .tab-content > div {
+        padding: 0;
+    }
+
+    //**************************************
     table {
-      border-collapse: collapse;
-      width: 100%;
+        font-size: small;
+        display: block;
+        thead th {
+            color: var(--ion-color-step-700);
+        }
+        thead {
+            display: block;
+            tr {
+                display: flex;
+                th:nth-child(1) {
+                    flex: 2;
+                }
+                th:nth-child(2) {
+                    flex: 2;
+                }
+                th:nth-child(3) {
+                    flex: 2;
+                }
+                th:nth-child(4) {
+                    flex: 1;
+                }
+            }
+        }
+
+        tbody {
+            display: block;
+            height: 60vh;
+            overflow: auto;
+            tr {
+                display: flex;
+                align-items: center;
+                td:nth-child(1) {
+                    flex: 2;
+                }
+                td:nth-child(2) {
+                    flex: 2;
+                }
+                td:nth-child(3) {
+                    flex: 2;
+                }
+                td:nth-child(4) {
+                    flex: 1;
+                }
+            }
+            tr:active {
+                background-color: rgb(72, 121, 194);
+            }
+
+            .btn-remove {
+                background-color: transparent;
+                border-color: transparent;
+                i {
+                    color: #caa52b;
+                }
+            }
+        }
     }
 
-    .btn-remove {
-      background-color: transparent;
-      border-color: transparent;
-      i {
-        color: #caa72b;
-      }
-    }
-  }
+    // .open-buy,
+    // .open-sell {
+    //     overflow-y: auto;
+    //     height: 50vh;
 
-  .open-sell table tbody td:nth-child(1) {
-    color: red;
-    font-weight: bold;
-  }
+    //     thead th {
+    //       position: sticky;
+    //       top: 0;
+    //     }
+    //     table {
+    //       border-collapse: collapse;
+    //       width: 100%;
+    //     }
 
-  .open-buy table tbody td:nth-child(1) {
-    color: greenyellow;
-    font-weight: bold;
-  }
+    //     .btn-remove {
+    //         background-color: transparent;
+    //         border-color: transparent;
+    //         i {
+    //             color: #caa72b;
+    //         }
+    //     }
+    // }
+
+    // .open-sell table tbody td:nth-child(1) {
+    //     color: red;
+    //     font-weight: bold;
+    // }
+
+    // .open-buy table tbody td:nth-child(1) {
+    //     color: greenyellow;
+    //     font-weight: bold;
+    // }
 }
