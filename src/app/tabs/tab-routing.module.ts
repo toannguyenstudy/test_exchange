@@ -14,10 +14,10 @@ const routes: Routes = [
                         path: '',
                         loadChildren: () =>
                             import('../pages/market/market.module').then(
-                                m => m.MarketPageModule
-                            )
-                    }
-                ]
+                                m => m.MarketPageModule,
+                            ),
+                    },
+                ],
             },
             {
                 path: 'exchange',
@@ -26,10 +26,22 @@ const routes: Routes = [
                         path: '',
                         loadChildren: () =>
                             import('../pages/exchange/exchange.module').then(
-                                m => m.ExchangePageModule
-                            )
-                    }
-                ]
+                                m => m.ExchangePageModule,
+                            ),
+                    },
+                ],
+            },
+            {
+                path: 'wallet',
+                children: [
+                    {
+                        path: '',
+                        loadChildren: () =>
+                            import('../pages/wallet/wallet.module').then(
+                                m => m.WalletPageModule,
+                            ),
+                    },
+                ],
             },
             {
                 path: 'account',
@@ -38,22 +50,22 @@ const routes: Routes = [
                         path: '',
                         loadChildren: () =>
                             import('../pages/account/account.module').then(
-                                m => m.AccountPageModule
-                            )
-                    }
-                ]
-            }
-        ]
+                                m => m.AccountPageModule,
+                            ),
+                    },
+                ],
+            },
+        ],
     },
     {
         path: '',
         pathMatch: 'full',
-        redirectTo: '/tabs/market'
-    }
+        redirectTo: '/tabs/market',
+    },
 ];
 
 @NgModule({
     imports: [RouterModule.forChild(routes)],
-    exports: [RouterModule]
+    exports: [RouterModule],
 })
 export class TabsPageRoutingModule {}
