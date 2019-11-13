@@ -1,0 +1,40 @@
+<div class="row mt-3">
+    <div class="col p-0">
+        <table class="table table-borderless  text-white">
+            <thead class="thead-inverse">
+                <tr>
+                    <th>Type</th>
+                    <th>Price</th>
+                    <th>Amount</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <ng-container *ngFor="let order of histories">
+                    <tr
+                        data-toggle="collapse"
+                        [attr.data-target]="'#order-' + order.id"
+                    >
+                        <td *ngIf="order.type == 1" class="text-success">
+                            Buy <i class="fas fa-arrow-up"></i>
+                        </td>
+
+                        <td *ngIf="order.type == 2" class="text-danger">
+                            Sell <i class="fas fa-arrow-down"></i>
+                        </td>
+                        <td>{{ order.price | number }}</td>
+                        <td>{{ order.amount }}</td>
+                        <td>{{ order.total | number }}</td>
+                    </tr>
+                    <div [attr.id]="'order-' + order.id" class="collapse">
+                        <tr>
+                            <td colspan="4" class="text-center">
+                                {{ order.date | date: 'dd/MM/yyyy hh:mm:ss' }}
+                            </td>
+                        </tr>
+                    </div>
+                </ng-container>
+            </tbody>
+        </table>
+    </div>
+</div>

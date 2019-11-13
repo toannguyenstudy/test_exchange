@@ -8,12 +8,13 @@ import { IonicModule } from '@ionic/angular';
 import { ExchangePage } from './exchange.page';
 import { ExchangeTradeComponent } from 'src/app/components/exchange-trade/exchange-trade.component';
 import { ExchangeOpenOrderComponent } from 'src/app/components/exchange-open-order/exchange-open-order.component';
+import { ExchangeHistoryComponent } from 'src/app/components/exchange-history/exchange-history.component';
 
 const routes: Routes = [
     {
         path: '',
-        component: ExchangePage
-    }
+        component: ExchangePage,
+    },
 ];
 
 @NgModule({
@@ -21,12 +22,13 @@ const routes: Routes = [
         CommonModule,
         FormsModule,
         IonicModule,
-        RouterModule.forChild(routes)
+        RouterModule.forChild(routes),
     ],
     declarations: [
         ExchangePage,
         ExchangeTradeComponent,
-        ExchangeOpenOrderComponent
-    ]
+        ExchangeOpenOrderComponent,
+        ExchangeHistoryComponent,
+    ],
 })
 export class ExchangePageModule {}
