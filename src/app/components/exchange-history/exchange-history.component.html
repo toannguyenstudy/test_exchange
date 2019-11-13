@@ -28,7 +28,10 @@
                     </tr>
                     <div [attr.id]="'order-' + order.id" class="collapse">
                         <tr>
-                            <td colspan="4" class="text-center">
+                            <td colspan="2" class="text-center p-0">
+                                Finished
+                            </td>
+                            <td colspan="2" class="text-center p-0 text-info">
                                 {{ order.date | date: 'dd/MM/yyyy hh:mm:ss' }}
                             </td>
                         </tr>

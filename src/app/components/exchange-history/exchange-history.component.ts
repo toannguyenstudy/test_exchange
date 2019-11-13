@@ -13,7 +13,7 @@ export class ExchangeHistoryComponent implements OnInit {
             price: 230000000,
             amount: 0.5,
             total: 115000000,
-            date: 1573619720796,
+            date: 1245869722312,
         },
         {
             id: 2,
@@ -29,7 +29,7 @@ export class ExchangeHistoryComponent implements OnInit {
             price: 230000000,
             amount: 0.5,
             total: 115000000,
-            date: 1573619720796,
+            date: 1573627760146,
         },
         {
             id: 4,
