@@ -17,6 +17,13 @@ const routes: Routes = [
                                 m => m.MarketPageModule,
                             ),
                     },
+                    {
+                        path: 'detail/:id',
+                        loadChildren: () =>
+                            import(
+                                '../pages/market-detail/market-detail.module'
+                            ).then(m => m.MarketDetailPageModule),
+                    },
                 ],
             },
             {

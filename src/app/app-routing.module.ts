@@ -5,15 +5,16 @@ const routes: Routes = [
     {
         path: '',
         loadChildren: () =>
-            import('./tabs/tabs.module').then(m => m.TabsPageModule)
+            import('./tabs/tabs.module').then(m => m.TabsPageModule),
     },
-  { path: 'wallet', loadChildren: './pages/wallet/wallet.module#WalletPageModule' }
+    //   { path: 'wallet', loadChildren: './pages/wallet/wallet.module#WalletPageModule' },
+    //   { path: 'market-detail', loadChildren: './pages/market-detail/market-detail.module#MarketDetailPageModule' }
 ];
 
 @NgModule({
     imports: [
-        RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
+        RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules }),
     ],
-    exports: [RouterModule]
+    exports: [RouterModule],
 })
 export class AppRoutingModule {}

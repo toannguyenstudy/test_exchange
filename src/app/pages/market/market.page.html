@@ -28,8 +28,10 @@
                         <th style="width: 25%">Change 24h</th>
                     </tr>
                 </thead>
+                <!-- [routerLink]="['detail']"
+                        routerDirection="forward" -->
                 <tbody>
-                    <tr>
+                    <tr (click)="onChange('BTC')">
                         <td class="align-middle mt-0 pd-0">
                             <p>BTC</p>
                             <p class="volumn">
@@ -47,7 +49,7 @@
                             </p>
                         </td>
                     </tr>
-                    <tr>
+                    <tr (click)="onChange('ETH')">
                         <td class="align-middle mt-0 pd-0">
                             <p>ETH</p>
                             <p class="volumn">Vol 35.265124</p>

@@ -113,54 +113,26 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
+                    <!-- style="background: linear-gradient(to left, #ff005e52 70%, transparent 0)" -->
+                    <tr
+                        *ngFor="let order of sellOrders"
+                        [style.background]="
+                            'linear-gradient(to left, #c128445e ' +
+                            (order.amount / maxSellAmount) * 100 +
+                            '%, transparent 0)'
+                        "
+                    >
+                        <td class="text-left price">
+                            {{ order.price | number }}
+                        </td>
+                        <td class="text-right">
+                            {{ order.amount | number: '1.4' }}
+                        </td>
+                    </tr>
+                    <!-- <tr>
                         <td class="text-left price">230,000,000</td>
                         <td class="text-right">0.1234567</td>
-                    </tr>
-                    <tr>
-                        <td class="text-left price">230,000,000</td>
-                        <td class="text-right">0.1234567</td>
-                    </tr>
-                    <tr>
-                        <td class="text-left price">230,000,000</td>
-                        <td class="text-right">0.1234567</td>
-                    </tr>
-                    <tr>
-                        <td class="text-left price">230,000,000</td>
-                        <td class="text-right">0.1234567</td>
-                    </tr>
-                    <tr>
-                        <td class="text-left price">230,000,000</td>
-                        <td class="text-right">0.1234567</td>
-                    </tr>
-                    <tr>
-                        <td class="text-left price">230,000,000</td>
-                        <td class="text-right">0.1234567</td>
-                    </tr>
-                    <tr>
-                        <td class="text-left price">230,000,000</td>
-                        <td class="text-right">0.1234567</td>
-                    </tr>
-                    <tr>
-                        <td class="text-left price">230,000,000</td>
-                        <td class="text-right">0.1234567</td>
-                    </tr>
-                    <tr>
-                        <td class="text-left price">230,000,000</td>
-                        <td class="text-right">0.1234567</td>
-                    </tr>
-                    <tr>
-                        <td class="text-left price">230,000,000</td>
-                        <td class="text-right">0.1234567</td>
-                    </tr>
-                    <tr>
-                        <td class="text-left price">230,000,000</td>
-                        <td class="text-right">0.1234567</td>
-                    </tr>
-                    <tr>
-                        <td class="text-left price">230,000,000</td>
-                        <td class="text-right">0.1234567</td>
-                    </tr>
+                    </tr> -->
                 </tbody>
             </table>
         </div>
@@ -175,33 +147,20 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td class="text-left price">230,000,000</td>
-                        <td class="text-right">0.1234567</td>
-                    </tr>
-                    <tr>
-                        <td class="text-left price">230,000,000</td>
-                        <td class="text-right">0.1234567</td>
-                    </tr>
-                    <tr>
-                        <td class="text-left price">230,000,000</td>
-                        <td class="text-right">0.1234567</td>
-                    </tr>
-                    <tr>
-                        <td class="text-left price">230,000,000</td>
-                        <td class="text-right">0.1234567</td>
-                    </tr>
-                    <tr>
-                        <td class="text-left price">230,000,000</td>
-                        <td class="text-right">0.1234567</td>
-                    </tr>
-                    <tr>
-                        <td class="text-left price">230,000,000</td>
-                        <td class="text-right">0.12345</td>
-                    </tr>
-                    <tr>
-                        <td class="text-left price">230,000,000</td>
-                        <td class="text-right">0.12345</td>
+                    <tr
+                        *ngFor="let order of buyOrders"
+                        [style.background]="
+                            'linear-gradient(to left, #138a1d4f ' +
+                            (order.amount / maxBuyAmount) * 100 +
+                            '%, transparent 0)'
+                        "
+                    >
+                        <td class="text-left price">
+                            {{ order.price | number }}
+                        </td>
+                        <td class="text-right">
+                            {{ order.amount | number: '1.4' }}
+                        </td>
                     </tr>
                 </tbody>
             </table>
