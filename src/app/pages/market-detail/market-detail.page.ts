@@ -7,11 +7,13 @@ import { ActivatedRoute } from '@angular/router';
     styleUrls: ['./market-detail.page.scss'],
 })
 export class MarketDetailPage implements OnInit {
-    activatedCoin = null;
+    activatedCoin = '';
+    activatedUnit = '';
 
     constructor(private activatedRoute: ActivatedRoute) {}
 
     ngOnInit() {
-        this.activatedCoin = this.activatedRoute.snapshot.paramMap.get('id');
+        this.activatedCoin = this.activatedRoute.snapshot.paramMap.get('coin');
+        this.activatedUnit = this.activatedRoute.snapshot.paramMap.get('unit');
     }
 }

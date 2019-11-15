@@ -16,8 +16,9 @@ export class MarketPage implements OnInit {
         console.log(e.target.value);
     }
 
-    onChange(coin) {
+    onChange(coin, unit) {
         // this.router.navigateByUrl('tabs/market/detail');
-        this.nav.navigateForward('tabs/market/detail/' + coin);
+        // this.nav.navigateForward('tabs/market/detail/' + coin);
+        this.nav.navigateForward(`detail/${coin}/${unit}`);
     }
 }

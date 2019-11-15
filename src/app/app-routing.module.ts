@@ -8,7 +8,11 @@ const routes: Routes = [
             import('./tabs/tabs.module').then(m => m.TabsPageModule),
     },
     //   { path: 'wallet', loadChildren: './pages/wallet/wallet.module#WalletPageModule' },
-    //   { path: 'market-detail', loadChildren: './pages/market-detail/market-detail.module#MarketDetailPageModule' }
+    {
+        path: 'detail/:coin/:unit',
+        loadChildren:
+            './pages/market-detail/market-detail.module#MarketDetailPageModule',
+    },
 ];
 
 @NgModule({

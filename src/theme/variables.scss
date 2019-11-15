@@ -2,6 +2,13 @@
 // http://ionicframework.com/docs/theming/
 
 /** Ionic CSS Variables **/
+/* roboto-regular - latin */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 800;
+    src: url('../assets/fonts/roboto-v20-latin-regular.ttf'); /* IE9 Compat Modes */
+}
 :root {
     /** primary **/
     --ion-color-primary: #3880ff;
