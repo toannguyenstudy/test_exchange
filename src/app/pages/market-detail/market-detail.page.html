@@ -1,66 +1,215 @@
 <ion-header>
-    <ion-toolbar>
-        <ion-buttons slot="start">
-            <ion-back-button
-                defaultHref="/tabs/market"
-                [text]="'Market'"
-            ></ion-back-button>
-        </ion-buttons>
-        <ion-title>{{ activatedCoin }} / {{ activatedUnit }}</ion-title>
-        <i class="far fa-star pr-2" slot="end"></i>
-    </ion-toolbar>
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-back-button
+				defaultHref="/tabs/market"
+				[text]="'Market'"
+			></ion-back-button>
+		</ion-buttons>
+		<ion-title>{{ activatedCoin }} / {{ activatedUnit }}</ion-title>
+		<i class="far fa-star pr-2" slot="end"></i>
+	</ion-toolbar>
 </ion-header>
 
 <ion-content>
-    <div class="container pt-2">
-        <!-- #region show market info OHLC - Volume... -->
-        <div class="row top-info" style="height: 100%;">
-            <!-- #region show last price, ratio... -->
-            <div class="col-7 left-info">
-                <div class="row">
-                    <div class="col">
-                        <h2 class="text-danger m-0">
-                            0.0024578 <i class="fas fa-long-arrow-alt-down"></i>
-                        </h2>
-                    </div>
-                </div>
-                <div class="row" style="font-size: small;">
-                    <div class="col">{{221000000 | number}}</div>
-                    <div class="col text-success">+1.86%</div>
-                </div>
-            </div>
-            <!-- #endregion -->
+	<div class="container pt-2">
+		<!-- #region show market info OHLC - Volume... -->
+		<div class="row top-info">
+			<!-- #region show last price, ratio... -->
+			<div class="col-7 left-info">
+				<div class="row">
+					<div class="col">
+						<h2 class="text-danger m-0">
+							0.0024578 <i class="fas fa-long-arrow-alt-down"></i>
+						</h2>
+					</div>
+				</div>
+				<div class="row" style="font-size: small;">
+					<div class="col">{{221000000 | number}}</div>
+					<div class="col text-success">+1.86%</div>
+				</div>
+			</div>
+			<!-- #endregion -->
 
-            <!-- #region show Volume, High, Low -->
-            <div class="col-5 right-info" style="font-size: small;">
-                <div class="row">
-                    <div class="col text-right text-muted">Vol</div>
-                    <div class="col">10.5647</div>
-                </div>
-                <div class="row">
-                    <div class="col text-right text-muted">High</div>
-                    <div class="col">0.05487</div>
-                </div>
-                <div class="row">
-                    <div class="col text-right text-muted">Low</div>
-                    <div class="col">0.05369</div>
-                </div>
-            </div>
-            <!-- #endregion -->
-        </div>
-        <!-- #endregion -->
+			<!-- #region show Volume, High, Low -->
+			<div class="col-5 right-info" style="font-size: small;">
+				<div class="row">
+					<div class="col text-right text-muted">Vol</div>
+					<div class="col">10.5647</div>
+				</div>
+				<div class="row">
+					<div class="col text-right text-muted">High</div>
+					<div class="col">0.05487</div>
+				</div>
+				<div class="row">
+					<div class="col text-right text-muted">Low</div>
+					<div class="col">0.05369</div>
+				</div>
+			</div>
+			<!-- #endregion -->
+		</div>
+		<!-- #endregion -->
 
-        <!-- #region chart tradingview -->
-        <div class="row">
-            <div class="col mt-2 p-0">
-                <iframe
-                    class="w-100"
-                    style="height: 300px;"
-                    src="https://s.tradingview.com/widgetembed/?frameElementId=tradingview_kenniex&interval=60&hidesidetoolbar=1&symboledit=1&saveimage=1&toolbarbg=fff&studies=%5B%5D&theme=Dark&style=2&timezone=Asia%2FBangkok&studies_overrides=%7B%7D&overrides=%7B%7D&enabled_features=%5B%5D&disabled_features=%5B%5D&locale=vi_VN&utm_medium=widget&utm_campaign=chart&symbol=BITTREX%3ABTCUSDT"
-                    frameborder="0"
-                ></iframe>
-            </div>
-        </div>
-        <!-- #endregion -->
-    </div>
+		<!-- #region chart tradingview -->
+		<div class="row">
+			<div class="col mt-2 p-0">
+				<iframe
+					class="w-100"
+					style="height: 300px; border-bottom: 4px solid #0000008a"
+					src="https://s.tradingview.com/widgetembed/?frameElementId=tradingview_kenniex&interval=60&hidesidetoolbar=1&symboledit=1&saveimage=1&toolbarbg=fff&studies=%5B%5D&theme=Dark&style=2&timezone=Asia%2FBangkok&studies_overrides=%7B%7D&overrides=%7B%7D&enabled_features=%5B%5D&disabled_features=%5B%5D&locale=vi_VN&utm_medium=widget&utm_campaign=chart&symbol=BITTREX%3ABTCUSDT"
+					frameborder="0"
+				></iframe>
+			</div>
+		</div>
+		<!-- #endregion -->
+
+		<!-- #region show market orderbook, market history, ..... -->
+		<div class="row bottom-info">
+			<div class="bottom-info-wrapper">
+				<!-- #region TAB LIST -->
+				<ul
+					class="nav nav-tabs bottom-list-market border-0"
+					style="justify-content: space-around;"
+				>
+					<li class="nav-item">
+						<a
+							class="nav-link active"
+							data-toggle="tab"
+							href="#orderBook"
+							>Order Book</a
+						>
+					</li>
+					<li class="nav-item">
+						<a
+							class="nav-link"
+							data-toggle="tab"
+							href="#marketHistory"
+							>Market History</a
+						>
+					</li>
+				</ul>
+				<!-- #endregion -->
+
+				<!-- #region TAB CONTENT -->
+				<div class="tab-content mt-2">
+					<!-- #region orderBook tab -->
+					<div class="tab-pane container active" id="orderBook">
+						<div class="row">
+							<!-- #region table BID -->
+							<div class="col-6 pr-0">
+								<table
+									class="table table-borderless table-sm text-white"
+								>
+									<thead class="thead-inverse text-muted">
+										<tr>
+											<th colspan="2">Bid</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>0.1</td>
+											<td class="text-success text-right">
+												{{21200000 | number}}
+											</td>
+										</tr>
+										<tr>
+											<td>0.1</td>
+											<td class="text-success text-right">
+												{{21200000 | number}}
+											</td>
+										</tr>
+										<tr>
+											<td>0.1</td>
+											<td class="text-success text-right">
+												{{21200000 | number}}
+											</td>
+										</tr>
+										<tr>
+											<td>0.1</td>
+											<td class="text-success text-right">
+												{{21200000 | number}}
+											</td>
+										</tr>
+										<tr>
+											<td>0.1</td>
+											<td class="text-success text-right">
+												{{21200000 | number}}
+											</td>
+										</tr>
+										<tr>
+											<td>0.1</td>
+											<td class="text-success text-right">
+												{{21200000 | number}}
+											</td>
+										</tr>
+										<tr>
+											<td>0.1</td>
+											<td class="text-success text-right">
+												{{21200000 | number}}
+											</td>
+										</tr>
+										<tr>
+											<td>0.1</td>
+											<td class="text-success text-right">
+												{{21200000 | number}}
+											</td>
+										</tr>
+										<tr>
+											<td>0.1</td>
+											<td class="text-success text-right">
+												{{21200000 | number}}
+											</td>
+										</tr>
+										<tr>
+											<td>0.1</td>
+											<td class="text-success text-right">
+												{{21200000 | number}}
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!-- #endregion -->
+
+							<!-- #region table ASK -->
+							<div class="col-6 pl-0">
+								<table
+									class="table table-borderless table-sm text-white"
+								>
+									<thead class="thead-inverse text-muted">
+										<tr>
+											<th colspan="2">Ask</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="text-danger text-left">
+												{{21200000 | number}}
+											</td>
+											<td class="text-right">0.1</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!-- #endregion -->
+						</div>
+					</div>
+					<!-- #endregion -->
+
+					<!-- OPEN BUY CONTENT -->
+					<div class="tab-pane container fade" id="marketHistory">
+						conde
+					</div>
+				</div>
+				<!-- #endregion -->
+			</div>
+		</div>
+		<!-- #endregion -->
+	</div>
 </ion-content>
+
+<ion-footer>
+	<ion-toolbar>
+		<ion-title>Footer</ion-title>
+	</ion-toolbar>
+</ion-footer>
