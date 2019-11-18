@@ -64,9 +64,16 @@
 
 ion-footer {
     button {
-        background-color: #33be85;
         color: white;
+        font-weight: bold;
     }
+    button.btn-buy {
+        background-color: var(--ion-buy-color);
+    }
+    button.btn-sell {
+        background-color: var(--ion-sell-color);
+    }
+
     button:active {
         background-color: #f3bc07;
     }

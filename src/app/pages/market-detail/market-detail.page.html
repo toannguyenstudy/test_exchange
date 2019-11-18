@@ -198,11 +198,23 @@
 
 <ion-footer>
     <ion-toolbar>
-        <button
-            class="btn rounded-0 btn-block btn-sm"
-            (click)="onClickNavigateExchangeTrade()"
-        >
-            BUY/SELL
-        </button>
+        <div class="row">
+            <div class="col pr-1">
+                <button
+                    class="btn rounded-0 btn-block btn-sm btn-buy"
+                    (click)="onClickNavigateExchangeTrade()"
+                >
+                    BUY
+                </button>
+            </div>
+            <div class="col pl-1">
+                <button
+                    class="btn rounded-0 btn-block btn-sm btn-sell"
+                    (click)="onClickNavigateExchangeTrade()"
+                >
+                    SELL
+                </button>
+            </div>
+        </div>
     </ion-toolbar>
 </ion-footer>
