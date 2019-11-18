@@ -4,6 +4,7 @@
             <ion-back-button
                 defaultHref="/tabs/market"
                 [text]="'Market'"
+                color="medium"
             ></ion-back-button>
         </ion-buttons>
         <ion-title>{{ activatedCoin }} / {{ activatedUnit }}</ion-title>
@@ -150,10 +151,43 @@
                     </div>
                     <!-- #endregion -->
 
-                    <!-- OPEN BUY CONTENT -->
+                    <!-- #region MARKET HISTORY -->
                     <div class="tab-pane container fade" id="marketHistory">
-                        conde
+                        <div class="row">
+                            <div class="col">
+                                <table
+                                    class="table table-borderless text-white table-sm"
+                                >
+                                    <thead>
+                                        <tr>
+                                            <th class="text-muted">Time</th>
+                                            <th class="text-muted">Price</th>
+                                            <th class="text-muted text-right">
+                                                Quantity
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let order of marketHistory">
+                                            <td>
+                                                {{ order.time | date: 'hh:mm:ss'
+                                                }}
+                                            </td>
+                                            <td
+                                                [ngClass]="{'text-danger': order.type==2, 'text-success': order.type==1}"
+                                            >
+                                                {{ order.price | number}}
+                                            </td>
+                                            <td class="text-right">
+                                                {{ order.amount }}
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
+                    <!-- #endregion -->
                 </div>
                 <!-- #endregion -->
             </div>

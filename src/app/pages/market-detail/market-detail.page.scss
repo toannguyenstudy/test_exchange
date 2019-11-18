@@ -44,6 +44,19 @@
                     font-size: small;
                     font-weight: bold;
                 }
+
+                #marketHistory {
+                    font-size: small;
+                    table thead tr td:nth-child(1) {
+                        width: 30%;
+                    }
+                    table thead tr td:nth-child(2) {
+                        width: 30%;
+                    }
+                    table thead tr td:nth-child(3) {
+                        width: 40%;
+                    }
+                }
             }
         }
     }
