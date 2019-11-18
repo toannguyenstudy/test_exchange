@@ -13,9 +13,9 @@
 :root {
     /** primary **/
     --ion-font-family: 'Barlow';
-    font-style: normal;
-    font-weight: 800;
-    font-display: swap;
+    --ion-font-family: 'Rubik', sans-serif;
+    --ion-buy-color: #33be85;
+    --ion-sell-color: #e0284c;
 
     --ion-color-primary: #3880ff;
     --ion-color-primary-rgb: 56, 128, 255;

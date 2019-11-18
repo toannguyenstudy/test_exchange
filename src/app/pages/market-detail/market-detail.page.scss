@@ -1,50 +1,60 @@
 .container {
-	.top-info {
-		height: 100%;
-		// border-bottom: 4px solid #0000008a;
-		padding-bottom: 5px;
-		.left-info,
-		.right-info {
-			display: flex;
-			flex-direction: column;
-			justify-content: space-between;
-		}
-	}
+    .top-info {
+        height: 100%;
+        // border-bottom: 4px solid #0000008a;
+        padding-bottom: 5px;
+        .left-info,
+        .right-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    }
 
-	.bottom-info {
-		.bottom-info-wrapper {
-			// padding-top: 20px;
-			height: 100%;
-			width: 100%;
-			ul {
-				display: flex;
-				flex-direction: row;
-				li {
-					flex: 1;
-					text-align: center;
-					.nav-link {
-						border-top: 0 !important;
-						border-right: 0 !important;
-						border-left: 0 !important;
-						background: transparent;
-						color: white;
-						font-size: medium;
-						font-weight: bold;
-					}
+    .bottom-info {
+        .bottom-info-wrapper {
+            // padding-top: 20px;
+            height: 100%;
+            width: 100%;
+            ul {
+                display: flex;
+                flex-direction: row;
+                li {
+                    flex: 1;
+                    text-align: center;
+                    .nav-link {
+                        border-top: 0 !important;
+                        border-right: 0 !important;
+                        border-left: 0 !important;
+                        background: transparent;
+                        color: white;
+                        font-size: medium;
+                        font-weight: bold;
+                    }
 
-					.nav-link.active {
-						color: #f3bc07;
-						border-bottom: #f3bc07 4px solid;
-					}
-				}
-			}
+                    .nav-link.active {
+                        color: #f3bc07;
+                        border-bottom: #f3bc07 4px solid;
+                    }
+                }
+            }
 
-			.tab-content {
-				#orderBook {
-					font-size: small;
-					font-weight: bold;
-				}
-			}
-		}
-	}
+            .tab-content {
+                #orderBook {
+                    font-size: small;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+ion-footer {
+    button {
+        background-color: #33be85;
+        color: white;
+    }
+    button:active {
+        background-color: #f3bc07;
+    }
 }
