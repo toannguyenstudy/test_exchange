@@ -1,0 +1,58 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-back-button
+				defaultHref="tabs/wallet"
+				text="wallet"
+				color="medium"
+			></ion-back-button>
+		</ion-buttons>
+		<ion-title>Balance</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<div class="container">
+		<!-- #region LOGO and NAME -->
+		<div class="row row-logo pt-3" style="height: 100%;">
+			<div class="col text-right pr-2">
+				<img
+					src="../../../assets/images/coin-logo/ethereum2.png"
+					width="35px"
+					alt="ethereum.png"
+				/>
+			</div>
+			<div class="col text-left pl-2">
+				<h3 class="m-0">ETH</h3>
+				<p class="m-0 text-muted">Ethereum</p>
+			</div>
+		</div>
+		<!-- #endregion -->
+
+		<!-- #region Statistics balance -->
+		<div class="row balance mt-2">
+			<div class="col">
+				<p class="text-muted font-weight-bold">Total</p>
+				<p class="text-muted font-weight-bold">Available</p>
+				<p class="text-muted font-weight-bold">In Order</p>
+			</div>
+			<div class="col">
+				<p class="text-right" style="font-size: large;">0.00</p>
+				<p class="text-right">0.00</p>
+				<p class="text-right">0.00</p>
+			</div>
+		</div>
+		<hr style="border: 0.1px solid #343a40;" />
+		<div class="row equity">
+			<div class="col">
+				<p class="text-muted font-weight-bold">Equity Value(ETH)</p>
+				<p class="text-muted font-weight-bold">Equity Value(VND)</p>
+			</div>
+			<div class="col">
+				<p class="text-right">0.00</p>
+				<p class="text-right">0,000,000</p>
+			</div>
+		</div>
+		<!-- #endregion -->
+	</div>
+</ion-content>

@@ -1,0 +1,26 @@
+ion-content {
+	.container {
+		.row-logo {
+			.col {
+				font-weight: bold;
+				margin-top: auto;
+				margin-bottom: auto;
+				p {
+					font-size: small;
+				}
+			}
+		}
+
+		.row.balance {
+			.col p {
+				margin-bottom: 5px;
+			}
+		}
+
+		.row.equity {
+			.col p {
+				margin-bottom: 5px;
+			}
+		}
+	}
+}
