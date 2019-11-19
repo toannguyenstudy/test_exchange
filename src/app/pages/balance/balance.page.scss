@@ -23,14 +23,16 @@ ion-content {
             }
         }
 
-        .row.go-to-trade > .col {
+        .row.go-to-trade {
             font-size: medium;
-            margin: 5px;
-            padding-top: 5px;
-            padding-bottom: 5px;
-            background-color: #3b3854d4;
-            border-radius: 2px;
-            // border: 2px solid #737692;
+            .col-6 {
+                padding: 7px;
+            }
+            .trade-badge {
+                background-color: #3b3854d4;
+                border-radius: 2px;
+                padding: 4px;
+            }
         }
     }
 }
