@@ -16,7 +16,8 @@ const routes: Routes = [
 	{
 		path: 'balance',
 		loadChildren: './pages/balance/balance.module#BalancePageModule',
-	},
+	},  { path: 'withdraw', loadChildren: './pages/withdraw/withdraw.module#WithdrawPageModule' },
+
 ];
 
 @NgModule({

@@ -25,13 +25,14 @@ ion-content {
 
         .row.go-to-trade {
             font-size: medium;
+            padding: 0 5px;
             .col-6 {
-                padding: 7px;
+                padding: 5px;
             }
             .trade-badge {
                 background-color: #3b3854d4;
                 border-radius: 2px;
-                padding: 4px;
+                padding: 4px 7px;
             }
         }
     }
