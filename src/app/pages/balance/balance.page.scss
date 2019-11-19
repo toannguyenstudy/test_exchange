@@ -1,26 +1,51 @@
 ion-content {
-	.container {
-		.row-logo {
-			.col {
-				font-weight: bold;
-				margin-top: auto;
-				margin-bottom: auto;
-				p {
-					font-size: small;
-				}
-			}
-		}
+    .container {
+        .row-logo {
+            .col {
+                font-weight: bold;
+                margin-top: auto;
+                margin-bottom: auto;
+                p {
+                    font-size: small;
+                }
+            }
+        }
 
-		.row.balance {
-			.col p {
-				margin-bottom: 5px;
-			}
-		}
+        .row.balance {
+            .col p {
+                margin-bottom: 5px;
+            }
+        }
 
-		.row.equity {
-			.col p {
-				margin-bottom: 5px;
-			}
-		}
-	}
+        .row.equity {
+            .col p {
+                margin-bottom: 5px;
+            }
+        }
+
+        .row.go-to-trade > .col {
+            font-size: medium;
+            margin: 5px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            background-color: #3b3854d4;
+            border-radius: 2px;
+            // border: 2px solid #737692;
+        }
+    }
+}
+
+ion-footer {
+    .btn-deposit {
+        color: white;
+        // font-weight: bold;
+        background-color: var(--ion-buy-color);
+        border-radius: 2px;
+    }
+    .btn-withdraw {
+        color: white;
+        // font-weight: bold;
+        background-color: var(--ion-sell-color);
+        border-radius: 2px;
+    }
 }
