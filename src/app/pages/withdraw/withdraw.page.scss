@@ -1,0 +1,38 @@
+ion-content {
+    .row.coin-type {
+        .col > * {
+            margin: auto 0;
+        }
+    }
+
+    .row.input-address {
+        .btn-contact {
+            margin-top: auto;
+            margin-bottom: 5px;
+            background: #3b475a;
+            border-radius: 0;
+            padding: 3px 4px;
+        }
+    }
+
+    .row.input-amount {
+        .btn-amount-max {
+            margin-top: auto;
+            margin-bottom: 5px;
+            border-radius: 0;
+            padding: 3px 4px;
+            background-color: transparent;
+            color: #ffce00 !important;
+        }
+    }
+}
+
+ion-footer {
+    ion-toolbar {
+        padding: 10px;
+    }
+    .btn-withdraw {
+        background: #c1d3e2;
+        border-radius: 1px;
+    }
+}
