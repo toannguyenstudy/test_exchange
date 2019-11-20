@@ -33,3 +33,9 @@
 
 // @import url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
 // @import url('https://fonts.googleapis.com/css?family=Inconsolata&display=swap');
+
+.login-modal .modal-wrapper {
+    --height: 95vh;
+    position: absolute;
+    bottom: 0;
+}

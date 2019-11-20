@@ -9,7 +9,8 @@
         class="container h-50 d-flex flex-column"
         style="justify-content: space-evenly;"
     >
-        <div class="row">
+        <!-- #region Sign In or Register account -->
+        <div class="row" (click)="openLoginModal()">
             <div class="col d-flex flex-row align-items-center">
                 <p><i class="fas fa-user-circle fa-2x"></i></p>
                 <p class="ml-3" style="font-size: large;">
@@ -17,6 +18,9 @@
                 </p>
             </div>
         </div>
+        <!-- #endregion -->
+
+        <!-- #region Setting to change anything -->
         <div class="row">
             <div class="col d-flex flex-row align-items-center">
                 <p>
@@ -25,6 +29,9 @@
                 <p class="ml-3">Setting</p>
             </div>
         </div>
+        <!-- #endregion -->
+
+        <!-- #region Help - support and About company -->
         <div class="row">
             <div class="col d-flex flex-row align-items-center">
                 <p>
@@ -33,6 +40,7 @@
                 <p class="ml-3">Help and Support</p>
             </div>
         </div>
+
         <div class="row">
             <div class="col d-flex flex-row align-items-center">
                 <p>
@@ -41,5 +49,6 @@
                 <p class="ml-3">About us</p>
             </div>
         </div>
+        <!-- #endregion -->
     </div>
 </ion-content>
