@@ -1,9 +1,66 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>deposit</ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-buttons>
+            <ion-back-button
+                defaultHref="/balance"
+                text="Balance"
+                color="medium"
+            ></ion-back-button>
+        </ion-buttons>
+        <ion-title>Deposit</ion-title>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
+    <div class="container">
+        <!-- #region Logo and Coin name -->
+        <div class="row coin-type pt-4">
+            <div class="col d-flex">
+                <img
+                    src="../../assets/images/coin-logo/ethereum2.png"
+                    height="30px"
+                    style="margin-top: auto; margin-bottom: auto;"
+                />
+                <h4 class="pl-2">
+                    ETH
+                </h4>
+            </div>
+        </div>
+        <!-- #endregion -->
 
+        <!-- #region Image of qrcode and coin address -->
+        <div class="row mt-3">
+            <div class="col">
+                <p class="text-muted">ETH Deposit Address</p>
+                <div class="img-qr text-center mb-3">
+                    <img
+                        src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=0x95cFaDDac52b76DA6e858Dd0896a46fcDf79E486"
+                        alt="qrcode"
+                    />
+                </div>
+                <p class="text-center">
+                    0x95cFaDDac52b76DA6e858Dd0896a46fcDf79E486
+                </p>
+                <div class="text-center">
+                    <button class="btn text-white btn-copy">
+                        Copy Address
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- #endregion -->
+
+        <div class="row important mt-4">
+            <div class="col">
+                <p class="text-muted">Important</p>
+                <div>
+                    <p>
+                        Send only ETH to this deposit address. Sending any other
+                        coin or token to this address may result in the loss of
+                        your deposit
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
 </ion-content>
