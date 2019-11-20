@@ -1,6 +1,6 @@
 <ion-header>
     <ion-toolbar>
-        <ion-buttons>
+        <ion-buttons slot="start">
             <ion-back-button
                 defaultHref="/balance"
                 text="Balance"
@@ -12,9 +12,9 @@
 </ion-header>
 
 <ion-content>
-    <div class="container">
+    <div class="container d-flex flex-column justify-content-around h-100">
         <!-- #region Logo and Coin name -->
-        <div class="row coin-type pt-4">
+        <div class="row coin-type">
             <div class="col d-flex">
                 <img
                     src="../../assets/images/coin-logo/ethereum2.png"
@@ -29,10 +29,10 @@
         <!-- #endregion -->
 
         <!-- #region Image of qrcode and coin address -->
-        <div class="row mt-3">
+        <div class="row">
             <div class="col">
                 <p class="text-muted">ETH Deposit Address</p>
-                <div class="img-qr text-center mb-3">
+                <div class="img-qr text-center p-4">
                     <img
                         src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=0x95cFaDDac52b76DA6e858Dd0896a46fcDf79E486"
                         alt="qrcode"
@@ -50,7 +50,8 @@
         </div>
         <!-- #endregion -->
 
-        <div class="row important mt-4">
+        <!-- #region Important info -->
+        <div class="row important">
             <div class="col">
                 <p class="text-muted">Important</p>
                 <div>
@@ -62,5 +63,6 @@
                 </div>
             </div>
         </div>
+        <!-- #endregion -->
     </div>
 </ion-content>
