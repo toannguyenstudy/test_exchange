@@ -33,10 +33,15 @@
             <div class="col">
                 <p class="text-muted">ETH Deposit Address</p>
                 <div class="img-qr text-center p-4">
-                    <img
-                        src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=0x95cFaDDac52b76DA6e858Dd0896a46fcDf79E486"
+                    <!-- <img
+                        src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=hihihehe"
                         alt="qrcode"
-                    />
+                    /> -->
+                    <qrcode
+                        class="qrcode-hihi"
+                        [qrdata]="address"
+                        size="150"
+                    ></qrcode>
                 </div>
                 <p class="text-center">
                     0x95cFaDDac52b76DA6e858Dd0896a46fcDf79E486

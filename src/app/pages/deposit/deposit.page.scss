@@ -4,4 +4,10 @@ ion-content {
         padding: 7px 45px;
         font-size: smaller;
     }
+
+    qrcode {
+        display: inline-block;
+        padding: 3px;
+        background: white;
+    }
 }
