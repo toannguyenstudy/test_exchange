@@ -12,9 +12,12 @@
 </ion-header>
 
 <ion-content>
-    <div class="container">
+    <div
+        class="container d-flex flex-column h-100"
+        style="justify-content: space-evenly;"
+    >
         <!-- #region LOGO and NAME -->
-        <div class="row row-logo pt-5" style="height: 100%;">
+        <div class="row row-logo">
             <div class="col text-right pr-2">
                 <img
                     src="../../../assets/images/coin-logo/ethereum2.png"
@@ -30,7 +33,7 @@
         <!-- #endregion -->
 
         <!-- #region Statistics balance -->
-        <div class="row balance mt-2">
+        <div class="row balance">
             <div class="col">
                 <p class="text-muted font-weight-bold">Total</p>
                 <p class="text-muted font-weight-bold">Available</p>
@@ -42,7 +45,7 @@
                 <p class="text-right">0.00</p>
             </div>
         </div>
-        <hr style="border: 0.1px solid #343a40;" />
+        <hr class="m-0" style="border: 0.1px solid #343a40;" />
         <div class="row equity">
             <div class="col">
                 <p class="text-muted font-weight-bold">Equity Value(ETH)</p>
@@ -56,50 +59,70 @@
         <!-- #endregion -->
 
         <!-- #region Go to trade badge -->
-        <div class="row go-to-trade mt-4">
-            <div class="col-6">
-                <div class="trade-badge">
-                    <div class="row">
-                        <div class="col text-muted">ETH / VND</div>
-                    </div>
-                    <div class="row">
-                        <div class="col">4,217,000</div>
-                        <div class="col text-right text-success">+2.38%</div>
-                    </div>
-                </div>
-            </div>
 
-            <div class="col-6">
-                <div class="trade-badge">
-                    <div class="row">
-                        <div class="col text-muted">ETH / USDT</div>
-                    </div>
-                    <div class="row">
-                        <div class="col">177.33</div>
-                        <div class="col text-right text-success">+2.38%</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6">
-                <div class="trade-badge">
-                    <div class="row">
-                        <div class="col text-muted">ETH / VND</div>
-                    </div>
-                    <div class="row">
-                        <div class="col">4,217,000</div>
-                        <div class="col text-right text-success">+2.38%</div>
+        <div class="row go-to-trade">
+            <div class="col">
+                <div class="row">
+                    <div class="col">
+                        <p class="text-muted font-weight-bold">
+                            Go to exchange trade
+                        </p>
                     </div>
                 </div>
-            </div>
+                <div class="row">
+                    <div class="col-6" routerLink="/tabs/exchange">
+                        <div class="trade-badge">
+                            <div class="row">
+                                <div class="col text-muted">ETH / VND</div>
+                            </div>
+                            <div class="row">
+                                <div class="col">4,217,000</div>
+                                <div class="col text-right text-success">
+                                    +2.38%
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-            <div class="col-6">
-                <div class="trade-badge">
-                    <div class="row">
-                        <div class="col text-muted">ETH / USDT</div>
+                    <div class="col-6" routerLink="/tabs/exchange">
+                        <div class="trade-badge">
+                            <div class="row">
+                                <div class="col text-muted">ETH / USDT</div>
+                            </div>
+                            <div class="row">
+                                <div class="col">177.33</div>
+                                <div class="col text-right text-success">
+                                    +2.38%
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="row">
-                        <div class="col">177.33</div>
-                        <div class="col text-right text-success">+2.38%</div>
+                    <div class="col-6" routerLink="/tabs/exchange">
+                        <div class="trade-badge">
+                            <div class="row">
+                                <div class="col text-muted">ETH / VND</div>
+                            </div>
+                            <div class="row">
+                                <div class="col">4,217,000</div>
+                                <div class="col text-right text-success">
+                                    +2.38%
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6" routerLink="/tabs/exchange">
+                        <div class="trade-badge">
+                            <div class="row">
+                                <div class="col text-muted">ETH / USDT</div>
+                            </div>
+                            <div class="row">
+                                <div class="col">177.33</div>
+                                <div class="col text-right text-success">
+                                    +2.38%
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

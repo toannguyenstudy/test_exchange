@@ -2,8 +2,13 @@ table tbody tr td p {
     margin: 0;
 }
 
+table thead tr th {
+    border-top: 0;
+    font-size: smaller;
+}
+
 .volumn {
-    font-size: x-small;
+    font-size: small;
     color: var(--ion-color-step-800);
 }
 
