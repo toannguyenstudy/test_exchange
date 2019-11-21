@@ -16,71 +16,60 @@
         <div class="tab-pane container active" id="openSell">
             <div class="open-sell">
                 <ng-container *ngIf="openOrdersSell.length > 0">
-                    <ion-list lines="none">
-                        <ion-list-header>
-                            <ion-label>Price</ion-label>
-                            <ion-label>Amount</ion-label>
-                            <ion-label>Total</ion-label>
-                        </ion-list-header>
+                    <table class="table table-borderless table-sm">
+                        <thead>
+                            <tr>
+                                <th>Price</th>
+                                <th>Amount</th>
+                                <th>Total</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <ng-container *ngFor="let order of openOrdersSell">
+                                <div
+                                    [attr.id]="'order-sell-' + order.id"
+                                    class="collapse"
+                                    style="margin-bottom: -10px;"
+                                >
+                                    <tr>
+                                        <td
+                                            colspan="4"
+                                            class="text-center p-0 text-info"
+                                        >
+                                            {{
+                                                order.date
+                                                    | date
+                                                        : 'dd/MM/yyyy hh:mm:ss'
+                                            }}
+                                        </td>
+                                    </tr>
+                                </div>
 
-                        <ion-item-sliding>
-                            <ion-item>
-                                <ion-label class="text-left m-0"
-                                    >210,000,000</ion-label
+                                <tr
+                                    data-toggle="collapse"
+                                    [attr.data-target]="
+                                        '#order-sell-' + order.id
+                                    "
                                 >
-                                <ion-label class="text-center m-0"
-                                    >0.423154</ion-label
-                                >
-                                <ion-label class="text-right m-0"
-                                    >97,700,000</ion-label
-                                >
-                            </ion-item>
-
-                            <ion-item-options side="end">
-                                <ion-item-option color="danger"
-                                    >Delete</ion-item-option
-                                >
-                            </ion-item-options>
-                        </ion-item-sliding>
-                        <ion-item-sliding>
-                            <ion-item>
-                                <ion-label class="text-left m-0"
-                                    >210,000,000</ion-label
-                                >
-                                <ion-label class="text-center m-0"
-                                    >0.423154</ion-label
-                                >
-                                <ion-label class="text-right m-0"
-                                    >97,700,000</ion-label
-                                >
-                            </ion-item>
-
-                            <ion-item-options side="end">
-                                <ion-item-option color="danger"
-                                    >Delete</ion-item-option
-                                >
-                            </ion-item-options>
-                        </ion-item-sliding>
-                        <ion-item-sliding>
-                            <ion-item>
-                                <ion-label class="text-left m-0"
-                                    >210,000,000</ion-label
-                                >
-                                <ion-label class="text-center m-0"
-                                    >0.423154</ion-label
-                                >
-                                <ion-label class="text-right m-0"
-                                    >97,700,000</ion-label
-                                >
-                            </ion-item>
-
-                            <ion-item-options side="end">
-                                <ion-item-option color="danger"
-                                    >Delete</ion-item-option
-                                >
-                            </ion-item-options>
-                        </ion-item-sliding>
-                    </ion-list>
+                                    <td class="text-success font-weight-bold">
+                                        {{ order.price | number }}
+                                    </td>
+                                    <td>{{ order.amount }}</td>
+                                    <td class="text-success font-weight-bold">
+                                        {{ order.total | number }}
+                                    </td>
+                                    <td>
+                                        <button
+                                            class="btn btn-danger btn-sm btn-remove"
+                                        >
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </ng-container>
+                        </tbody>
+                    </table>
                 </ng-container>
 
                 <ng-container *ngIf="openOrdersSell.length == 0">
