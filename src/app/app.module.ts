@@ -9,6 +9,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { LoginPageModule } from './pages/login/login.module';
+import { RegisterPageModule } from './pages/register/register.module';
 
 @NgModule({
     declarations: [AppComponent],
@@ -18,6 +19,7 @@ import { LoginPageModule } from './pages/login/login.module';
         IonicModule.forRoot(),
         AppRoutingModule,
         LoginPageModule,
+        RegisterPageModule,
     ],
     providers: [
         StatusBar,

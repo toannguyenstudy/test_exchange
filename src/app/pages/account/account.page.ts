@@ -16,7 +16,11 @@ export class AccountPage implements OnInit {
         const modal = await this.modalController.create({
             component: LoginPage,
             cssClass: 'login-modal',
+            id: 'loginModal',
         });
+
+        modal.onDidDismiss().then(data => {});
+
         return await modal.present();
     }
 }

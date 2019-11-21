@@ -24,7 +24,8 @@ const routes: Routes = [
     {
         path: 'deposit',
         loadChildren: './pages/deposit/deposit.module#DepositPageModule',
-    },
+    },  { path: 'register', loadChildren: './pages/register/register.module#RegisterPageModule' },
+
     //   { path: 'login', loadChildren: './pages/login/login.module#LoginPageModule' },
 ];
 
