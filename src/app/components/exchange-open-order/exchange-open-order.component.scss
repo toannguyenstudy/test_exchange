@@ -119,9 +119,33 @@
     }
 
     .tab-content {
-        ion-list ion-item {
-            ion-label {
-                font-size: medium;
+        ion-list {
+            .list-sell-order {
+                height: 50vh;
+                overflow: auto;
+            }
+            ion-item {
+                ion-label {
+                    font-size: medium;
+                }
+
+                .sell-price {
+                    color: var(--ion-sell-color);
+                }
+
+                .sell-total {
+                    color: var(--ion-sell-color);
+                    font-weight: bold;
+                }
+
+                .buy-price {
+                    color: var(--ion-buy-color);
+                }
+
+                .buy-total {
+                    color: var(--ion-buy-color);
+                    font-weight: bold;
+                }
             }
         }
     }

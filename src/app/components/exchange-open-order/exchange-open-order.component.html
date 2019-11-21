@@ -12,9 +12,10 @@
 
     <!-- Tab panes -->
     <div class="tab-content">
-        <!-- OPEN SELL CONTENT -->
+        <!-- #region Open Sell content -->
         <div class="tab-pane container active" id="openSell">
             <div class="open-sell">
+                <!-- #region Content with order lists -->
                 <ng-container *ngIf="openOrdersSell.length > 0">
                     <ion-list lines="none">
                         <ion-list-header>
@@ -23,66 +24,53 @@
                             <ion-label>Total</ion-label>
                         </ion-list-header>
 
-                        <ion-item-sliding>
-                            <ion-item>
-                                <ion-label class="text-left m-0"
-                                    >210,000,000</ion-label
-                                >
-                                <ion-label class="text-center m-0"
-                                    >0.423154</ion-label
-                                >
-                                <ion-label class="text-right m-0"
-                                    >97,700,000</ion-label
-                                >
-                            </ion-item>
+                        <div class="list-sell-order">
+                            <ion-item-sliding
+                                *ngFor="let order of openOrdersSell"
+                            >
+                                <ion-item>
+                                    <ion-label
+                                        class="text-left m-0 sell-price"
+                                        >{{ order.price | number }}</ion-label
+                                    >
+                                    <ion-label class="text-center m-0">{{
+                                        order.amount
+                                    }}</ion-label>
+                                    <ion-label
+                                        class="text-right m-0 sell-total"
+                                        >{{
+                                            order.price * order.amount | number
+                                        }}</ion-label
+                                    >
+                                </ion-item>
 
-                            <ion-item-options side="end">
-                                <ion-item-option color="danger"
-                                    >Delete</ion-item-option
-                                >
-                            </ion-item-options>
-                        </ion-item-sliding>
-                        <ion-item-sliding>
-                            <ion-item>
-                                <ion-label class="text-left m-0"
-                                    >210,000,000</ion-label
-                                >
-                                <ion-label class="text-center m-0"
-                                    >0.423154</ion-label
-                                >
-                                <ion-label class="text-right m-0"
-                                    >97,700,000</ion-label
-                                >
-                            </ion-item>
-
-                            <ion-item-options side="end">
-                                <ion-item-option color="danger"
-                                    >Delete</ion-item-option
-                                >
-                            </ion-item-options>
-                        </ion-item-sliding>
-                        <ion-item-sliding>
-                            <ion-item>
-                                <ion-label class="text-left m-0"
-                                    >210,000,000</ion-label
-                                >
-                                <ion-label class="text-center m-0"
-                                    >0.423154</ion-label
-                                >
-                                <ion-label class="text-right m-0"
-                                    >97,700,000</ion-label
-                                >
-                            </ion-item>
-
-                            <ion-item-options side="end">
-                                <ion-item-option color="danger"
-                                    >Delete</ion-item-option
-                                >
-                            </ion-item-options>
-                        </ion-item-sliding>
+                                <ion-item-options side="end">
+                                    <ion-item-option color="danger" expandable
+                                        >Delete</ion-item-option
+                                    >
+                                </ion-item-options>
+                                <ion-item-options side="start">
+                                    <ion-item-option>{{
+                                        order.date | date: 'd/M/yy hh:m:s'
+                                    }}</ion-item-option>
+                                </ion-item-options>
+                            </ion-item-sliding>
+                        </div>
                     </ion-list>
-                </ng-container>
 
+                    <ion-label>
+                        * Swipe <span style="color: orange">left</span> to
+                        delete select order opening.
+                    </ion-label>
+                    <br />
+                    <ion-label>
+                        * Swipe <span style="color: orange">right</span> to show
+                        order open time.
+                    </ion-label>
+                </ng-container>
+                <!-- #endregion -->
+
+                <!-- #region content with empty order -->
                 <ng-container *ngIf="openOrdersSell.length == 0">
                     <div style="text-align: center;">
                         <h5>Open order is empty!</h5>
@@ -92,70 +80,66 @@
                         />
                     </div>
                 </ng-container>
+                <!-- #endregion -->
             </div>
         </div>
 
-        <!-- OPEN BUY CONTENT -->
+        <!-- #endregion -->
+
+        <!-- #region Open Buy content -->
         <div class="tab-pane container fade" id="openBuy">
             <div class="open-buy">
                 <ng-container *ngIf="openOrdersBuy.length > 0">
-                    <table
-                        class="table table-borderless table-sm"
-                        id="table-open-buy"
-                    >
-                        <thead>
-                            <tr>
-                                <th>Price</th>
-                                <th>Amount</th>
-                                <th>Total</th>
-                                <th class="text-center">Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <ng-container *ngFor="let order of openOrdersBuy">
-                                <div
-                                    [attr.id]="'order-buy-' + order.id"
-                                    class="collapse"
-                                    style="margin-bottom: -10px;"
-                                >
-                                    <tr>
-                                        <td
-                                            colspan="4"
-                                            class="text-center p-0 text-info"
-                                        >
-                                            {{
-                                                order.date
-                                                    | date
-                                                        : 'dd/MM/yyyy hh:mm:ss'
-                                            }}
-                                        </td>
-                                    </tr>
-                                </div>
+                    <ion-list lines="none">
+                        <ion-list-header>
+                            <ion-label>Price</ion-label>
+                            <ion-label>Amount</ion-label>
+                            <ion-label>Total</ion-label>
+                        </ion-list-header>
 
-                                <tr
-                                    data-toggle="collapse"
-                                    [attr.data-target]="
-                                        '#order-buy-' + order.id
-                                    "
-                                >
-                                    <td class="text-danger font-weight-bold">
-                                        {{ order.price | number }}
-                                    </td>
-                                    <td>{{ order.amount }}</td>
-                                    <td class="text-danger font-weight-bold">
-                                        {{ order.total | number }}
-                                    </td>
-                                    <td>
-                                        <button
-                                            class="btn btn-danger btn-sm btn-remove"
-                                        >
-                                            <i class="fas fa-trash"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                            </ng-container>
-                        </tbody>
-                    </table>
+                        <div class="list-sell-order">
+                            <ion-item-sliding
+                                *ngFor="let order of openOrdersBuy"
+                            >
+                                <ion-item>
+                                    <ion-label
+                                        class="text-left m-0 buy-price"
+                                        >{{ order.price | number }}</ion-label
+                                    >
+                                    <ion-label class="text-center m-0">{{
+                                        order.amount
+                                    }}</ion-label>
+                                    <ion-label
+                                        class="text-right m-0 buy-total"
+                                        >{{
+                                            order.price * order.amount | number
+                                        }}</ion-label
+                                    >
+                                </ion-item>
+
+                                <ion-item-options side="end">
+                                    <ion-item-option color="danger" expandable
+                                        >Delete</ion-item-option
+                                    >
+                                </ion-item-options>
+                                <ion-item-options side="start">
+                                    <ion-item-option>{{
+                                        order.date | date: 'd/M/yy hh:m:s'
+                                    }}</ion-item-option>
+                                </ion-item-options>
+                            </ion-item-sliding>
+                        </div>
+                    </ion-list>
+
+                    <ion-label>
+                        * Swipe <span style="color: orange">left</span> to
+                        delete select order opening.
+                    </ion-label>
+                    <br />
+                    <ion-label>
+                        * Swipe <span style="color: orange">right</span> to show
+                        order open time.
+                    </ion-label>
                 </ng-container>
 
                 <ng-container *ngIf="openOrdersBuy.length == 0">
@@ -169,6 +153,7 @@
                 </ng-container>
             </div>
         </div>
+        <!-- #endregion -->
     </div>
 </div>
 
