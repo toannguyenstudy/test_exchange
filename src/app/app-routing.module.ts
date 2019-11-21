@@ -20,9 +20,12 @@ const routes: Routes = [
     {
         path: 'withdraw',
         loadChildren: './pages/withdraw/withdraw.module#WithdrawPageModule',
-    },  { path: 'deposit', loadChildren: './pages/deposit/deposit.module#DepositPageModule' },
-  { path: 'login', loadChildren: './pages/login/login.module#LoginPageModule' },
-
+    },
+    {
+        path: 'deposit',
+        loadChildren: './pages/deposit/deposit.module#DepositPageModule',
+    },
+    //   { path: 'login', loadChildren: './pages/login/login.module#LoginPageModule' },
 ];
 
 @NgModule({

@@ -14,4 +14,8 @@ export class LoginPage implements OnInit {
     closeLoginModal() {
         this.modalController.dismiss();
     }
+
+    showAlert() {
+        alert('ok');
+    }
 }

@@ -13,13 +13,50 @@
 </ion-header>
 
 <ion-content>
-    <ion-card>
-        <ion-card-header>
-            <ion-card-subtitle>Awesome Subtitle</ion-card-subtitle>
-            <ion-card-title>Awesome Title</ion-card-title>
-        </ion-card-header>
-        <ion-card-content>
-            Awesome content
-        </ion-card-content>
-    </ion-card>
+    <div class="container d-flex flex-column">
+        <div class="row">
+            <div class="col">
+                <h1 style="font-size: 2.5rem;">Welcome back</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label>Email</label>
+                    <input
+                        type="email"
+                        class="form-control text-white bg-dark rounded-0"
+                        placeholder="Enter email"
+                    />
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input
+                        type="password"
+                        class="form-control text-white bg-dark rounded-0"
+                        placeholder="Password"
+                    />
+                </div>
+                <p
+                    class="text-right"
+                    style="text-decoration: underline; color: #ffce00;"
+                >
+                    Forgot Password?
+                </p>
+                <button
+                    type="button"
+                    class="btn btn-lg text-light btn-block rounded-0 border-0"
+                    style="background: #898a96;"
+                >
+                    Sign In
+                </button>
+                <p class="text-center mt-3">
+                    No Account yet?
+                    <span style="color: #ffce00; text-decoration: underline;"
+                        >Register</span
+                    >
+                </p>
+            </div>
+        </div>
+    </div>
 </ion-content>
