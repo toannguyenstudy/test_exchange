@@ -19,6 +19,7 @@ export class LoginPage implements OnInit {
     async goToRegister() {
         const modal = await this.modalController.create({
             component: RegisterPage,
+            cssClass: 'login-modal',
             id: 'registerModal',
         });
 
