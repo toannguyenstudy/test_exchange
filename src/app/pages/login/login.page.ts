@@ -1,6 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { RegisterPage } from '../register/register.page';
+import { myEnterAnimation } from '../../animations/enter';
+import { myLeaveAnimation } from '../../animations/leave';
 
 @Component({
     selector: 'app-login',
@@ -21,6 +23,8 @@ export class LoginPage implements OnInit {
             component: RegisterPage,
             cssClass: 'login-modal',
             id: 'registerModal',
+            enterAnimation: myEnterAnimation,
+            leaveAnimation: myLeaveAnimation,
         });
 
         modal.onDidDismiss().then(data => {
