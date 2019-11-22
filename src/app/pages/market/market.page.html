@@ -1,6 +1,8 @@
 <ion-header>
     <ion-toolbar>
-        <ion-title>market</ion-title>
+        <ion-title>
+            {{ 'marketTab.public.market' | translate }}
+        </ion-title>
     </ion-toolbar>
 </ion-header>
 
@@ -24,9 +26,11 @@
                 <thead>
                     <tr>
                         <th class="text-muted">Coin</th>
-                        <th class="text-muted">Last Price</th>
+                        <th class="text-muted">
+                            {{ 'marketTab.homePage.lastPrice' | translate }}
+                        </th>
                         <th class="text-muted" style="width: 25%">
-                            Change 24h
+                            {{ 'marketTab.homePage.change' | translate }}
                         </th>
                     </tr>
                 </thead>
@@ -37,7 +41,8 @@
                         <td class="align-middle mt-0 pd-0">
                             <p>BTC</p>
                             <p class="volumn">
-                                Vol 1.2354565
+                                {{ 'marketTab.homePage.vol' | translate }}
+                                1.2354565
                             </p>
                         </td>
                         <td class="align-middle mt-0 pd-0">
@@ -54,7 +59,10 @@
                     <tr (click)="onChange('ETH', 'VND')">
                         <td class="align-middle mt-0 pd-0">
                             <p>ETH</p>
-                            <p class="volumn">Vol 35.265124</p>
+                            <p class="volumn">
+                                {{ 'marketTab.homePage.vol' | translate }}
+                                35.265124
+                            </p>
                         </td>
                         <td class="align-middle mt-0 pd-0">
                             <p>4,213,000</p>

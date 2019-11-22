@@ -6,6 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { MarketPage } from './market.page';
+import { SharedModule } from 'src/app/shared.module';
 // import { MarketDetailPage } from '../market-detail/market-detail.page';
 
 const routes: Routes = [
@@ -21,6 +22,7 @@ const routes: Routes = [
         FormsModule,
         IonicModule,
         RouterModule.forChild(routes),
+        SharedModule,
     ],
     declarations: [MarketPage],
 })

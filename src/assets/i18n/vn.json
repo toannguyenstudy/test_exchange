@@ -90,5 +90,29 @@
             "swipeLeft": "* Vuốt sang <span class='text-warning'>trái</span> để huỷ lệnh đang chờ",
             "swipeRight": "* Vuốt sang <span class='text-warning'>phải</span> để xem thời gian lệnh"
         }
+    },
+    "marketTab": {
+        "public": {
+            "market": "Thị trường"
+        },
+        "homePage": {
+            "lastPrice": "Giá cuối",
+            "change": "Thay đổi 24h",
+            "vol": "KL"
+        },
+        "marketDetail": {
+            "vol": "KL",
+            "high": "Cao",
+            "low": "Thấp",
+            "orderBook": "Sổ Lệnh",
+            "marketHistory": "Lịch sử thị trường",
+            "bid": "Giá bán",
+            "ask": "Giá mua",
+            "time": "Thời gian",
+            "price": "Giá",
+            "quantity": "Khối lượng",
+            "buy": "Mua",
+            "sell": "Bán"
+        }
     }
 }

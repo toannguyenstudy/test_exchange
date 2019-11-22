@@ -3,7 +3,7 @@
         <ion-buttons slot="start">
             <ion-back-button
                 defaultHref="/tabs/market"
-                [text]="'Market'"
+                text="{{ 'marketTab.public.market' | translate }}"
                 color="medium"
             ></ion-back-button>
         </ion-buttons>
@@ -35,15 +35,21 @@
             <!-- #region show Volume, High, Low -->
             <div class="col-5 right-info" style="font-size: small;">
                 <div class="row">
-                    <div class="col text-right text-muted">Vol</div>
+                    <div class="col text-right text-muted">
+                        {{ 'marketTab.marketDetail.vol' | translate }}
+                    </div>
                     <div class="col">10.5647</div>
                 </div>
                 <div class="row">
-                    <div class="col text-right text-muted">High</div>
+                    <div class="col text-right text-muted">
+                        {{ 'marketTab.marketDetail.high' | translate }}
+                    </div>
                     <div class="col">0.05487</div>
                 </div>
                 <div class="row">
-                    <div class="col text-right text-muted">Low</div>
+                    <div class="col text-right text-muted">
+                        {{ 'marketTab.marketDetail.low' | translate }}
+                    </div>
                     <div class="col">0.05369</div>
                 </div>
             </div>
@@ -77,15 +83,17 @@
                             class="nav-link active"
                             data-toggle="tab"
                             href="#orderBook"
-                            >Order Book</a
                         >
+                            {{ 'marketTab.marketDetail.orderBook' | translate }}
+                        </a>
                     </li>
                     <li class="nav-item">
                         <a
                             class="nav-link"
                             data-toggle="tab"
                             href="#marketHistory"
-                            >Market History</a
+                            >{{ 'marketTab.marketDetail.marketHistory' |
+                            translate }}</a
                         >
                     </li>
                 </ul>
@@ -103,7 +111,10 @@
                                 >
                                     <thead class="thead-inverse text-muted">
                                         <tr>
-                                            <th colspan="2">Bid</th>
+                                            <th colspan="2">
+                                                {{ 'marketTab.marketDetail.bid'
+                                                | translate }}
+                                            </th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -128,7 +139,10 @@
                                 >
                                     <thead class="thead-inverse text-muted">
                                         <tr>
-                                            <th colspan="2">Ask</th>
+                                            <th colspan="2">
+                                                {{ 'marketTab.marketDetail.ask'
+                                                | translate }}
+                                            </th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -160,10 +174,19 @@
                                 >
                                     <thead>
                                         <tr>
-                                            <th class="text-muted">Time</th>
-                                            <th class="text-muted">Price</th>
+                                            <th class="text-muted">
+                                                {{ 'marketTab.marketDetail.time'
+                                                | translate }}
+                                            </th>
+                                            <th class="text-muted">
+                                                {{
+                                                'marketTab.marketDetail.price' |
+                                                translate }}
+                                            </th>
                                             <th class="text-muted text-right">
-                                                Quantity
+                                                {{
+                                                'marketTab.marketDetail.quantity'
+                                                | translate }}
                                             </th>
                                         </tr>
                                     </thead>
@@ -201,18 +224,18 @@
         <div class="row">
             <div class="col pr-1">
                 <button
-                    class="btn rounded-0 btn-block btn-sm btn-buy"
+                    class="btn text-uppercase rounded-0 btn-block btn-sm btn-buy"
                     (click)="onClickNavigateExchangeTrade()"
                 >
-                    BUY
+                    {{ 'marketTab.marketDetail.buy' | translate }}
                 </button>
             </div>
             <div class="col pl-1">
                 <button
-                    class="btn rounded-0 btn-block btn-sm btn-sell"
+                    class="btn text-uppercase rounded-0 btn-block btn-sm btn-sell"
                     (click)="onClickNavigateExchangeTrade()"
                 >
-                    SELL
+                    {{ 'marketTab.marketDetail.sell' | translate }}
                 </button>
             </div>
         </div>

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { randomNumberInRange, roundNumberNearest } from '../../controls';
+import { CustomTranslateService } from '../../services/custom-translate.service';
 
 @Component({
     selector: 'app-market-detail',
@@ -25,6 +26,7 @@ export class MarketDetailPage implements OnInit {
         private activatedRoute: ActivatedRoute,
         private router: Router,
         private sanitizer: DomSanitizer,
+        private customTranslateService: CustomTranslateService,
     ) {}
 
     ngOnInit() {

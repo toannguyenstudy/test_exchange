@@ -90,5 +90,29 @@
             "swipeLeft": "* Swipe <span class='text-warning'>left</span> to delete select order opening",
             "swipeRight": "* Swipe <span class='text-warning'>right</span> to show order opening time"
         }
+    },
+    "marketTab": {
+        "public": {
+            "market": "Market"
+        },
+        "homePage": {
+            "lastPrice": "Last Price",
+            "change": "Change 24h",
+            "vol": "Vol"
+        },
+        "marketDetail": {
+            "vol": "Vol",
+            "high": "High",
+            "low": "Low",
+            "orderBook": "Order Book",
+            "marketHistory": "Market History",
+            "bid": "Bid",
+            "ask": "Ask",
+            "time": "Time",
+            "price": "Price",
+            "quantity": "Quantity",
+            "buy": "Buy",
+            "sell": "Sell"
+        }
     }
 }
