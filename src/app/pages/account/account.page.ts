@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { LoginPage } from '../login/login.page';
 import { CustomTranslateService } from '../../services/custom-translate.service';
+import { LoadingController } from '@ionic/angular';
 
 @Component({
     selector: 'app-account',
@@ -12,6 +13,7 @@ export class AccountPage implements OnInit {
     constructor(
         private modalController: ModalController,
         private customeTranslateService: CustomTranslateService,
+        private loadingController: LoadingController,
     ) {}
 
     ngOnInit() {}
@@ -28,7 +30,22 @@ export class AccountPage implements OnInit {
         return await modal.present();
     }
 
+    async presentLoading() {
+        const loading = await this.loadingController.create({
+            message: 'Please wait..',
+            duration: 2000,
+        });
+        await loading.present();
+
+        const { role, data } = await loading.onDidDismiss();
+
+        console.log('Loading dismissed!');
+    }
+
     changeLanguage(lang) {
-        this.customeTranslateService.changeDefaultLanguage(lang);
+        this.presentLoading();
+        setTimeout(() => {
+            this.customeTranslateService.changeDefaultLanguage(lang);
+        }, 2000);
     }
 }
