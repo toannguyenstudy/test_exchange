@@ -1,0 +1,52 @@
+{
+    "accountTab": {
+        "homePage": {
+            "title": "Tài khoản",
+            "setting": "Cài đặt",
+            "help": "Giải đáp và hỗ trợ",
+            "about": "Về chúng tôi",
+            "signInOrRegister": "Đăng nhập hoặc đăng ký"
+        },
+        "loginPage": {
+            "welcome": "Chào mừng bạn!",
+            "enterEmail": "nhập email",
+            "password": "Mật khẩu",
+            "enterPassword": "nhập mật khẩu",
+            "forgotPassword": "Quên mật khẩu",
+            "signIn": "Đăng nhập",
+            "noAccountYet": "Chưa có tài khoản",
+            "register": "Đăng ký"
+        },
+        "registerPage": {
+            "login": "Đăng nhập",
+            "enterEmail": "nhập email",
+            "password": "Mật khẩu",
+            "enterPassword": "nhập mật khẩu",
+            "passwordAtleast8Character": "mật khẩu phải có ít nhất 8 ký tự",
+            "reference": "Mã giới thiệu",
+            "optional": "tuỳ chọn",
+            "enterReference": "nhập mã giới thiệu",
+            "iAgreeWith": "Tôi đồng ý với",
+            "theTermOfUse": "điều khoản sử dụng",
+            "register": "Đăng ký",
+            "accountRegister": "Đã có tải khoản"
+        }
+    },
+    "walletTab": {
+        "homePage": {
+            "enterCoinWallet": "nhập mã tiền",
+            "priceEstimate": "Giá trị ước tính"
+        },
+        "balancePage": {
+            "wallet": "Ví tiền",
+            "balance": "Số dư",
+            "total": "Tổng cộng",
+            "available": "Khả dụng",
+            "inOrder": "Đang đặt",
+            "equityValue": "Giá trị vốn",
+            "gotoExchangeTrade": "Đến trang giao dịch",
+            "deposit": "Nạp",
+            "withdraw": "Rút"
+        }
+    }
+}

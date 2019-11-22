@@ -6,21 +6,23 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { BalancePage } from './balance.page';
+import { SharedModule } from 'src/app/shared.module';
 
 const routes: Routes = [
-  {
-    path: '',
-    component: BalancePage
-  }
+    {
+        path: '',
+        component: BalancePage,
+    },
 ];
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    RouterModule.forChild(routes)
-  ],
-  declarations: [BalancePage]
+    imports: [
+        CommonModule,
+        FormsModule,
+        IonicModule,
+        RouterModule.forChild(routes),
+        SharedModule,
+    ],
+    declarations: [BalancePage],
 })
 export class BalancePageModule {}

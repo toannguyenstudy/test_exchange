@@ -1,0 +1,52 @@
+{
+    "accountTab": {
+        "homePage": {
+            "title": "Account",
+            "setting": "Setting",
+            "help": "Help and Support",
+            "about": "About us",
+            "signInOrRegister": "LogIn or Register"
+        },
+        "loginPage": {
+            "welcome": "Welcome Back!",
+            "enterEmail": "enter email",
+            "password": "Password",
+            "enterPassword": "enter password",
+            "forgotPassword": "Forgot password",
+            "signIn": "Log In",
+            "noAccountYet": "Haven't account yet",
+            "register": "Register"
+        },
+        "registerPage": {
+            "login": "Log In",
+            "enterEmail": "enter email",
+            "password": "Password",
+            "enterPassword": "enter password",
+            "passwordAtleast8Character": "Password at least 8 character",
+            "reference": "Reference",
+            "optional": "Optional",
+            "enterReference": "enter reference",
+            "iAgreeWith": "I agree with",
+            "theTermOfUse": "the term of use",
+            "register": "Register",
+            "accountRegister": "Have account"
+        }
+    },
+    "walletTab": {
+        "homePage": {
+            "enterCoinWallet": "enter coin",
+            "priceEstimate": "Price estimate"
+        },
+        "balancePage": {
+            "wallet": "Wallet",
+            "balance": "Balance",
+            "total": "Total",
+            "available": "Available",
+            "inOrder": "In order",
+            "equityValue": "Equity value",
+            "gotoExchangeTrade": "Go to exchange trade",
+            "deposit": "Deposit",
+            "withdraw": "Withdraw"
+        }
+    }
+}

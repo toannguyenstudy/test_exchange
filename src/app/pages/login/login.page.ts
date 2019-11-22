@@ -4,13 +4,20 @@ import { RegisterPage } from '../register/register.page';
 import { myEnterAnimation } from '../../animations/enter';
 import { myLeaveAnimation } from '../../animations/leave';
 
+import { TranslateService } from '@ngx-translate/core';
+
 @Component({
     selector: 'app-login',
     templateUrl: './login.page.html',
     styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
-    constructor(private modalController: ModalController) {}
+    constructor(
+        private modalController: ModalController,
+        private translateService: TranslateService,
+    ) {
+        this.translateService.setDefaultLang('vn');
+    }
 
     ngOnInit() {}
 

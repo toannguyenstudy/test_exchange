@@ -6,21 +6,23 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { AccountPage } from './account.page';
+import { SharedModule } from 'src/app/shared.module';
 
 const routes: Routes = [
-  {
-    path: '',
-    component: AccountPage
-  }
+    {
+        path: '',
+        component: AccountPage,
+    },
 ];
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    RouterModule.forChild(routes)
-  ],
-  declarations: [AccountPage]
+    imports: [
+        CommonModule,
+        FormsModule,
+        IonicModule,
+        RouterModule.forChild(routes),
+        SharedModule,
+    ],
+    declarations: [AccountPage],
 })
 export class AccountPageModule {}

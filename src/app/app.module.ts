@@ -11,6 +11,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { LoginPageModule } from './pages/login/login.module';
 import { RegisterPageModule } from './pages/register/register.module';
 
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+export function HttpLoaderFactory(http: HttpClient) {
+    return new TranslateHttpLoader(http);
+}
+
 @NgModule({
     declarations: [AppComponent],
     entryComponents: [],
@@ -20,6 +27,14 @@ import { RegisterPageModule } from './pages/register/register.module';
         AppRoutingModule,
         LoginPageModule,
         RegisterPageModule,
+        HttpClientModule,
+        TranslateModule.forRoot({
+            loader: {
+                provide: TranslateLoader,
+                useFactory: HttpLoaderFactory,
+                deps: [HttpClient],
+            },
+        }),
     ],
     providers: [
         StatusBar,

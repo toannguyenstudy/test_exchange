@@ -1,7 +1,9 @@
 <ion-content height="100%" style="--overflow: hidden;">
     <div class="container pt-3">
         <div class="row">
-            <ion-searchbar placeholder="fill coin wallet"></ion-searchbar>
+            <ion-searchbar
+                placeholder="{{'walletTab.homePage.enterCoinWallet' | translate}}"
+            ></ion-searchbar>
         </div>
 
         <div class="row mt-2">
@@ -9,7 +11,8 @@
                 <ion-list lines="inset">
                     <ion-list-header>
                         <ion-label class="font-weight-bold"
-                            >Price Esimate</ion-label
+                            >{{'walletTab.homePage.priceEstimate' |
+                            translate}}</ion-label
                         >
                         <ion-label class="text-right pr-2"
                             >{{111280000 | number}}</ion-label

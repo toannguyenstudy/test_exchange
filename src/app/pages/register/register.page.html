@@ -2,7 +2,10 @@
     <ion-toolbar>
         <ion-buttons (click)="onDismiss()" slot="start">
             <i class="fal fa-lg fa-chevron-left"></i>
-            <ion-label>&nbsp; Log In</ion-label>
+            <ion-label
+                >&nbsp; {{'accountTab.registerPage.login' |
+                translate}}</ion-label
+            >
         </ion-buttons>
     </ion-toolbar>
 </ion-header>
@@ -11,7 +14,9 @@
     <div class="container d-flex flex-column">
         <div class="row">
             <div class="col">
-                <h1 style="font-size: 2.5rem;">Register</h1>
+                <h1 style="font-size: 2.5rem;">
+                    {{'accountTab.registerPage.register' | translate}}
+                </h1>
             </div>
         </div>
         <div class="row">
@@ -21,38 +26,47 @@
                     <input
                         type="email"
                         class="form-control form-control-lg text-white bg-dark rounded-0"
-                        placeholder="Enter email"
+                        placeholder="{{'accountTab.registerPage.enterEmail' | translate}}"
                     />
                 </div>
                 <div class="form-group">
-                    <label>Password</label>
+                    <label
+                        >{{'accountTab.registerPage.password' |
+                        translate}}</label
+                    >
                     <input
                         type="password"
                         class="form-control form-control-lg text-white bg-dark rounded-0"
-                        placeholder="Password"
+                        placeholder="{{'accountTab.registerPage.enterPassword' | translate}}"
                     />
                     <small class="form-text text-muted"
-                        >Password must have at least 8 character</small
+                        >{{'accountTab.registerPage.passwordAtleast8Character' |
+                        translate}}</small
                     >
                 </div>
 
                 <div class="form-group">
-                    <label>Reference (Optional)</label>
+                    <label>
+                        {{'accountTab.registerPage.reference' | translate}}
+                        &nbsp; ({{'accountTab.registerPage.optional' |
+                        translate}})
+                    </label>
                     <input
                         type="text"
                         class="form-control form-control-lg text-white bg-dark rounded-0"
-                        placeholder="Reference"
+                        placeholder="{{'accountTab.registerPage.enterReference' | translate}}"
                     />
                 </div>
 
                 <div class="form-group form-check custom-checkbox">
                     <input type="checkbox" class="form-check-input" />
                     <label class="form-check-label"
-                        >I agree with
+                        >{{'accountTab.registerPage.iAgreeWith' | translate}}
                         <span
                             style="color: #ffce00; text-decoration: underline;"
                         >
-                            the terms of use
+                            {{'accountTab.registerPage.theTermOfUse' |
+                            translate}}
                         </span>
                     </label>
                 </div>
@@ -62,14 +76,14 @@
                     class="btn btn-lg text-light btn-block rounded-0 border-0"
                     style="background: #898a96;"
                 >
-                    Register
+                    {{'accountTab.registerPage.register' | translate}}
                 </button>
                 <p class="text-center mt-3">
-                    Account Registered?
+                    {{'accountTab.registerPage.accountRegister' | translate}}?
                     <span
                         (click)="onDismiss()"
                         style="color: #ffce00; text-decoration: underline;"
-                        >Log In</span
+                        >{{'accountTab.registerPage.login' | translate}}</span
                     >
                 </p>
             </div>

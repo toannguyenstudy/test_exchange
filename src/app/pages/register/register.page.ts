@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
     selector: 'app-register',
@@ -7,7 +8,12 @@ import { ModalController } from '@ionic/angular';
     styleUrls: ['./register.page.scss'],
 })
 export class RegisterPage implements OnInit {
-    constructor(private modalController: ModalController) {}
+    constructor(
+        private modalController: ModalController,
+        private translateService: TranslateService,
+    ) {
+        this.translateService.setDefaultLang('vn');
+    }
 
     ngOnInit() {}
 
