@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
+// import { TranslateService } from '@ngx-translate/core';
+import { CustomTranslateService } from '../../services/custom-translate.service';
 
 @Component({
     selector: 'app-wallet',
@@ -7,9 +8,7 @@ import { TranslateService } from '@ngx-translate/core';
     styleUrls: ['./wallet.page.scss'],
 })
 export class WalletPage implements OnInit {
-    constructor(private translateService: TranslateService) {
-        this.translateService.setDefaultLang('vn');
-    }
+    constructor(private customeTranslateService: CustomTranslateService) {}
 
     ngOnInit() {}
 }

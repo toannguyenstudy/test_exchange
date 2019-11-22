@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
+import { CustomTranslateService } from '../../services/custom-translate.service';
 
 @Component({
     selector: 'app-balance',
@@ -7,9 +7,7 @@ import { TranslateService } from '@ngx-translate/core';
     styleUrls: ['./balance.page.scss'],
 })
 export class BalancePage implements OnInit {
-    constructor(private translateService: TranslateService) {
-        this.translateService.setDefaultLang('vn');
-    }
+    constructor(private customeTranslateService: CustomTranslateService) {}
 
     ngOnInit() {}
 }

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { LoginPage } from '../login/login.page';
-import { TranslateService } from '@ngx-translate/core';
+import { CustomTranslateService } from '../../services/custom-translate.service';
 
 @Component({
     selector: 'app-account',
@@ -11,16 +11,10 @@ import { TranslateService } from '@ngx-translate/core';
 export class AccountPage implements OnInit {
     constructor(
         private modalController: ModalController,
-        private translateService: TranslateService,
-    ) {
-        this.translateService.setDefaultLang('vn');
-    }
+        private customeTranslateService: CustomTranslateService,
+    ) {}
 
     ngOnInit() {}
-
-    selectLanguage(lang) {
-        this.translateService.setDefaultLang(lang);
-    }
 
     async openLoginModal() {
         const modal = await this.modalController.create({
