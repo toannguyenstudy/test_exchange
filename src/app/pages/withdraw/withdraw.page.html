@@ -3,11 +3,13 @@
         <ion-buttons slot="start">
             <ion-back-button
                 defaultHref="/balance"
-                text="Balance"
+                text="{{ 'walletTab.withdrawPage.balance' | translate }}"
                 color="medium"
             ></ion-back-button>
         </ion-buttons>
-        <ion-title>Withdrawal</ion-title>
+        <ion-title
+            >{{ 'walletTab.withdrawPage.withdrawal' | translate }}</ion-title
+        >
     </ion-toolbar>
 </ion-header>
 
@@ -31,7 +33,10 @@
         <!-- #region Limit withdraw in 24h -->
         <div class="row limit-withdraw mt-4">
             <div class="col-10">
-                <p class="text-muted">24h Withdrawal Limit: 0 / 20 ETH</p>
+                <p class="text-muted">
+                    {{ 'walletTab.withdrawPage.withdrawLimit' |
+                    translate:{'name': '24h'} }}: 0 / 20 ETH
+                </p>
             </div>
             <div class="col-2 text-right">
                 <i class="far fa-question-circle" style="color: #ffce00"></i>
@@ -43,7 +48,10 @@
         <div class="row input-address">
             <div class="col p-0">
                 <ion-item>
-                    <ion-label position="stacked">Address</ion-label>
+                    <ion-label position="stacked"
+                        >{{ 'walletTab.withdrawPage.address' | translate
+                        }}</ion-label
+                    >
                     <ion-input></ion-input>
                     <button
                         slot="end"
@@ -66,7 +74,10 @@
         <div class="row input-amount mt-3">
             <div class="col p-0">
                 <ion-item>
-                    <ion-label position="stacked">Amount</ion-label>
+                    <ion-label position="stacked"
+                        >{{ 'walletTab.withdrawPage.amount' | translate
+                        }}</ion-label
+                    >
                     <ion-input placeholder="0 ETH"></ion-input>
                     <button
                         slot="end"
@@ -76,7 +87,8 @@
                     </button>
                 </ion-item>
                 <p class="text-muted ml-3" style="font-size: smaller;">
-                    Minimum Withdrawal: <span class="text-white">0.01ETH</span>
+                    {{ 'walletTab.withdrawPage.minimumWithdrawal' | translate
+                    }}: <span class="text-white">0.01ETH</span>
                 </p>
             </div>
         </div>
@@ -84,9 +96,13 @@
 
         <!-- #region Show summary info of Fee, total get... -->
         <div class="row actual-amount">
-            <div class="col-6 text-muted">Fee</div>
+            <div class="col-6 text-muted">
+                {{ 'walletTab.withdrawPage.fee' | translate }}
+            </div>
             <div class="col-6 text-right">0.005 ETH</div>
-            <div class="col-6 text-muted">Actual amount</div>
+            <div class="col-6 text-muted">
+                {{ 'walletTab.withdrawPage.actualAmount' | translate }}
+            </div>
             <div class="col-6 text-right">0 ETH</div>
         </div>
         <!-- #endregion -->
@@ -95,6 +111,8 @@
 
 <ion-footer>
     <ion-toolbar>
-        <button class="btn btn-block btn-lg btn-withdraw">Withdraw</button>
+        <button class="btn btn-block btn-lg btn-withdraw">
+            {{ 'walletTab.withdrawPage.withdraw' | translate }}
+        </button>
     </ion-toolbar>
 </ion-footer>

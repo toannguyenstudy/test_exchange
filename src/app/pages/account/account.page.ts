@@ -27,4 +27,8 @@ export class AccountPage implements OnInit {
 
         return await modal.present();
     }
+
+    changeLanguage(lang) {
+        this.customeTranslateService.changeDefaultLanguage(lang);
+    }
 }

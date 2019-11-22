@@ -47,6 +47,25 @@
             "gotoExchangeTrade": "Đến trang giao dịch",
             "deposit": "Nạp",
             "withdraw": "Rút"
+        },
+        "depositPage": {
+            "balance": "Số dư",
+            "deposit": "Nạp",
+            "depositAddress": "Địa chỉ ví nạp {{coin}}",
+            "copyAddress": "Sao chép ví",
+            "important": "Chú ý",
+            "importantContent": "Chỉ gửi {{coin}} đến địa chỉ ví này. Nếu gửi Coin khác hoặc mã Token khác đến ví này có thể làm mất hết số coin đó. Bạn nên lưu ý!"
+        },
+        "withdrawPage": {
+            "balance": "Số dư",
+            "withdrawal": "Rút",
+            "withdrawLimit": "Giới hạn rút {{name}}",
+            "address": "Địa chỉ ví",
+            "amount": "Số lượng",
+            "minimumWithdrawal": "Số lượng rút tối thiểu",
+            "fee": "Phí rút",
+            "actualAmount": "Số lượng nhận được",
+            "withdraw": "Rút"
         }
     }
 }

@@ -3,11 +3,11 @@
         <ion-buttons slot="start">
             <ion-back-button
                 defaultHref="/balance"
-                text="Balance"
+                text="{{'walletTab.depositPage.balance' | translate}}"
                 color="medium"
             ></ion-back-button>
         </ion-buttons>
-        <ion-title>Deposit</ion-title>
+        <ion-title>{{'walletTab.depositPage.deposit' | translate}}</ion-title>
     </ion-toolbar>
 </ion-header>
 
@@ -31,7 +31,10 @@
         <!-- #region Image of qrcode and coin address -->
         <div class="row">
             <div class="col">
-                <p class="text-muted">ETH Deposit Address</p>
+                <p class="text-muted">
+                    {{'walletTab.depositPage.depositAddress' |
+                    translate:{'coin': 'ETH'} }}
+                </p>
                 <div class="img-qr text-center p-4">
                     <!-- <img
                         src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=hihihehe"
@@ -48,7 +51,7 @@
                 </p>
                 <div class="text-center">
                     <button class="btn text-white btn-copy">
-                        Copy Address
+                        {{'walletTab.depositPage.copyAddress' | translate}}
                     </button>
                 </div>
             </div>
@@ -58,12 +61,13 @@
         <!-- #region Important info -->
         <div class="row important">
             <div class="col">
-                <p class="text-muted">Important</p>
+                <p class="text-muted">
+                    {{'walletTab.depositPage.important' | translate}}
+                </p>
                 <div>
                     <p>
-                        Send only ETH to this deposit address. Sending any other
-                        coin or token to this address may result in the loss of
-                        your deposit
+                        {{'walletTab.depositPage.importantContent' | translate:
+                        {'coin': 'ETH'} }}
                     </p>
                 </div>
             </div>

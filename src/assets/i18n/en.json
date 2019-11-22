@@ -47,6 +47,25 @@
             "gotoExchangeTrade": "Go to exchange trade",
             "deposit": "Deposit",
             "withdraw": "Withdraw"
+        },
+        "depositPage": {
+            "balance": "Balance",
+            "deposit": "Deposit",
+            "depositAddress": "{{coin}} Deposit Address",
+            "copyAddress": "Copy Address",
+            "important": "Important",
+            "importantContent": "Send only {{coin}} to this deposit address. Sending any other coin or token to this address may result in the loss of your deposit!"
+        },
+        "withdrawPage": {
+            "balance": "Balance",
+            "withdrawal": "Withrawal",
+            "withdrawLimit": "{{name}} Withdrawal Limit",
+            "address": "Address",
+            "amount": "Amount",
+            "minimumWithdrawal": "Minimun Withdrawal",
+            "fee": "Fee",
+            "actualAmount": "Actual amount",
+            "withdraw": "Withdraw"
         }
     }
 }

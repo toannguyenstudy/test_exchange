@@ -7,6 +7,7 @@ import { QRCodeModule } from 'angularx-qrcode';
 import { IonicModule } from '@ionic/angular';
 
 import { DepositPage } from './deposit.page';
+import { SharedModule } from 'src/app/shared.module';
 
 const routes: Routes = [
     {
@@ -22,6 +23,7 @@ const routes: Routes = [
         IonicModule,
         QRCodeModule,
         RouterModule.forChild(routes),
+        SharedModule,
     ],
     declarations: [DepositPage],
 })
