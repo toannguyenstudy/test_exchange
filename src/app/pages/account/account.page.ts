@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { LoginPage } from '../login/login.page';
 import { CustomTranslateService } from '../../services/custom-translate.service';
+import { TranslateService } from '@ngx-translate/core';
+
 import { LoadingController } from '@ionic/angular';
 
 @Component({
@@ -10,13 +12,18 @@ import { LoadingController } from '@ionic/angular';
     styleUrls: ['./account.page.scss'],
 })
 export class AccountPage implements OnInit {
+    currentLanguage = '';
+
     constructor(
         private modalController: ModalController,
         private customeTranslateService: CustomTranslateService,
+        private translateService: TranslateService,
         private loadingController: LoadingController,
     ) {}
 
-    ngOnInit() {}
+    ngOnInit() {
+        this.currentLanguage = this.translateService.getDefaultLang();
+    }
 
     async openLoginModal() {
         const modal = await this.modalController.create({
@@ -30,22 +37,27 @@ export class AccountPage implements OnInit {
         return await modal.present();
     }
 
-    async presentLoading() {
+    async presentLoading(message) {
         const loading = await this.loadingController.create({
-            message: 'Please wait..',
+            message,
             duration: 2000,
         });
         await loading.present();
 
         const { role, data } = await loading.onDidDismiss();
-
-        console.log('Loading dismissed!');
     }
 
     changeLanguage(lang) {
-        this.presentLoading();
-        setTimeout(() => {
+        let currentLang = this.translateService.getDefaultLang();
+        let message = '';
+        if (currentLang == 'vn') message = 'Please wait in second!';
+        else if (currentLang == 'en') message = 'Xin đợi vài giấy!';
+        this.presentLoading(message).then(x => {
             this.customeTranslateService.changeDefaultLanguage(lang);
-        }, 2000);
+            this.currentLanguage = lang;
+        });
+        // setTimeout(() => {
+
+        // }, 2000);
     }
 }

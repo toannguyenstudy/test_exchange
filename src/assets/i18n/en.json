@@ -1,4 +1,10 @@
 {
+    "allTab": {
+        "market": "Market",
+        "exchange": "Exchange",
+        "wallet": "Wallet",
+        "account": "Account"
+    },
     "accountTab": {
         "homePage": {
             "title": "Account",

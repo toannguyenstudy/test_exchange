@@ -53,7 +53,15 @@
             </div>
         </div>
         <!-- #endregion -->
-        <ion-button (click)="changeLanguage('vn')">Vietnamese</ion-button>
-        <ion-button (click)="changeLanguage('en')">Tiếng Anh</ion-button>
+        <ion-button
+            (click)="changeLanguage('vn')"
+            [disabled]="currentLanguage=='vn'"
+            >Vietnamese</ion-button
+        >
+        <ion-button
+            (click)="changeLanguage('en')"
+            [disabled]="currentLanguage=='en'"
+            >Tiếng Anh</ion-button
+        >
     </div>
 </ion-content>

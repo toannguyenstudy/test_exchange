@@ -2,23 +2,25 @@
     <ion-tab-bar slot="bottom">
         <ion-tab-button tab="market">
             <i class="fas fa-2x fa-funnel-dollar"></i>
-            <ion-label>Market</ion-label>
+            <ion-label>
+                {{ 'allTab.market' | translate }}
+            </ion-label>
         </ion-tab-button>
 
         <ion-tab-button tab="exchange">
             <i class="fas fa-gavel fa-2x"></i>
-            <ion-label>Exchange</ion-label>
+            <ion-label>{{ 'allTab.exchange' | translate }}</ion-label>
         </ion-tab-button>
 
         <ion-tab-button tab="wallet">
             <i class="fas fa-wallet fa-2x"></i>
-            <ion-label>Wallet</ion-label>
+            <ion-label>{{ 'allTab.wallet' | translate }}</ion-label>
         </ion-tab-button>
 
         <ion-tab-button tab="account">
             <!-- <ion-icon name="contact"></ion-icon> -->
             <i class="fas fa-user-circle fa-2x"></i>
-            <ion-label>Account</ion-label>
+            <ion-label>{{ 'allTab.account' | translate }}</ion-label>
         </ion-tab-button>
     </ion-tab-bar>
 </ion-tabs>

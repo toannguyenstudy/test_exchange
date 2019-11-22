@@ -1,4 +1,10 @@
 {
+    "allTab": {
+        "market": "Thị Trường",
+        "exchange": "Giao Dịch",
+        "wallet": "Quỹ",
+        "account": "Tài Khoản"
+    },
     "accountTab": {
         "homePage": {
             "title": "Tài khoản",
