@@ -130,6 +130,10 @@
     // --ion-item-background: #1c1c1c;
     --ion-item-background: transparent;
     --ion-item-background-activated: #313131;
+
+    .text-muted {
+        color: var(--ion-color-step-650) !important;
+    }
 }
 
 .md body.dark {
