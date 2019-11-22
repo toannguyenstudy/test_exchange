@@ -1,98 +1,99 @@
 .buy-sell-order {
-  input {
-    background-color: #364352;
-    color: white;
-    border-color: #57637d;
-    border-radius: 0;
-    text-align: center;
-  }
+    input {
+        background-color: #364352;
+        color: white;
+        border-color: #57637d;
+        border-radius: 0;
+        text-align: center;
+    }
 
-  .input-group {
-    height: 25px;
-  }
-  .input-group * {
-    height: 100%;
-  }
+    .input-group {
+        height: 25px;
+    }
+    .input-group * {
+        height: 100%;
+    }
 
-  .input-group-prepend span {
-    background-color: #57637d;
-    color: #93aed6;
-    border: 0;
-    font-weight: bold;
-    border-radius: 0;
-    font-size: larger;
-  }
-  .input-group-append span {
-    background-color: #57637d;
-    color: #93aed6;
-    border: 0;
-    font-weight: bold;
-    border-radius: 0;
-    font-size: larger;
-  }
+    .input-group-prepend span {
+        background-color: #57637d;
+        color: #93aed6;
+        border: 0;
+        font-weight: bold;
+        border-radius: 0;
+        font-size: larger;
+    }
+    .input-group-append span {
+        background-color: #57637d;
+        color: #93aed6;
+        border: 0;
+        font-weight: bold;
+        border-radius: 0;
+        font-size: larger;
+    }
 
-  .btn {
-    border-radius: 0;
-    padding: 0;
-    height: 25px;
-  }
+    .btn {
+        border-radius: 0;
+        padding: 0;
+        height: 25px;
+    }
 
-  label {
-    font-size: smaller;
-    color: var(--ion-color-step-700);
-    margin-bottom: 0;
-  }
+    label {
+        font-size: smaller;
+        color: var(--ion-color-step-700);
+        margin-bottom: 0;
+    }
 }
 
 .buy-sell-order-table {
-  font-size: 0.8em;
+    font-size: 0.8em;
 
-  .col-6 {
-    padding: 0;
-  }
-  table {
-    background-color: #002742;
-    padding: 0;
-    tbody {
-      height: 200px;
-      overflow-y: auto;
-      display: block;
+    .col-6 {
+        padding: 0;
     }
-    thead {
-      display: block;
-    }
-    td,
-    th {
-      width: 100%;
+    table {
+        background-color: transparent;
+        padding: 0;
+
+        tbody {
+            height: 200px;
+            overflow-y: auto;
+            display: block;
+        }
+        thead {
+            display: block;
+        }
+        td,
+        th {
+            width: 100%;
+        }
+
+        td {
+            padding: 5px 12px;
+        }
+
+        th {
+            color: var(--ion-color-step-700);
+        }
     }
 
-    td {
-      padding: 5px 12px;
+    table.sell-table {
+        tbody tr td.price {
+            // color: #db026c;
+            color: #e2054f;
+            font-weight: bold;
+        }
     }
 
-    th {
-      color: var(--ion-color-step-700);
+    table.buy-table {
+        tbody tr td.price {
+            color: #08b83d;
+            font-weight: bold;
+        }
     }
-  }
-
-  table.sell-table {
-    tbody tr td.price {
-      // color: #db026c;
-      color: #e2054f;
-      font-weight: bold;
-    }
-  }
-
-  table.buy-table {
-    tbody tr td.price {
-      color: #08b83d;
-      font-weight: bold;
-    }
-  }
 }
 
 .decimal {
-  ion-list {
-    padding: 0;
-  }
+    ion-list {
+        padding: 0;
+    }
 }

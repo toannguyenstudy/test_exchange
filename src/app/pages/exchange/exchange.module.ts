@@ -9,6 +9,7 @@ import { ExchangePage } from './exchange.page';
 import { ExchangeTradeComponent } from 'src/app/components/exchange-trade/exchange-trade.component';
 import { ExchangeOpenOrderComponent } from 'src/app/components/exchange-open-order/exchange-open-order.component';
 import { ExchangeHistoryComponent } from 'src/app/components/exchange-history/exchange-history.component';
+import { SharedModule } from 'src/app/shared.module';
 
 const routes: Routes = [
     {
@@ -23,6 +24,7 @@ const routes: Routes = [
         FormsModule,
         IonicModule,
         RouterModule.forChild(routes),
+        SharedModule,
     ],
     declarations: [
         ExchangePage,

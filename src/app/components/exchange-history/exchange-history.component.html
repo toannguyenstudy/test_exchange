@@ -3,10 +3,18 @@
         <table class="table text-white">
             <thead class="thead-inverse">
                 <tr>
-                    <th>Type</th>
-                    <th>Price</th>
-                    <th>Amount</th>
-                    <th>Total</th>
+                    <th>
+                        {{ 'exchangeTab.public.type' | translate }}
+                    </th>
+                    <th>
+                        {{ 'exchangeTab.public.price' | translate }}
+                    </th>
+                    <th>
+                        {{ 'exchangeTab.public.amount' | translate }}
+                    </th>
+                    <th>
+                        {{ 'exchangeTab.public.total' | translate }}
+                    </th>
                 </tr>
             </thead>
             <tbody>
@@ -16,11 +24,13 @@
                         [attr.data-target]="'#order-' + order.id"
                     >
                         <td *ngIf="order.type == 1" class="text-success">
-                            Buy <i class="fas fa-arrow-up"></i>
+                            {{ 'exchangeTab.public.buy' | translate }}
+                            <i class="fas fa-arrow-up"></i>
                         </td>
 
                         <td *ngIf="order.type == 2" class="text-danger">
-                            Sell <i class="fas fa-arrow-down"></i>
+                            {{ 'exchangeTab.public.sell' | translate }}
+                            <i class="fas fa-arrow-down"></i>
                         </td>
                         <td>{{ order.price | number }}</td>
                         <td>{{ order.amount }}</td>

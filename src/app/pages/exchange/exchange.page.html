@@ -16,14 +16,18 @@
         style="justify-content: space-around;"
     >
         <li class="nav-item">
-            <a class="nav-link active" data-toggle="tab" href="#Trade">Trade</a>
+            <a class="nav-link active" data-toggle="tab" href="#Trade">
+                {{ 'exchangeTab.public.trade' | translate }}
+            </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#Open">Open Order</a>
+            <a class="nav-link" data-toggle="tab" href="#Open">
+                {{ 'exchangeTab.public.openOrder' | translate }}
+            </a>
         </li>
         <li class="nav-item">
             <a class="nav-link" data-toggle="tab" href="#History"
-                >Trade History</a
+                >{{ 'exchangeTab.public.tradeHistory' | translate }}</a
             >
         </li>
     </ul>

@@ -1,12 +1,22 @@
 <div class="open-order" style="padding-top: 20px; height: 100%">
     <ul class="nav nav-tabs" style="justify-content: space-around;">
         <li class="nav-item">
-            <a class="nav-link active" data-toggle="tab" href="#openSell"
-                >SELL</a
+            <a
+                class="nav-link text-uppercase active"
+                data-toggle="tab"
+                href="#openSell"
             >
+                {{ 'exchangeTab.public.sell' | translate }}
+            </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#openBuy">BUY</a>
+            <a
+                class="nav-link text-uppercase"
+                data-toggle="tab"
+                href="#openBuy"
+            >
+                {{ 'exchangeTab.public.buy' | translate }}
+            </a>
         </li>
     </ul>
 
@@ -19,9 +29,15 @@
                 <ng-container *ngIf="openOrdersSell.length > 0">
                     <ion-list lines="none">
                         <ion-list-header>
-                            <ion-label>Price</ion-label>
-                            <ion-label>Amount</ion-label>
-                            <ion-label>Total</ion-label>
+                            <ion-label>
+                                {{ 'exchangeTab.public.price' | translate }}
+                            </ion-label>
+                            <ion-label>
+                                {{ 'exchangeTab.public.amount' | translate }}
+                            </ion-label>
+                            <ion-label>
+                                {{ 'exchangeTab.public.total' | translate }}
+                            </ion-label>
                         </ion-list-header>
 
                         <div class="list-sell-order">
@@ -58,15 +74,27 @@
                         </div>
                     </ion-list>
 
-                    <ion-label>
-                        * Swipe <span style="color: orange">left</span> to
-                        delete select order opening.
-                    </ion-label>
-                    <br />
-                    <ion-label>
-                        * Swipe <span style="color: orange">right</span> to show
-                        order open time.
-                    </ion-label>
+                    <p
+                        class="text-center mb-0"
+                        [innerHTML]="
+                            'exchangeTab.exchangeOpenOrder.swipeLeft'
+                                | translate
+                        "
+                    >
+                        <!-- * Swipe <span style="color: orange">left</span> to
+                        delete select order opening. -->
+                    </p>
+
+                    <p
+                        class="text-center mb-0"
+                        [innerHTML]="
+                            'exchangeTab.exchangeOpenOrder.swipeRight'
+                                | translate
+                        "
+                    >
+                        <!-- * Swipe <span style="color: orange">right</span> to show
+                        order open time. -->
+                    </p>
                 </ng-container>
                 <!-- #endregion -->
 
@@ -92,9 +120,15 @@
                 <ng-container *ngIf="openOrdersBuy.length > 0">
                     <ion-list lines="none">
                         <ion-list-header>
-                            <ion-label>Price</ion-label>
-                            <ion-label>Amount</ion-label>
-                            <ion-label>Total</ion-label>
+                            <ion-label>
+                                {{ 'exchangeTab.public.price' | translate }}
+                            </ion-label>
+                            <ion-label>
+                                {{ 'exchangeTab.public.amount' | translate }}
+                            </ion-label>
+                            <ion-label>
+                                {{ 'exchangeTab.public.total' | translate }}
+                            </ion-label>
                         </ion-list-header>
 
                         <div class="list-sell-order">
@@ -131,15 +165,27 @@
                         </div>
                     </ion-list>
 
-                    <ion-label>
-                        * Swipe <span style="color: orange">left</span> to
-                        delete select order opening.
-                    </ion-label>
-                    <br />
-                    <ion-label>
-                        * Swipe <span style="color: orange">right</span> to show
-                        order open time.
-                    </ion-label>
+                    <p
+                        class="text-center mb-0"
+                        [innerHTML]="
+                            'exchangeTab.exchangeOpenOrder.swipeLeft'
+                                | translate
+                        "
+                    >
+                        <!-- * Swipe <span style="color: orange">left</span> to
+                        delete select order opening. -->
+                    </p>
+
+                    <p
+                        class="text-center mb-0"
+                        [innerHTML]="
+                            'exchangeTab.exchangeOpenOrder.swipeRight'
+                                | translate
+                        "
+                    >
+                        <!-- * Swipe <span style="color: orange">right</span> to show
+                        order open time. -->
+                    </p>
                 </ng-container>
 
                 <ng-container *ngIf="openOrdersBuy.length == 0">

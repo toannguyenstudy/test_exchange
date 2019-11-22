@@ -5,7 +5,7 @@
             "setting": "Setting",
             "help": "Help and Support",
             "about": "About us",
-            "signInOrRegister": "LogIn or Register"
+            "signInOrRegister": "SignIn or Register"
         },
         "loginPage": {
             "welcome": "Welcome Back!",
@@ -66,6 +66,29 @@
             "fee": "Fee",
             "actualAmount": "Actual amount",
             "withdraw": "Withdraw"
+        }
+    },
+    "exchangeTab": {
+        "public": {
+            "trade": "Trade",
+            "openOrder": "Open Order",
+            "tradeHistory": "Trade History",
+            "price": "Price",
+            "amount": "Amount",
+            "total": "Total",
+            "buy": "Buy",
+            "sell": "Sell",
+            "type": "Type"
+        },
+        "exchangeTrade": {
+            "decimal": "Decimal",
+            "default": "Default",
+            "digits": "Digits"
+        },
+        "exchangeOpenOrder": {
+            "delete": "Delete",
+            "swipeLeft": "* Swipe <span class='text-warning'>left</span> to delete select order opening",
+            "swipeRight": "* Swipe <span class='text-warning'>right</span> to show order opening time"
         }
     }
 }

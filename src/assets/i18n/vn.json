@@ -67,5 +67,28 @@
             "actualAmount": "Số lượng nhận được",
             "withdraw": "Rút"
         }
+    },
+    "exchangeTab": {
+        "public": {
+            "trade": "Giao dịch",
+            "openOrder": "Lệnh chờ",
+            "tradeHistory": "Lịch sử",
+            "price": "Giá",
+            "amount": "Số lượng",
+            "total": "Tổng",
+            "buy": "Mua",
+            "sell": "Bán",
+            "type": "Loại"
+        },
+        "exchangeTrade": {
+            "decimal": "Thập phân",
+            "default": "Mặc định",
+            "digits": "chữ số"
+        },
+        "exchangeOpenOrder": {
+            "delete": "Huỷ",
+            "swipeLeft": "* Vuốt sang <span class='text-warning'>trái</span> để huỷ lệnh đang chờ",
+            "swipeRight": "* Vuốt sang <span class='text-warning'>phải</span> để xem thời gian lệnh"
+        }
     }
 }
