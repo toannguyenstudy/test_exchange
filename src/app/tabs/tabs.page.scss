@@ -1,4 +1,5 @@
 ion-tab-button {
-    --color: #a4aab3;
+    --color: var(--ion-color-tab-icon);
     --color-selected: #f3bc07;
+    background: var(--ion-toolbar-background);
 }
