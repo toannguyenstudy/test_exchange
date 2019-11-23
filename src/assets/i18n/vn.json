@@ -84,7 +84,8 @@
             "total": "Tổng",
             "buy": "Mua",
             "sell": "Bán",
-            "type": "Loại"
+            "type": "Loại",
+            "complete": "Hoàn thành"
         },
         "exchangeTrade": {
             "decimal": "Thập phân",

@@ -22,7 +22,7 @@ ion-content {
             border-radius: 0;
             padding: 3px 4px;
             background-color: transparent;
-            color: #ffce00 !important;
+            color: var(--ion-color-main-yellow) !important;
         }
     }
 }
@@ -32,7 +32,7 @@ ion-footer {
         padding: 10px;
     }
     .btn-withdraw {
-        background: #c1d3e2;
+        background: var(--ion-color-background-button-withdraw);
         border-radius: 1px;
     }
 }

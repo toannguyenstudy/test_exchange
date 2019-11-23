@@ -6,8 +6,8 @@
 }
 
 .box select {
-    background-color: #002742;
-    color: white;
+    background-color: var(--ion-color-header-select-background);
+    // color: white;
     padding: 12px;
     width: 150px;
     border: none;
@@ -52,12 +52,12 @@
         border-right: 0 !important;
         border-left: 0 !important;
         background: transparent;
-        color: white;
+        color: var(--ion-color-navtab-text);
         font-size: small;
     }
 
     .nav-link.active {
-        color: #f3bc07;
-        border-bottom: #f3bc07 4px solid;
+        color: var(--ion-color-navtab-active);
+        border-bottom: var(--ion-color-navtab-active) 4px solid;
     }
 }

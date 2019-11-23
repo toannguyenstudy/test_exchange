@@ -1,6 +1,6 @@
 <div class="row mt-3">
     <div class="col p-0">
-        <table class="table text-white">
+        <table class="table">
             <thead class="thead-inverse">
                 <tr>
                     <th>
@@ -23,12 +23,12 @@
                         data-toggle="collapse"
                         [attr.data-target]="'#order-' + order.id"
                     >
-                        <td *ngIf="order.type == 1" class="text-success">
+                        <td *ngIf="order.type == 1" class="buy-type">
                             {{ 'exchangeTab.public.buy' | translate }}
                             <i class="fas fa-arrow-up"></i>
                         </td>
 
-                        <td *ngIf="order.type == 2" class="text-danger">
+                        <td *ngIf="order.type == 2" class="sell-type">
                             {{ 'exchangeTab.public.sell' | translate }}
                             <i class="fas fa-arrow-down"></i>
                         </td>
@@ -39,7 +39,7 @@
                     <div [attr.id]="'order-' + order.id" class="collapse">
                         <tr>
                             <td colspan="2" class="text-center p-0">
-                                Finished
+                                {{ 'exchangeTab.public.complete' | translate }}
                             </td>
                             <td colspan="2" class="text-center p-0 text-info">
                                 {{ order.date | date: 'dd/MM/yyyy hh:mm:ss' }}

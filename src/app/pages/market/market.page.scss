@@ -1,3 +1,7 @@
+table {
+    color: var(--ion-color-text);
+}
+
 table tbody tr td p {
     margin: 0;
 }
@@ -9,7 +13,7 @@ table thead tr th {
 
 .volumn {
     font-size: small;
-    color: var(--ion-color-step-800);
+    color: var(--ion-color-text-light);
 }
 
 .nav-tab-list {
@@ -28,12 +32,12 @@ table thead tr th {
         border-right: 0 !important;
         border-left: 0 !important;
         background: transparent;
-        color: white;
+        color: var(--ion-color-text);
         font-size: small;
     }
 
     .nav-link.active {
-        color: #f3bc07;
-        border-bottom: #f3bc07 4px solid;
+        color: var(--ion-color-main-yellow);
+        border-bottom: var(--ion-color-main-yellow) 4px solid;
     }
 }

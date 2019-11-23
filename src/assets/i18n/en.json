@@ -84,7 +84,8 @@
             "total": "Total",
             "buy": "Buy",
             "sell": "Sell",
-            "type": "Type"
+            "type": "Type",
+            "complete": "Complete"
         },
         "exchangeTrade": {
             "decimal": "Decimal",

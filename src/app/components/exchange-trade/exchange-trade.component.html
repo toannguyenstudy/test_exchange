@@ -127,9 +127,9 @@
     <div class="row mt-3 buy-sell-order-table">
         <!-- table for sell order -->
         <div class="col-6">
-            <table class="table table-dark table-borderless sell-table">
+            <table class="table table-borderless sell-table">
                 <thead>
-                    <tr>
+                    <tr class="text-muted">
                         <th class="text-left w-auto">
                             {{ 'exchangeTab.public.price' | translate }}(VND)
                         </th>
@@ -151,7 +151,7 @@
                         <td class="text-left price">
                             {{ order.price | number }}
                         </td>
-                        <td class="text-right">
+                        <td class="text-right amount">
                             {{ order.amount | number: '1.4' }}
                         </td>
                     </tr>
@@ -165,9 +165,9 @@
 
         <!-- table for buy order -->
         <div class="col-6">
-            <table class="table table-dark table-borderless buy-table">
+            <table class="table table-borderless buy-table">
                 <thead>
-                    <tr>
+                    <tr class="text-muted">
                         <th class="text-left w-auto">
                             {{ 'exchangeTab.public.price' | translate }}(VND)
                         </th>
@@ -188,7 +188,7 @@
                         <td class="text-left price">
                             {{ order.price | number }}
                         </td>
-                        <td class="text-right">
+                        <td class="text-right amount">
                             {{ order.amount | number: '1.4' }}
                         </td>
                     </tr>

@@ -1,5 +1,6 @@
 ion-list {
     ion-list-header {
-        --background: #3559af;
+        --background: var(--ion-color-background-title);
+        color: var(--ion-text-color);
     }
 }

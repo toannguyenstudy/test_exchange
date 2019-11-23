@@ -1,8 +1,8 @@
 .buy-sell-order {
     input {
-        background-color: #364352;
-        color: white;
-        border-color: #57637d;
+        background-color: var(--ion-color-all-input);
+        color: var(--ion-color-text);
+        border-color: var(--ion-color-all-input-border);
         border-radius: 0;
         text-align: center;
     }
@@ -15,16 +15,16 @@
     }
 
     .input-group-prepend span {
-        background-color: #57637d;
-        color: #93aed6;
+        background-color: var(--ion-color-all-input-prepend-append);
+        color: var(--ion-color-all-input-prepend-append-text);
         border: 0;
         font-weight: bold;
         border-radius: 0;
         font-size: larger;
     }
     .input-group-append span {
-        background-color: #57637d;
-        color: #93aed6;
+        background-color: var(--ion-color-all-input-prepend-append);
+        color: var(--ion-color-all-input-prepend-append-text);
         border: 0;
         font-weight: bold;
         border-radius: 0;
@@ -39,7 +39,6 @@
 
     label {
         font-size: smaller;
-        color: var(--ion-color-step-700);
         margin-bottom: 0;
     }
 }
@@ -58,6 +57,9 @@
             height: 200px;
             overflow-y: auto;
             display: block;
+            .amount {
+                color: var(--ion-color-text);
+            }
         }
         thead {
             display: block;
@@ -70,23 +72,19 @@
         td {
             padding: 5px 12px;
         }
-
-        th {
-            color: var(--ion-color-step-700);
-        }
     }
 
     table.sell-table {
         tbody tr td.price {
             // color: #db026c;
-            color: #e2054f;
+            color: var(--ion-sell-color);
             font-weight: bold;
         }
     }
 
     table.buy-table {
         tbody tr td.price {
-            color: #08b83d;
+            color: var(--ion-buy-color);
             font-weight: bold;
         }
     }
@@ -95,5 +93,8 @@
 .decimal {
     ion-list {
         padding: 0;
+        ion-item {
+            --background: transparent !important;
+        }
     }
 }
