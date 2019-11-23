@@ -1,6 +1,8 @@
 <ion-header>
     <ion-toolbar>
-        <ion-title>{{"accountTab.homePage.title" | translate}}</ion-title>
+        <ion-title class="text-uppercase"
+            >{{"accountTab.homePage.title" | translate}}</ion-title
+        >
     </ion-toolbar>
 </ion-header>
 
@@ -62,6 +64,16 @@
             (click)="changeLanguage('en')"
             [disabled]="currentLanguage=='en'"
             >Tiếng Anh</ion-button
+        >
+        <ion-button
+            (click)="changeTheme('dark')"
+            [disabled]="currentTheme=='dark'"
+            >Dark mode</ion-button
+        >
+        <ion-button
+            (click)="changeTheme('light')"
+            [disabled]="currentTheme=='light'"
+            >Light mode</ion-button
         >
     </div>
 </ion-content>

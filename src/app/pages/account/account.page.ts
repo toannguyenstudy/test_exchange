@@ -5,6 +5,7 @@ import { CustomTranslateService } from '../../services/custom-translate.service'
 import { TranslateService } from '@ngx-translate/core';
 
 import { LoadingController } from '@ionic/angular';
+import { CustomThemeService } from '../../services/custom-theme.service';
 
 @Component({
     selector: 'app-account',
@@ -13,11 +14,13 @@ import { LoadingController } from '@ionic/angular';
 })
 export class AccountPage implements OnInit {
     currentLanguage = '';
+    currentTheme = 'dark';
 
     constructor(
         private modalController: ModalController,
         private customeTranslateService: CustomTranslateService,
         private translateService: TranslateService,
+        private customThemeService: CustomThemeService,
         private loadingController: LoadingController,
     ) {}
 
@@ -51,7 +54,7 @@ export class AccountPage implements OnInit {
         let currentLang = this.translateService.getDefaultLang();
         let message = '';
         if (currentLang == 'vn') message = 'Please wait in second!';
-        else if (currentLang == 'en') message = 'Xin đợi vài giấy!';
+        else if (currentLang == 'en') message = 'Vui lòng chờ trong giây lát!';
         this.presentLoading(message).then(x => {
             this.customeTranslateService.changeDefaultLanguage(lang);
             this.currentLanguage = lang;
@@ -59,5 +62,22 @@ export class AccountPage implements OnInit {
         // setTimeout(() => {
 
         // }, 2000);
+    }
+
+    changeTheme(theme) {
+        let currentLang = this.translateService.getDefaultLang();
+        let message = '';
+        if (currentLang == 'en') message = 'Please wait in second!';
+        else if (currentLang == 'vn') message = 'Vui lòng chờ trong giây lát!';
+
+        this.presentLoading(message).then(x => {
+            if (theme == 'light') {
+                this.customThemeService.enableLightTheme();
+                this.currentTheme = 'light';
+            } else {
+                this.customThemeService.enableDarkTheme();
+                this.currentTheme = 'dark';
+            }
+        });
     }
 }

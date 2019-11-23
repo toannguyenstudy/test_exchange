@@ -15,6 +15,7 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { CustomTranslateService } from './services/custom-translate.service';
+import { CustomThemeService } from './services/custom-theme.service';
 export function HttpLoaderFactory(http: HttpClient) {
     return new TranslateHttpLoader(http);
 }
@@ -42,6 +43,7 @@ export function HttpLoaderFactory(http: HttpClient) {
         SplashScreen,
         { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
         CustomTranslateService,
+        CustomThemeService,
     ],
     bootstrap: [AppComponent],
 })
