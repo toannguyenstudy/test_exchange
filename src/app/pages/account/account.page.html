@@ -58,22 +58,23 @@
         <ion-button
             (click)="changeLanguage('vn')"
             [disabled]="currentLanguage=='vn'"
-            >Vietnamese</ion-button
+            >{{ 'language.vietnamese' | translate }}</ion-button
         >
         <ion-button
             (click)="changeLanguage('en')"
             [disabled]="currentLanguage=='en'"
-            >Tiếng Anh</ion-button
+            >{{ 'language.english' | translate }}</ion-button
         >
         <ion-button
             (click)="changeTheme('dark')"
             [disabled]="currentTheme=='dark'"
-            >Dark mode</ion-button
         >
+            {{ 'theme.dark' | translate }}
+        </ion-button>
         <ion-button
             (click)="changeTheme('light')"
             [disabled]="currentTheme=='light'"
-            >Light mode</ion-button
+            >{{ 'theme.light' | translate }}</ion-button
         >
     </div>
 </ion-content>

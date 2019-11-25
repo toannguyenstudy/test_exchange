@@ -1,4 +1,12 @@
 {
+    "language": {
+        "english": "Tiếng Anh",
+        "vietnamese": "Tiếng Việt"
+    },
+    "theme": {
+        "dark": "Giao diện tối",
+        "light": "Giao diện sáng"
+    },
     "allTab": {
         "market": "Thị Trường",
         "exchange": "Giao Dịch",
@@ -88,7 +96,7 @@
             "complete": "Hoàn thành"
         },
         "exchangeTrade": {
-            "decimal": "Thập phân",
+            "decimal": "Hiển thị",
             "default": "Mặc định",
             "digits": "chữ số"
         },

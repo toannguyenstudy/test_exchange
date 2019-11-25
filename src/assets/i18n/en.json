@@ -1,4 +1,12 @@
 {
+    "language": {
+        "english": "English",
+        "vietnamese": "Vietnamese"
+    },
+    "theme": {
+        "dark": "Dark mode",
+        "light": "Light mode"
+    },
     "allTab": {
         "market": "Market",
         "exchange": "Exchange",
