@@ -14,11 +14,15 @@ import { RegisterPageModule } from './pages/register/register.module';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+
 import { CustomTranslateService } from './services/custom-translate.service';
 import { CustomThemeService } from './services/custom-theme.service';
 export function HttpLoaderFactory(http: HttpClient) {
     return new TranslateHttpLoader(http);
 }
+
+import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
 
 @NgModule({
     declarations: [AppComponent],
@@ -30,6 +34,7 @@ export function HttpLoaderFactory(http: HttpClient) {
         LoginPageModule,
         RegisterPageModule,
         HttpClientModule,
+        FormsModule,
         TranslateModule.forRoot({
             loader: {
                 provide: TranslateLoader,
@@ -44,6 +49,7 @@ export function HttpLoaderFactory(http: HttpClient) {
         { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
         CustomTranslateService,
         CustomThemeService,
+        BarcodeScanner,
     ],
     bootstrap: [AppComponent],
 })

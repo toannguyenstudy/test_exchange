@@ -52,7 +52,7 @@
                         >{{ 'walletTab.withdrawPage.address' | translate
                         }}</ion-label
                     >
-                    <ion-input></ion-input>
+                    <ion-input [(ngModel)]="address"></ion-input>
                     <button
                         slot="end"
                         class="btn btn-sm text-white btn-contact"
@@ -62,6 +62,7 @@
                     <button
                         slot="end"
                         class="btn btn-sm text-white ml-1 btn-contact"
+                        (click)="openQRScanner()"
                     >
                         <i class="fas fa-qrcode fa-lg"></i>
                     </button>
