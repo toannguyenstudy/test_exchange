@@ -1,5 +1,22 @@
 input {
-    background: var(--ion-color-account-login-register-input-background);
-    color: var(--ion-color-account-login-register-input-text);
     border: 1px solid var(--ion-color-account-login-register-input-border);
+    background-color: var(--ion-color-account-login-register-input-background);
+    color: var(--ion-color-account-login-register-input-text);
+}
+
+input.password {
+    border-right: 0;
+}
+
+.input-group-append span {
+    border-left: 0;
+    border-radius: 0;
+    border-color: var(--ion-color-account-login-register-input-border);
+    background-color: var(--ion-color-account-login-register-input-background);
+    color: var(--ion-color-account-login-register-input-text);
+}
+
+.form-control:focus {
+    background-color: var(--ion-color-account-login-register-input-background);
+    color: var(--ion-color-account-login-register-input-text);
 }

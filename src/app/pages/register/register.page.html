@@ -34,11 +34,25 @@
                         >{{'accountTab.registerPage.password' |
                         translate}}</label
                     >
-                    <input
-                        type="password"
-                        class="form-control form-control-lg rounded-0"
-                        placeholder="{{'accountTab.registerPage.enterPassword' | translate}}"
-                    />
+                    <div class="input-group">
+                        <input
+                            [type]="showPasswordType"
+                            class="form-control form-control-lg password rounded-0"
+                            placeholder="{{'accountTab.registerPage.enterPassword' | translate}}"
+                        />
+                        <div class="input-group-append">
+                            <span
+                                class="input-group-text"
+                                (click)="onChangeShowPassword()"
+                            >
+                                <i *ngIf="showPassword" class="fas fa-eye"></i>
+                                <i
+                                    *ngIf="!showPassword"
+                                    class="fas fa-eye-slash"
+                                ></i>
+                            </span>
+                        </div>
+                    </div>
                     <small class="form-text text-muted"
                         >{{'accountTab.registerPage.passwordAtleast8Character' |
                         translate}}</small

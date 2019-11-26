@@ -12,12 +12,20 @@ import { CustomTranslateService } from '../../services/custom-translate.service'
     styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
+    showPassword: boolean = false;
+    showPasswordType: string = 'password';
+
     constructor(
         private modalController: ModalController,
         private customeTranslateService: CustomTranslateService,
     ) {}
 
     ngOnInit() {}
+
+    onChangeShowPassword() {
+        this.showPassword = !this.showPassword;
+        this.showPasswordType = this.showPassword ? 'text' : 'password';
+    }
 
     async closeLoginModal(data) {
         return await this.modalController.dismiss(data);
