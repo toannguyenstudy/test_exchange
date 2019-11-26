@@ -1,0 +1,123 @@
+<ion-content class="my-passcode">
+    <div class="container">
+        <div class="row pt-4">
+            <div class="col text-center">
+                <h3>Enter pin</h3>
+            </div>
+        </div>
+        <div class="row mb-4">
+            <div class="col text-center">
+                <i
+                    [class]="passcode.length > 0 ? 'fas fa-circle' : 'far fa-circle'"
+                ></i>
+                <i
+                    [class]="passcode.length > 1 ? 'fas fa-circle' : 'far fa-circle'"
+                ></i>
+                <i
+                    [class]="passcode.length > 2 ? 'fas fa-circle' : 'far fa-circle'"
+                ></i>
+                <i
+                    [class]="passcode.length > 3 ? 'fas fa-circle' : 'far fa-circle'"
+                ></i>
+            </div>
+        </div>
+        <div class="row mb-4">
+            <div class="col text-center">
+                <button
+                    class="btn btn-outline-primary rounded-circle btn-lg"
+                    (click)="addPasscode('1')"
+                >
+                    1
+                </button>
+            </div>
+            <div class="col text-center">
+                <button
+                    class="btn btn-outline-primary rounded-circle btn-lg"
+                    (click)="addPasscode('2')"
+                >
+                    2
+                </button>
+            </div>
+            <div class="col text-center">
+                <button
+                    class="btn btn-outline-primary rounded-circle btn-lg"
+                    (click)="addPasscode('3')"
+                >
+                    3
+                </button>
+            </div>
+        </div>
+        <div class="row mb-4">
+            <div class="col text-center">
+                <button
+                    class="btn btn-outline-primary rounded-circle btn-lg"
+                    (click)="addPasscode('4')"
+                >
+                    4
+                </button>
+            </div>
+            <div class="col text-center">
+                <button
+                    class="btn btn-outline-primary rounded-circle btn-lg"
+                    (click)="addPasscode('5')"
+                >
+                    5
+                </button>
+            </div>
+            <div class="col text-center">
+                <button
+                    class="btn btn-outline-primary rounded-circle btn-lg"
+                    (click)="addPasscode('6')"
+                >
+                    6
+                </button>
+            </div>
+        </div>
+        <div class="row mb-4">
+            <div class="col text-center">
+                <button
+                    class="btn btn-outline-primary rounded-circle btn-lg"
+                    (click)="addPasscode('7')"
+                >
+                    7
+                </button>
+            </div>
+            <div class="col text-center">
+                <button
+                    class="btn btn-outline-primary rounded-circle btn-lg"
+                    (click)="addPasscode('8')"
+                >
+                    8
+                </button>
+            </div>
+            <div class="col text-center">
+                <button
+                    class="btn btn-outline-primary rounded-circle btn-lg"
+                    (click)="addPasscode('9')"
+                >
+                    9
+                </button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col text-center"></div>
+            <div class="col text-center">
+                <button
+                    class="btn btn-outline-primary rounded-circle btn-lg"
+                    (click)="addPasscode('0')"
+                >
+                    0
+                </button>
+            </div>
+            <div class="col text-center">
+                <button class="btn btn-clear" (click)="clearOne()">
+                    <i
+                        class="fas fa-backspace fa-2x"
+                        style="color: var(--ion-color-primary)"
+                    ></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    {{passcode}}
+</ion-content>

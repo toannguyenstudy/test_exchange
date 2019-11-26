@@ -4,10 +4,11 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
     {
         path: '',
-        loadChildren: () =>
-            import('./tabs/tabs.module').then(m => m.TabsPageModule),
+        redirectTo: 'passcode',
+        pathMatch: 'full',
+        // loadChildren: () =>
+        //     import('./tabs/tabs.module').then(m => m.TabsPageModule),
     },
-    //   { path: 'wallet', loadChildren: './pages/wallet/wallet.module#WalletPageModule' },
     {
         path: 'detail/:coin/:unit',
         loadChildren:
@@ -24,9 +25,11 @@ const routes: Routes = [
     {
         path: 'deposit',
         loadChildren: './pages/deposit/deposit.module#DepositPageModule',
-    },  { path: 'register', loadChildren: './pages/register/register.module#RegisterPageModule' },
-
-    //   { path: 'login', loadChildren: './pages/login/login.module#LoginPageModule' },
+    },
+    {
+        path: 'passcode',
+        loadChildren: './pages/passcode/passcode.module#PasscodePageModule',
+    },
 ];
 
 @NgModule({
