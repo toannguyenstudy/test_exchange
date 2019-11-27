@@ -21,7 +21,7 @@ export class PasscodePage implements OnInit {
                 setTimeout(() => {
                     this.isFalse = false;
                     this.passcode = '';
-                }, 1000);
+                }, 600);
             } else {
                 alert('ok con de');
             }
