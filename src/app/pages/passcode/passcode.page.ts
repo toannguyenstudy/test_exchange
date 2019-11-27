@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AlertController } from '@ionic/angular';
+import { ModalController } from '@ionic/angular';
 
 @Component({
     selector: 'app-passcode',
@@ -9,7 +11,10 @@ export class PasscodePage implements OnInit {
     passcode: string = '';
     isFalse: boolean = false;
 
-    constructor() {}
+    constructor(
+        private alertController: AlertController,
+        private modalController: ModalController,
+    ) {}
 
     ngOnInit() {}
 
@@ -23,7 +28,7 @@ export class PasscodePage implements OnInit {
                     this.passcode = '';
                 }, 600);
             } else {
-                alert('ok con de');
+                this.closePasscode();
             }
             return;
         }
@@ -31,5 +36,9 @@ export class PasscodePage implements OnInit {
 
     clearOne() {
         this.passcode = this.passcode.slice(0, -1);
+    }
+
+    closePasscode() {
+        this.modalController.dismiss(null, null, 'passcode');
     }
 }

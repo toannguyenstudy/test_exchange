@@ -23,6 +23,7 @@ export function HttpLoaderFactory(http: HttpClient) {
 }
 
 import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
+import { PasscodePageModule } from './pages/passcode/passcode.module';
 
 @NgModule({
     declarations: [AppComponent],
@@ -42,6 +43,7 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
                 deps: [HttpClient],
             },
         }),
+        PasscodePageModule,
     ],
     providers: [
         StatusBar,
