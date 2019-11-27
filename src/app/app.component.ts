@@ -34,6 +34,7 @@ export class AppComponent {
         let passcodeModal = await this.modalController.create({
             id: 'passcode',
             component: PasscodePage,
+            backdropDismiss: false,
         });
         return await passcodeModal.present();
     }
