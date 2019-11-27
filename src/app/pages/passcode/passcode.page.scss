@@ -1,3 +1,61 @@
+@keyframes angry-animation {
+    0% {
+        -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+        transform: translateX(0);
+    }
+    5% {
+        -webkit-transform: translateX(-10px);
+        -ms-transform: translateX(-10px);
+        transform: translateX(-10px);
+    }
+    10% {
+        -webkit-transform: translateX(10px);
+        -ms-transform: translateX(10px);
+        transform: translateX(10px);
+    }
+    15% {
+        -webkit-transform: translateX(-10px);
+        -ms-transform: translateX(-10px);
+        transform: translateX(-10px);
+    }
+    20% {
+        -webkit-transform: translateX(10px);
+        -ms-transform: translateX(10px);
+        transform: translateX(10px);
+    }
+    25% {
+        -webkit-transform: translateX(-10px);
+        -ms-transform: translateX(-10px);
+        transform: translateX(-10px);
+    }
+    30% {
+        -webkit-transform: translateX(10px);
+        -ms-transform: translateX(10px);
+        transform: translateX(10px);
+    }
+    35% {
+        -webkit-transform: translateX(-10px);
+        -ms-transform: translateX(-10px);
+        transform: translateX(-10px);
+    }
+    40% {
+        -webkit-transform: translateX(10px);
+        -ms-transform: translateX(10px);
+        transform: translateX(10px);
+    }
+    45% {
+        -webkit-transform: translateX(-10px);
+        -ms-transform: translateX(-10px);
+        transform: translateX(-10px);
+    }
+    50% {
+        -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
 ion-content {
     .container {
         .far,
@@ -7,6 +65,36 @@ ion-content {
         button {
             width: 70px;
             height: 70px;
+            font-size: xx-large;
+            color: var(--ion-color-primary);
+        }
+
+        button.btn-number {
+            border: 1px solid var(--ion-color-primary);
+        }
+
+        button:active {
+            background: var(--ion-color-primary);
+            color: black;
+        }
+        button:focus {
+            box-shadow: none !important;
+        }
+
+        .btn-clear:active {
+            background: none;
+            i {
+                color: #3880ffb8 !important;
+            }
+        }
+
+        .is-wrong {
+            animation-name: angry-animation;
+            animation-duration: 1s;
+            animation-timing-function: linear;
+            animation-delay: 0s;
+            animation-iteration-count: 1;
+            animation-direction: normal;
         }
     }
 }

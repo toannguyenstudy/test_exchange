@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PasscodePage implements OnInit {
     passcode: string = '';
+    isFalse: boolean = false;
 
     constructor() {}
 
@@ -14,6 +15,18 @@ export class PasscodePage implements OnInit {
 
     addPasscode(val) {
         this.passcode += val;
+        if (this.passcode.length == 4) {
+            if (this.passcode != '2601') {
+                this.isFalse = true;
+                setTimeout(() => {
+                    this.isFalse = false;
+                    this.passcode = '';
+                }, 1000);
+            } else {
+                alert('ok con de');
+            }
+            return;
+        }
     }
 
     clearOne() {

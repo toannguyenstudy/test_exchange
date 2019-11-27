@@ -6,7 +6,10 @@
             </div>
         </div>
         <div class="row mb-4">
-            <div class="col text-center">
+            <div
+                class="col text-center"
+                [ngClass]="{'is-wrong': isFalse==true}"
+            >
                 <i
                     [class]="passcode.length > 0 ? 'fas fa-circle' : 'far fa-circle'"
                 ></i>
@@ -24,7 +27,7 @@
         <div class="row mb-4">
             <div class="col text-center">
                 <button
-                    class="btn btn-outline-primary rounded-circle btn-lg"
+                    class="btn btn-number rounded-circle btn-lg"
                     (click)="addPasscode('1')"
                 >
                     1
@@ -32,7 +35,7 @@
             </div>
             <div class="col text-center">
                 <button
-                    class="btn btn-outline-primary rounded-circle btn-lg"
+                    class="btn btn-number rounded-circle btn-lg"
                     (click)="addPasscode('2')"
                 >
                     2
@@ -40,7 +43,7 @@
             </div>
             <div class="col text-center">
                 <button
-                    class="btn btn-outline-primary rounded-circle btn-lg"
+                    class="btn btn-number rounded-circle btn-lg"
                     (click)="addPasscode('3')"
                 >
                     3
@@ -50,7 +53,7 @@
         <div class="row mb-4">
             <div class="col text-center">
                 <button
-                    class="btn btn-outline-primary rounded-circle btn-lg"
+                    class="btn btn-number rounded-circle btn-lg"
                     (click)="addPasscode('4')"
                 >
                     4
@@ -58,7 +61,7 @@
             </div>
             <div class="col text-center">
                 <button
-                    class="btn btn-outline-primary rounded-circle btn-lg"
+                    class="btn btn-number rounded-circle btn-lg"
                     (click)="addPasscode('5')"
                 >
                     5
@@ -66,7 +69,7 @@
             </div>
             <div class="col text-center">
                 <button
-                    class="btn btn-outline-primary rounded-circle btn-lg"
+                    class="btn btn-number rounded-circle btn-lg"
                     (click)="addPasscode('6')"
                 >
                     6
@@ -76,7 +79,7 @@
         <div class="row mb-4">
             <div class="col text-center">
                 <button
-                    class="btn btn-outline-primary rounded-circle btn-lg"
+                    class="btn btn-number rounded-circle btn-lg"
                     (click)="addPasscode('7')"
                 >
                     7
@@ -84,7 +87,7 @@
             </div>
             <div class="col text-center">
                 <button
-                    class="btn btn-outline-primary rounded-circle btn-lg"
+                    class="btn btn-number rounded-circle btn-lg"
                     (click)="addPasscode('8')"
                 >
                     8
@@ -92,7 +95,7 @@
             </div>
             <div class="col text-center">
                 <button
-                    class="btn btn-outline-primary rounded-circle btn-lg"
+                    class="btn btn-number rounded-circle btn-lg"
                     (click)="addPasscode('9')"
                 >
                     9
@@ -103,16 +106,16 @@
             <div class="col text-center"></div>
             <div class="col text-center">
                 <button
-                    class="btn btn-outline-primary rounded-circle btn-lg"
+                    class="btn btn-number rounded-circle btn-lg"
                     (click)="addPasscode('0')"
                 >
                     0
                 </button>
             </div>
             <div class="col text-center">
-                <button class="btn btn-clear" (click)="clearOne()">
+                <button class="btn border-0 btn-clear" (click)="clearOne()">
                     <i
-                        class="fas fa-backspace fa-2x"
+                        class="fas fa-backspace"
                         style="color: var(--ion-color-primary)"
                     ></i>
                 </button>
