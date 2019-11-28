@@ -54,7 +54,8 @@
             "language": "Ngôn ngữ",
             "english": "Tiếng Anh",
             "vietnamese": "Tiếng Việt",
-            "aboutUs": "Thông tin"
+            "aboutUs": "Thông tin",
+            "changePasscode": "Thay đổi Passcode"
         }
     },
     "walletTab": {

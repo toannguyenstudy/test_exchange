@@ -54,7 +54,8 @@
             "language": "Language",
             "english": "English",
             "vietnamese": "Vietnamese",
-            "aboutUs": "About us"
+            "aboutUs": "About us",
+            "changePasscode": "Change Passcode"
         }
     },
     "walletTab": {

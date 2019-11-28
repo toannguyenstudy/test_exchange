@@ -115,6 +115,7 @@ export class SettingPage implements OnInit {
     }
 
     onclear() {
+        alert('clear all storage done!');
         this.storage.clear();
     }
 }
