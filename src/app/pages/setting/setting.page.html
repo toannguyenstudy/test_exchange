@@ -22,7 +22,10 @@
                             >{{'accountTab.settingPage.theme' | translate
                             }}</ion-label
                         >
-                        <ion-select (ionChange)="changeTheme($event)">
+                        <ion-select
+                            mode="ios"
+                            (ionChange)="changeTheme($event)"
+                        >
                             <ion-select-option
                                 value="dark"
                                 [selected]="currentTheme=='dark'?true:false"
@@ -45,7 +48,10 @@
                             >{{'accountTab.settingPage.language' | translate
                             }}</ion-label
                         >
-                        <ion-select (ionChange)="changeLanguage($event)">
+                        <ion-select
+                            mode="ios"
+                            (ionChange)="changeLanguage($event)"
+                        >
                             <ion-select-option
                                 value="en"
                                 [selected]="currentLanguage=='en'?true:false"
