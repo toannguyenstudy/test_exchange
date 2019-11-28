@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AlertController } from '@ionic/angular';
 import { ModalController } from '@ionic/angular';
+import { Storage } from '@ionic/storage';
 
 @Component({
     selector: 'app-passcode',
@@ -11,17 +12,24 @@ export class PasscodePage implements OnInit {
     passcode: string = '';
     isFalse: boolean = false;
 
+    securePasscode = '';
+
     constructor(
         private alertController: AlertController,
         private modalController: ModalController,
+        private storage: Storage,
     ) {}
 
-    ngOnInit() {}
+    ngOnInit() {
+        this.storage.get('passcode').then(pass => {
+            this.securePasscode = pass;
+        });
+    }
 
     addPasscode(val) {
         this.passcode += val;
         if (this.passcode.length == 4) {
-            if (this.passcode != '2601') {
+            if (this.passcode != this.securePasscode) {
                 this.isFalse = true;
                 setTimeout(() => {
                     this.isFalse = false;

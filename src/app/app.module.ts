@@ -24,6 +24,7 @@ export function HttpLoaderFactory(http: HttpClient) {
 
 import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
 import { PasscodePageModule } from './pages/passcode/passcode.module';
+import { IonicStorageModule } from '@ionic/storage';
 
 @NgModule({
     declarations: [AppComponent],
@@ -44,6 +45,7 @@ import { PasscodePageModule } from './pages/passcode/passcode.module';
             },
         }),
         PasscodePageModule,
+        IonicStorageModule.forRoot(),
     ],
     providers: [
         StatusBar,

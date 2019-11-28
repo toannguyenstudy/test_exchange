@@ -6,6 +6,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { PasscodePage } from './pages/passcode/passcode.page';
 
 import { ModalController } from '@ionic/angular';
+import { Storage } from '@ionic/storage';
 
 @Component({
     selector: 'app-root',
@@ -19,11 +20,14 @@ export class AppComponent {
         private splashScreen: SplashScreen,
         private statusBar: StatusBar,
         private modalController: ModalController,
+        private storage: Storage,
     ) {
         this.initializeApp();
-        if (this.isAllowPasscode) {
-            this.showPasscode();
-        }
+        this.storage.get('passcodeActive').then(active => {
+            if (active) {
+                this.showPasscode();
+            }
+        });
     }
 
     initializeApp() {
