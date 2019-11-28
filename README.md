@@ -1,4 +1,4 @@
-#**ToanNguyen Exchange**
+#ToanNguyen Exchange
 
 ### Beautiful login modal
 
