@@ -46,8 +46,9 @@ export class SettingPage implements OnInit {
             header: 'Set new passcode',
             inputs: [
                 {
-                    type: 'number',
+                    type: 'tel',
                     name: 'passcode',
+                    id: 'passcode-prompt',
                 },
             ],
             buttons: [
@@ -63,13 +64,14 @@ export class SettingPage implements OnInit {
                 {
                     text: 'OK',
                     handler: data => {
+                        console.log(data);
                         this.storage.set('passcode', data.passcode.toString());
                     },
                 },
             ],
         });
 
-        await alert.present();
+        return await alert.present();
     }
 
     changeTheme(e) {
@@ -111,7 +113,11 @@ export class SettingPage implements OnInit {
     }
 
     async changePasscode() {
-        this.presentAlertChangePasscode('none');
+        this.presentAlertChangePasscode('none').then(() => {
+            document
+                .getElementById('passcode-prompt')
+                .setAttribute('maxLength', '4');
+        });
     }
 
     onclear() {
