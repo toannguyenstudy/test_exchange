@@ -15,12 +15,34 @@ export class LoginPage implements OnInit {
     showPassword: boolean = false;
     showPasswordType: string = 'password';
 
+    loginPage = null;
     constructor(
         private modalController: ModalController,
         private customeTranslateService: CustomTranslateService,
     ) {}
 
-    ngOnInit() {}
+    ngOnInit() {
+        this.loginPage = document.getElementById('loginModal');
+        // .children.item(1)
+        // .children.item(0);
+    }
+
+    handlePan(e) {
+        //console.log(e.center.y);
+        this.loginPage.style.transform = `translateY(${e.center.y - 40}px)`;
+    }
+
+    handlePanEnd(e) {
+        if (e.center.y <= 300) {
+            this.loginPage.style.transition = 'transform 0.5s';
+            this.loginPage.style.transform = `translateY(0px)`;
+            setTimeout(() => {
+                this.loginPage.style.transition = 'none';
+            }, 500);
+        } else {
+            this.closeLoginModal(null);
+        }
+    }
 
     onChangeShowPassword() {
         this.showPassword = !this.showPassword;

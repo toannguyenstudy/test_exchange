@@ -26,6 +26,20 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
 import { PasscodePageModule } from './pages/passcode/passcode.module';
 import { IonicStorageModule } from '@ionic/storage';
 
+import {
+    HammerGestureConfig,
+    HAMMER_GESTURE_CONFIG,
+} from '@angular/platform-browser';
+import * as Hammer from 'hammerjs';
+
+export class CustomHammerConfig extends HammerGestureConfig {
+    overrides = {
+        pan: {
+            direction: Hammer.DIRECTION_ALL,
+        },
+    };
+}
+
 @NgModule({
     declarations: [AppComponent],
     entryComponents: [],
@@ -54,6 +68,7 @@ import { IonicStorageModule } from '@ionic/storage';
         CustomTranslateService,
         CustomThemeService,
         BarcodeScanner,
+        { provide: HAMMER_GESTURE_CONFIG, useClass: CustomHammerConfig },
     ],
     bootstrap: [AppComponent],
 })

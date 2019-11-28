@@ -1,5 +1,9 @@
 <ion-header>
-    <ion-toolbar>
+    <ion-toolbar
+        (pan)="handlePan($event)"
+        (panend)="handlePanEnd($event)"
+        color="warning"
+    >
         <ion-buttons slot="end">
             <ion-button (click)="closeLoginModal()">
                 <ion-icon
