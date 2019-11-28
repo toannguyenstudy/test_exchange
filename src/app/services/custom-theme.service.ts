@@ -6,6 +6,7 @@ import { DOCUMENT } from '@angular/common';
 })
 export class CustomThemeService {
     renderer: Renderer2;
+    currentTheme: string = 'dark';
 
     constructor(
         private renderFactory: RendererFactory2,
@@ -17,10 +18,16 @@ export class CustomThemeService {
     enableDarkTheme() {
         this.renderer.addClass(this.document.body, 'dark');
         this.renderer.removeClass(this.document.body, 'light');
+        this.currentTheme = 'dark';
     }
 
     enableLightTheme() {
         this.renderer.addClass(this.document.body, 'light');
         this.renderer.removeClass(this.document.body, 'dark');
+        this.currentTheme = 'light';
+    }
+
+    getCurrentTheme() {
+        return this.currentTheme;
     }
 }

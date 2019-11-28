@@ -30,6 +30,10 @@ const routes: Routes = [
         path: 'passcode',
         loadChildren: './pages/passcode/passcode.module#PasscodePageModule',
     },
+    {
+        path: 'setting',
+        loadChildren: './pages/setting/setting.module#SettingPageModule',
+    },
 ];
 
 @NgModule({

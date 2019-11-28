@@ -12,4 +12,8 @@ export class CustomTranslateService {
     changeDefaultLanguage(lang) {
         this.translateService.setDefaultLang(lang);
     }
+
+    getCurrentLanguage() {
+        return this.translateService.getDefaultLang();
+    }
 }

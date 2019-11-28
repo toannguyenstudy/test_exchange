@@ -1,0 +1,93 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button
+                text="{{'accountTab.settingPage.account' | translate }}"
+                color="medium"
+                defaultHref="tabs/account"
+            ></ion-back-button>
+        </ion-buttons>
+        <ion-title>{{'accountTab.settingPage.setting' | translate }}</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="container pt-4">
+        <div class="row">
+            <div class="col">
+                <ion-list lines="full">
+                    <!-- #region Theme selection -->
+                    <ion-item class="ion-no-padding mb-2">
+                        <ion-label
+                            >{{'accountTab.settingPage.theme' | translate
+                            }}</ion-label
+                        >
+                        <ion-select (ionChange)="changeTheme($event)">
+                            <ion-select-option
+                                value="dark"
+                                [selected]="currentTheme=='dark'?true:false"
+                                >{{'accountTab.settingPage.dark' | translate
+                                }}</ion-select-option
+                            >
+                            <ion-select-option
+                                value="light"
+                                [selected]="currentTheme=='light'?true:false"
+                                >{{'accountTab.settingPage.light' | translate
+                                }}</ion-select-option
+                            >
+                        </ion-select>
+                    </ion-item>
+                    <!-- #endregion -->
+
+                    <!-- #region Language selection -->
+                    <ion-item class="ion-no-padding mb-2">
+                        <ion-label
+                            >{{'accountTab.settingPage.language' | translate
+                            }}</ion-label
+                        >
+                        <ion-select (ionChange)="changeLanguage($event)">
+                            <ion-select-option
+                                value="en"
+                                [selected]="currentLanguage=='en'?true:false"
+                                >{{'accountTab.settingPage.english' | translate
+                                }}</ion-select-option
+                            >
+                            <ion-select-option
+                                value="vn"
+                                [selected]="currentLanguage=='vn'?true:false"
+                                >{{'accountTab.settingPage.vietnamese' |
+                                translate }}</ion-select-option
+                            >
+                        </ion-select>
+                    </ion-item>
+                    <!-- #endregion -->
+
+                    <ion-item class="ion-no-padding mb-2">
+                        <ion-label>Passcode</ion-label>
+                        <ion-toggle
+                            color="success"
+                            style="--background: var(--ion-color-all-input-prepend-append-text)"
+                            [(ngModel)]="passcodeActive"
+                        ></ion-toggle>
+                    </ion-item>
+                    <ion-item
+                        *ngIf="passcodeActive"
+                        class="ion-no-padding mb-2"
+                    >
+                        <ion-label>Change Passcode</ion-label>
+                    </ion-item>
+
+                    <ion-item class="ion-no-padding mb-2">
+                        <ion-label slot="start"
+                            >{{'accountTab.settingPage.aboutUs' | translate
+                            }}</ion-label
+                        >
+                        <ion-label slot="end" class="text-right sub-text"
+                            >v1.0.1</ion-label
+                        >
+                    </ion-item>
+                </ion-list>
+            </div>
+        </div>
+    </div>
+</ion-content>

@@ -13,6 +13,7 @@ import { ModalController } from '@ionic/angular';
     styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
+    isAllowPasscode: boolean = false;
     constructor(
         private platform: Platform,
         private splashScreen: SplashScreen,
@@ -20,7 +21,9 @@ export class AppComponent {
         private modalController: ModalController,
     ) {
         this.initializeApp();
-        this.showPasscode();
+        if (this.isAllowPasscode) {
+            this.showPasscode();
+        }
     }
 
     initializeApp() {

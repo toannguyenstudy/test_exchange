@@ -24,7 +24,7 @@
         <!-- #endregion -->
 
         <!-- #region Setting to change anything -->
-        <div class="row">
+        <div class="row" routerLink="/setting">
             <div class="col d-flex flex-row align-items-center">
                 <p>
                     <i class="fad fa-sliders-h fa-lg"></i>
@@ -55,7 +55,7 @@
             </div>
         </div>
         <!-- #endregion -->
-        <ion-button
+        <!-- <ion-button
             (click)="changeLanguage('vn')"
             [disabled]="currentLanguage=='vn'"
             >{{ 'language.vietnamese' | translate }}</ion-button
@@ -75,6 +75,6 @@
             (click)="changeTheme('light')"
             [disabled]="currentTheme=='light'"
             >{{ 'theme.light' | translate }}</ion-button
-        >
+        > -->
     </div>
 </ion-content>

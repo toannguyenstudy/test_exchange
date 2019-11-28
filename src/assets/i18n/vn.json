@@ -44,6 +44,17 @@
             "theTermOfUse": "điều khoản sử dụng",
             "register": "Đăng ký",
             "accountRegister": "Đã có tải khoản"
+        },
+        "settingPage": {
+            "account": "Tài Khoản",
+            "setting": "Cài Đặt",
+            "theme": "Giao diện",
+            "dark": "Nền Tối",
+            "light": "Nền Sáng",
+            "language": "Ngôn ngữ",
+            "english": "Tiếng Anh",
+            "vietnamese": "Tiếng Việt",
+            "aboutUs": "Thông tin"
         }
     },
     "walletTab": {

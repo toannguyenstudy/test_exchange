@@ -44,6 +44,17 @@
             "theTermOfUse": "the term of use",
             "register": "Register",
             "accountRegister": "Have account"
+        },
+        "settingPage": {
+            "account": "Account",
+            "setting": "Setting",
+            "theme": "Theme",
+            "dark": "Dark",
+            "light": "Light",
+            "language": "Language",
+            "english": "English",
+            "vietnamese": "Vietnamese",
+            "aboutUs": "About us"
         }
     },
     "walletTab": {
