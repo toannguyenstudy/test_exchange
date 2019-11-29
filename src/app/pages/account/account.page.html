@@ -26,8 +26,8 @@
 
             <div class="row" (click)="openLoginModal()">
                 <div class="col d-flex flex-row align-items-center">
-                    <p><i class="fad fa-gift-card fa-lg"></i></p>
-                    <p class="ml-3" style="font-size: large;">
+                    <p class="mb-0"><i class="fad fa-gift-card fa-lg"></i></p>
+                    <p class="ml-3 mb-0" style="font-size: large;">
                         <!-- Sign In or Register -->
                         {{"accountTab.homePage.myReferralID" | translate}}
                     </p>
@@ -36,13 +36,15 @@
 
             <div class="row" (click)="openLoginModal()">
                 <div class="col d-flex flex-row align-items-center">
-                    <p><i class="fad fa-address-card fa-lg"></i></p>
-                    <p class="ml-3" style="font-size: large;">
+                    <p class="mb-0">
+                        <i class="fad fa-address-card fa-lg"></i>
+                    </p>
+                    <p class="ml-3 mb-0" style="font-size: large;">
                         <!-- Sign In or Register -->
                         {{"accountTab.homePage.identityAuthentication" |
                         translate}}
                     </p>
-                    <p>
+                    <p class="mb-0">
                         <span class="ml-5 badge badge-secondary">
                             {{"accountTab.homePage.unIdentity" | translate}}
                         </span>
@@ -52,8 +54,10 @@
 
             <div class="row" (click)="openLoginModal()">
                 <div class="col d-flex flex-row align-items-center">
-                    <p><i class="fad fa-shield-cross fa-lg"></i></p>
-                    <p class="ml-3" style="font-size: large;">
+                    <p class="mb-0">
+                        <i class="fad fa-shield-cross fa-lg"></i>
+                    </p>
+                    <p class="ml-3 mb-0" style="font-size: large;">
                         <!-- Sign In or Register -->
                         {{"accountTab.homePage.security" | translate}}
                     </p>
@@ -71,8 +75,8 @@
         <!-- #region Sign In or Register account -->
         <div *ngIf="!isLoggedIn" class="row" (click)="openLoginModal()">
             <div class="col d-flex flex-row align-items-center">
-                <p><i class="fas fa-user-circle fa-2x"></i></p>
-                <p class="ml-3" style="font-size: large;">
+                <p class="mb-0"><i class="fas fa-user-circle fa-2x"></i></p>
+                <p class="ml-3 mb-0" style="font-size: large;">
                     <!-- Sign In or Register -->
                     {{"accountTab.homePage.signInOrRegister" | translate}}
                 </p>
@@ -83,10 +87,10 @@
         <!-- #region Setting to change anything -->
         <div class="row" routerLink="/setting">
             <div class="col d-flex flex-row align-items-center">
-                <p>
+                <p class="mb-0">
                     <i class="fad fa-sliders-h fa-lg"></i>
                 </p>
-                <p class="ml-3">
+                <p class="ml-3 mb-0">
                     {{"accountTab.homePage.setting" | translate}}
                 </p>
             </div>
@@ -96,19 +100,23 @@
         <!-- #region Help - support and About company -->
         <div class="row">
             <div class="col d-flex flex-row align-items-center">
-                <p>
+                <p class="mb-0">
                     <i class="fad fa-question-circle fa-lg"></i>
                 </p>
-                <p class="ml-3">{{"accountTab.homePage.help" | translate}}</p>
+                <p class="ml-3 mb-0">
+                    {{"accountTab.homePage.help" | translate}}
+                </p>
             </div>
         </div>
 
         <div class="row">
             <div class="col d-flex flex-row align-items-center">
-                <p>
+                <p class="mb-0">
                     <i class="fad fa-info-circle fa-lg"></i>
                 </p>
-                <p class="ml-3">{{"accountTab.homePage.about" | translate}}</p>
+                <p class="ml-3 mb-0">
+                    {{"accountTab.homePage.about" | translate}}
+                </p>
             </div>
         </div>
         <!-- #endregion -->
