@@ -16,6 +16,10 @@
     "accountTab": {
         "homePage": {
             "title": "Account",
+            "myReferralID": "My Referral ID",
+            "identityAuthentication": "Identity Authentication",
+            "unIdentity": "not verified",
+            "security": "Security",
             "setting": "Setting",
             "help": "Help and Support",
             "about": "About us",

@@ -16,6 +16,10 @@
     "accountTab": {
         "homePage": {
             "title": "Tài khoản",
+            "myReferralID": "Mã Ref của tôi",
+            "identityAuthentication": "Xác minh danh tính",
+            "security": "Bảo mật",
+            "unIdentity": "Chưa xác minh",
             "setting": "Cài đặt",
             "help": "Giải đáp và hỗ trợ",
             "about": "Về chúng tôi",

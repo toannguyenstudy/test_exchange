@@ -11,8 +11,65 @@
         class="container h-100 d-flex flex-column"
         style="justify-content: space-evenly;"
     >
+        <!-- #region Display when user Logged In -->
+        <ng-container *ngIf="isLoggedIn">
+            <div class="row">
+                <div class="col">
+                    <ion-item lines="none">
+                        <ion-avatar>
+                            <img src="assets/images/empty-avatar.png" />
+                        </ion-avatar>
+                        <ion-label class="ml-3">toannguyen@gmail.com</ion-label>
+                    </ion-item>
+                </div>
+            </div>
+
+            <div class="row" (click)="openLoginModal()">
+                <div class="col d-flex flex-row align-items-center">
+                    <p><i class="fad fa-gift-card fa-lg"></i></p>
+                    <p class="ml-3" style="font-size: large;">
+                        <!-- Sign In or Register -->
+                        {{"accountTab.homePage.myReferralID" | translate}}
+                    </p>
+                </div>
+            </div>
+
+            <div class="row" (click)="openLoginModal()">
+                <div class="col d-flex flex-row align-items-center">
+                    <p><i class="fad fa-address-card fa-lg"></i></p>
+                    <p class="ml-3" style="font-size: large;">
+                        <!-- Sign In or Register -->
+                        {{"accountTab.homePage.identityAuthentication" |
+                        translate}}
+                    </p>
+                    <p>
+                        <span class="ml-5 badge badge-secondary">
+                            {{"accountTab.homePage.unIdentity" | translate}}
+                        </span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="row" (click)="openLoginModal()">
+                <div class="col d-flex flex-row align-items-center">
+                    <p><i class="fad fa-shield-cross fa-lg"></i></p>
+                    <p class="ml-3" style="font-size: large;">
+                        <!-- Sign In or Register -->
+                        {{"accountTab.homePage.security" | translate}}
+                    </p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <hr />
+                </div>
+            </div>
+        </ng-container>
+        <!-- #endregion -->
+
         <!-- #region Sign In or Register account -->
-        <div class="row" (click)="openLoginModal()">
+        <div *ngIf="!isLoggedIn" class="row" (click)="openLoginModal()">
             <div class="col d-flex flex-row align-items-center">
                 <p><i class="fas fa-user-circle fa-2x"></i></p>
                 <p class="ml-3" style="font-size: large;">
@@ -55,26 +112,11 @@
             </div>
         </div>
         <!-- #endregion -->
-        <!-- <ion-button
-            (click)="changeLanguage('vn')"
-            [disabled]="currentLanguage=='vn'"
-            >{{ 'language.vietnamese' | translate }}</ion-button
-        >
-        <ion-button
-            (click)="changeLanguage('en')"
-            [disabled]="currentLanguage=='en'"
-            >{{ 'language.english' | translate }}</ion-button
-        >
-        <ion-button
-            (click)="changeTheme('dark')"
-            [disabled]="currentTheme=='dark'"
-        >
-            {{ 'theme.dark' | translate }}
-        </ion-button>
-        <ion-button
-            (click)="changeTheme('light')"
-            [disabled]="currentTheme=='light'"
-            >{{ 'theme.light' | translate }}</ion-button
-        > -->
+
+        <div class="row">
+            <div class="col">
+                <button class="btn btn-outline-warning">Log out</button>
+            </div>
+        </div>
     </div>
 </ion-content>

@@ -4,4 +4,10 @@ ion-content {
         --fa-secondary-color: #cccccc;
         --fa-secondary-opacity: 0.3;
     }
+
+    hr {
+        background: gray;
+        margin: 0;
+        height: 3px;
+    }
 }
