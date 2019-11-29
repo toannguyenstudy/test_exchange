@@ -16,6 +16,7 @@ export class LoginPage implements OnInit {
     showPasswordType: string = 'password';
 
     loginPage = null;
+    ionBackdrop = null;
     constructor(
         private modalController: ModalController,
         private customeTranslateService: CustomTranslateService,
@@ -23,22 +24,25 @@ export class LoginPage implements OnInit {
 
     ngOnInit() {
         this.loginPage = document.getElementById('loginModal');
-        // .children.item(1)
-        // .children.item(0);
+        this.ionBackdrop = document
+            .getElementById('loginModal')
+            .children.item(0);
     }
 
     handlePan(e) {
-        //console.log(e.center.y);
-        this.loginPage.style.transform = `translateY(${e.center.y - 40}px)`;
+        this.loginPage.style.transform = `translateY(${e.center.y -
+            (document.body.clientHeight * 5) / 100}px)`;
+        this.ionBackdrop.style.background = 'transparent';
     }
 
     handlePanEnd(e) {
         if (e.center.y <= 300) {
             this.loginPage.style.transition = 'transform 0.5s';
             this.loginPage.style.transform = `translateY(0px)`;
+            this.ionBackdrop.style.background = 'black';
             setTimeout(() => {
                 this.loginPage.style.transition = 'none';
-            }, 500);
+            }, 400);
         } else {
             this.closeLoginModal(null);
         }
