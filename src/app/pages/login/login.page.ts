@@ -31,7 +31,7 @@ export class LoginPage implements OnInit {
 
     handlePan(e) {
         this.loginPage.style.transform = `translateY(${e.center.y -
-            (document.body.clientHeight * 5) / 100}px)`;
+            ((document.body.clientHeight * 5) / 100 + 20)}px)`;
         this.ionBackdrop.style.background = 'transparent';
     }
 
