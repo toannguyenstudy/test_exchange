@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
+import { LoadingController } from '@ionic/angular';
+import { Storage } from '@ionic/storage';
+
 import { LoginPage } from '../login/login.page';
 import { CustomTranslateService } from '../../services/custom-translate.service';
 import { TranslateService } from '@ngx-translate/core';
-
-import { LoadingController } from '@ionic/angular';
 import { CustomThemeService } from '../../services/custom-theme.service';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
     selector: 'app-account',
@@ -16,7 +18,7 @@ export class AccountPage implements OnInit {
     currentLanguage = '';
     currentTheme = 'dark';
 
-    isLoggedIn: boolean = false;
+    isLoggedIn: boolean;
 
     constructor(
         private modalController: ModalController,
@@ -24,10 +26,26 @@ export class AccountPage implements OnInit {
         private translateService: TranslateService,
         private customThemeService: CustomThemeService,
         private loadingController: LoadingController,
+        private storage: Storage,
+        private userSerivce: UserService,
     ) {}
 
     ngOnInit() {
         this.currentLanguage = this.translateService.getDefaultLang();
+        this.checkLogged();
+    }
+
+    checkLogged() {
+        this.storage
+            .get('token')
+            .then(token => {
+                if (token) this.isLoggedIn = true;
+                else this.isLoggedIn = false;
+            })
+            .catch(err => {
+                this.isLoggedIn = false;
+                console.log(err);
+            });
     }
 
     async openLoginModal() {
@@ -37,7 +55,9 @@ export class AccountPage implements OnInit {
             id: 'loginModal',
         });
 
-        modal.onDidDismiss().then(data => {});
+        modal.onDidDismiss().then(data => {
+            this.checkLogged();
+        });
 
         return await modal.present();
     }
@@ -80,6 +100,18 @@ export class AccountPage implements OnInit {
                 this.customThemeService.enableDarkTheme();
                 this.currentTheme = 'dark';
             }
+        });
+    }
+
+    clearAllStorage() {
+        this.storage.clear().then(() => {
+            alert('clear ok');
+        });
+    }
+
+    logoutUser() {
+        this.storage.remove('token').then(() => {
+            this.checkLogged();
         });
     }
 }

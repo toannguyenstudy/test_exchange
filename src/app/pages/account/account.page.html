@@ -109,7 +109,7 @@
             </div>
         </div>
 
-        <div class="row">
+        <div class="row" (click)="clearAllStorage()">
             <div class="col d-flex flex-row align-items-center">
                 <p class="mb-0">
                     <i class="fad fa-info-circle fa-lg"></i>
@@ -121,7 +121,7 @@
         </div>
         <!-- #endregion -->
 
-        <div class="row" *ngIf="isLoggedIn">
+        <div class="row" *ngIf="isLoggedIn" (click)="logoutUser()">
             <div class="col">
                 <button class="btn btn-outline-warning">Log out</button>
             </div>

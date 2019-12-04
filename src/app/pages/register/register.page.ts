@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
+import { AlertController } from '@ionic/angular';
+import { Storage } from '@ionic/storage';
+
 import { TranslateService } from '@ngx-translate/core';
+import { UserService } from '../../services/user.service';
 
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
@@ -17,8 +21,11 @@ export class RegisterPage implements OnInit {
 
     constructor(
         private modalController: ModalController,
+        private alertController: AlertController,
         private translateService: TranslateService,
+        private userService: UserService,
         private formBuilder: FormBuilder,
+        private storage: Storage,
     ) {}
 
     get emailMessageError() {
@@ -80,10 +87,56 @@ export class RegisterPage implements OnInit {
         );
     }
 
+    async presentAlert(title, subTitle, isSuccess = false) {
+        let alert = await this.alertController.create({
+            header: title,
+            subHeader: subTitle,
+            mode: 'ios',
+            buttons: [
+                {
+                    text: 'OK',
+                    handler: () => {
+                        if (isSuccess) {
+                            this.modalController.dismiss(
+                                null,
+                                null,
+                                'registerModal',
+                            );
+                            this.modalController.dismiss(
+                                null,
+                                null,
+                                'loginModal',
+                            );
+                        }
+                    },
+                },
+            ],
+        });
+
+        await alert.present();
+    }
+
     onRegisterForm() {
         if (!this.registerForm.valid) return;
-        alert('ok het nha');
-        this.modalController.dismiss(null, null, 'registerModal');
-        this.modalController.dismiss(null, null, 'loginModal');
+
+        let user = this.registerForm.value;
+        this.userService.register(user).subscribe(
+            (result: { status: string; data: any; message: string }) => {
+                if (result.status == 'error') {
+                    this.presentAlert('Register Unsuccessful', result.message);
+                } else {
+                    this.storage.set('token', result.data.token).then(() => {
+                        this.presentAlert(
+                            'Register Successful',
+                            'Nice trade!!!',
+                            true,
+                        );
+                    });
+                }
+            },
+            err => {
+                console.log('err: ', err);
+            },
+        );
     }
 }

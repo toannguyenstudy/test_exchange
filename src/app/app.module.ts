@@ -18,9 +18,7 @@ import { FormsModule } from '@angular/forms';
 
 import { CustomTranslateService } from './services/custom-translate.service';
 import { CustomThemeService } from './services/custom-theme.service';
-export function HttpLoaderFactory(http: HttpClient) {
-    return new TranslateHttpLoader(http);
-}
+import { UserService } from './services/user.service';
 
 import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
 import { PasscodePageModule } from './pages/passcode/passcode.module';
@@ -31,6 +29,10 @@ import {
     HAMMER_GESTURE_CONFIG,
 } from '@angular/platform-browser';
 import * as Hammer from 'hammerjs';
+
+export function HttpLoaderFactory(http: HttpClient) {
+    return new TranslateHttpLoader(http);
+}
 
 export class CustomHammerConfig extends HammerGestureConfig {
     overrides = {
@@ -67,6 +69,7 @@ export class CustomHammerConfig extends HammerGestureConfig {
         { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
         CustomTranslateService,
         CustomThemeService,
+        UserService,
         BarcodeScanner,
         { provide: HAMMER_GESTURE_CONFIG, useClass: CustomHammerConfig },
     ],
