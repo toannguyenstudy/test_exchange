@@ -40,14 +40,17 @@
             "enterEmail": "enter email",
             "password": "Password",
             "enterPassword": "enter password",
-            "passwordAtleast8Character": "Password at least 8 character",
             "reference": "Reference",
             "optional": "Optional",
             "enterReference": "enter reference",
             "iAgreeWith": "I agree with",
             "theTermOfUse": "the term of use",
             "register": "Register",
-            "accountRegister": "Have account"
+            "accountRegister": "Have account",
+            "emailRequired": "Email Required",
+            "emailInvalid": "Email Invalid",
+            "passwordRequired": "Password Required",
+            "passwordMinlength": "Password at least 6 character"
         },
         "settingPage": {
             "account": "Account",

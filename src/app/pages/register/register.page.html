@@ -1,6 +1,6 @@
 <ion-header>
     <ion-toolbar color="warning">
-        <ion-buttons (click)="onDismiss()" slot="start">
+        <ion-buttons (click)="backToLogin()" slot="start">
             <i class="fal fa-lg fa-chevron-left"></i>
             <ion-label
                 >&nbsp; {{'accountTab.registerPage.login' |
@@ -19,88 +19,120 @@
                 </h1>
             </div>
         </div>
-        <div class="row">
-            <div class="col">
-                <div class="form-group">
-                    <label>Email</label>
-                    <input
-                        type="email"
-                        class="form-control form-control-lg rounded-0"
-                        placeholder="{{'accountTab.registerPage.enterEmail' | translate}}"
-                    />
-                </div>
-                <div class="form-group">
-                    <label
-                        >{{'accountTab.registerPage.password' |
-                        translate}}</label
-                    >
-                    <div class="input-group">
+
+        <form [formGroup]="registerForm" (ngSubmit)="onRegisterForm()">
+            <div class="row">
+                <div class="col">
+                    <!-- #region Email input -->
+                    <div class="form-group">
+                        <label>Email</label>
                         <input
-                            [type]="showPasswordType"
-                            class="form-control form-control-lg password rounded-0"
-                            placeholder="{{'accountTab.registerPage.enterPassword' | translate}}"
+                            type="email"
+                            class="form-control form-control-lg rounded-0"
+                            placeholder="{{'accountTab.registerPage.enterEmail' | translate}}"
+                            formControlName="email"
                         />
-                        <div class="input-group-append">
-                            <span
-                                class="input-group-text"
-                                (click)="onChangeShowPassword()"
-                            >
-                                <i *ngIf="showPassword" class="fas fa-eye"></i>
-                                <i
-                                    *ngIf="!showPassword"
-                                    class="fas fa-eye-slash"
-                                ></i>
-                            </span>
-                        </div>
-                    </div>
-                    <small class="form-text text-muted"
-                        >{{'accountTab.registerPage.passwordAtleast8Character' |
-                        translate}}</small
-                    >
-                </div>
-
-                <div class="form-group">
-                    <label>
-                        {{'accountTab.registerPage.reference' | translate}}
-                        &nbsp; ({{'accountTab.registerPage.optional' |
-                        translate}})
-                    </label>
-                    <input
-                        type="text"
-                        class="form-control form-control-lg rounded-0"
-                        placeholder="{{'accountTab.registerPage.enterReference' | translate}}"
-                    />
-                </div>
-
-                <div class="form-group form-check custom-checkbox">
-                    <input type="checkbox" class="form-check-input" />
-                    <label class="form-check-label"
-                        >{{'accountTab.registerPage.iAgreeWith' | translate}}
-                        <span
-                            style="color: #ffce00; text-decoration: underline;"
+                        <small
+                            class="form-text badge badge-danger rounded-0"
+                            *ngIf="registerForm.controls.email.errors && registerForm.controls.email.dirty"
+                            >{{emailMessageError}}</small
                         >
-                            {{'accountTab.registerPage.theTermOfUse' |
-                            translate}}
-                        </span>
-                    </label>
-                </div>
+                    </div>
+                    <!-- #endregion -->
 
-                <button
-                    type="button"
-                    class="btn btn-lg text-light btn-block rounded-0 border-0"
-                    style="background: #898a96;"
-                >
-                    {{'accountTab.registerPage.register' | translate}}
-                </button>
-                <p class="text-center mt-3">
-                    {{'accountTab.registerPage.accountRegister' | translate}}?
-                    <span
-                        (click)="onDismiss()"
-                        style="color: #ffce00; text-decoration: underline;"
-                        >{{'accountTab.registerPage.login' | translate}}</span
+                    <!-- #region Password input -->
+                    <div class="form-group">
+                        <label
+                            >{{'accountTab.registerPage.password' |
+                            translate}}</label
+                        >
+                        <div class="input-group">
+                            <input
+                                [type]="showPasswordType"
+                                class="form-control form-control-lg password rounded-0"
+                                placeholder="{{'accountTab.registerPage.enterPassword' | translate}}"
+                                formControlName="password"
+                            />
+                            <div class="input-group-append">
+                                <span
+                                    class="input-group-text"
+                                    (click)="onChangeShowPassword()"
+                                >
+                                    <i
+                                        *ngIf="showPassword"
+                                        class="fas fa-eye"
+                                    ></i>
+                                    <i
+                                        *ngIf="!showPassword"
+                                        class="fas fa-eye-slash"
+                                    ></i>
+                                </span>
+                            </div>
+                        </div>
+                        <small
+                            class="form-text badge badge-danger rounded-0"
+                            *ngIf="registerForm.controls.password.errors && registerForm.controls.password.dirty"
+                            >{{ passwordMessageError }}</small
+                        >
+                    </div>
+                    <!-- #endregion -->
+
+                    <!-- #region Referral input -->
+                    <div class="form-group">
+                        <label>
+                            {{'accountTab.registerPage.reference' | translate}}
+                            &nbsp; ({{'accountTab.registerPage.optional' |
+                            translate}})
+                        </label>
+                        <input
+                            type="text"
+                            class="form-control form-control-lg rounded-0"
+                            placeholder="{{'accountTab.registerPage.enterReference' | translate}}"
+                        />
+                    </div>
+                    <!-- #endregion -->
+
+                    <!-- #region Agree term Checkbox -->
+                    <div class="form-group form-check custom-checkbox">
+                        <input type="checkbox" class="form-check-input" />
+                        <label class="form-check-label"
+                            >{{'accountTab.registerPage.iAgreeWith' |
+                            translate}}
+                            <span
+                                style="color: #ffce00; text-decoration: underline;"
+                            >
+                                {{'accountTab.registerPage.theTermOfUse' |
+                                translate}}
+                            </span>
+                        </label>
+                    </div>
+                    <!-- #endregion -->
+
+                    <!-- #region register button -->
+                    <button
+                        type="submit"
+                        class="btn btn-lg text-light btn-block rounded-0 border-0"
+                        style="background: #898a96;"
+                        [disabled]="!registerForm.valid"
                     >
-                </p>
+                        {{'accountTab.registerPage.register' | translate}}
+                    </button>
+                    <!-- #endregion -->
+
+                    <!-- #region back to login page -->
+                    <p class="text-center mt-3">
+                        {{'accountTab.registerPage.accountRegister' |
+                        translate}}?
+                        <span
+                            (click)="backToLogin()"
+                            style="color: #ffce00; text-decoration: underline;"
+                            >{{'accountTab.registerPage.login' |
+                            translate}}</span
+                        >
+                    </p>
+                    <!-- #endregion -->
+                </div>
             </div>
-        </div>
+        </form>
     </div>
 </ion-content>

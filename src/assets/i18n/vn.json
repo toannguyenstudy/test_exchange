@@ -47,7 +47,11 @@
             "iAgreeWith": "Tôi đồng ý với",
             "theTermOfUse": "điều khoản sử dụng",
             "register": "Đăng ký",
-            "accountRegister": "Đã có tải khoản"
+            "accountRegister": "Đã có tải khoản",
+            "emailRequired": "Email phải được nhập",
+            "emailInvalid": "Email không hợp lệ",
+            "passwordRequired": "Password phải được nhập",
+            "passwordMinlength": "Password phải ít nhất 6 ký tự"
         },
         "settingPage": {
             "account": "Tài Khoản",

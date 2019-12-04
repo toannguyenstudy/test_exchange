@@ -16,7 +16,7 @@ export class AccountPage implements OnInit {
     currentLanguage = '';
     currentTheme = 'dark';
 
-    isLoggedIn: boolean = true;
+    isLoggedIn: boolean = false;
 
     constructor(
         private modalController: ModalController,
