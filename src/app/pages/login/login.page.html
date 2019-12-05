@@ -86,6 +86,7 @@
                         class="btn btn-lg text-light btn-block rounded-0 border-0"
                         style="background: #898a96;"
                         [disabled]="!loginForm.valid"
+                        (click)="onLoginForm()"
                     >
                         {{'accountTab.loginPage.signIn' | translate}}
                     </button>

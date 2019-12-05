@@ -8,7 +8,7 @@ import { CustomTranslateService } from '../../services/custom-translate.service'
     styleUrls: ['./wallet.page.scss'],
 })
 export class WalletPage implements OnInit {
-    constructor(private customeTranslateService: CustomTranslateService) {}
+    constructor() {}
 
     ngOnInit() {}
 }

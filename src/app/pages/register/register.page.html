@@ -33,7 +33,7 @@
                             formControlName="email"
                         />
                         <small
-                            class="form-text badge badge-danger rounded-0"
+                            class="form-text badge text-warning"
                             *ngIf="registerForm.controls.email.errors && registerForm.controls.email.dirty"
                             >{{emailMessageError}}</small
                         >
@@ -70,7 +70,7 @@
                             </div>
                         </div>
                         <small
-                            class="form-text badge badge-danger rounded-0"
+                            class="form-text badge text-warning"
                             *ngIf="registerForm.controls.password.errors && registerForm.controls.password.dirty"
                             >{{ passwordMessageError }}</small
                         >

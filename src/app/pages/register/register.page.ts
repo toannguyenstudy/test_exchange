@@ -97,16 +97,7 @@ export class RegisterPage implements OnInit {
                     text: 'OK',
                     handler: () => {
                         if (isSuccess) {
-                            this.modalController.dismiss(
-                                null,
-                                null,
-                                'registerModal',
-                            );
-                            this.modalController.dismiss(
-                                null,
-                                null,
-                                'loginModal',
-                            );
+                            this.modalController.dismiss(null, 'ok');
                         }
                     },
                 },
@@ -125,6 +116,7 @@ export class RegisterPage implements OnInit {
                 if (result.status == 'error') {
                     this.presentAlert('Register Unsuccessful', result.message);
                 } else {
+                    this.storage.set('email', result.data.email);
                     this.storage.set('token', result.data.token).then(() => {
                         this.presentAlert(
                             'Register Successful',

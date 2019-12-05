@@ -1,11 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { ModalController } from '@ionic/angular';
-import { LoadingController } from '@ionic/angular';
-import { Storage } from '@ionic/storage';
+import {
+    ModalController,
+    AlertController,
+    LoadingController,
+} from '@ionic/angular';
 
+import { Storage } from '@ionic/storage';
 import { LoginPage } from '../login/login.page';
-import { CustomTranslateService } from '../../services/custom-translate.service';
+
 import { TranslateService } from '@ngx-translate/core';
+import { CustomTranslateService } from '../../services/custom-translate.service';
 import { CustomThemeService } from '../../services/custom-theme.service';
 import { UserService } from 'src/app/services/user.service';
 
@@ -19,9 +23,11 @@ export class AccountPage implements OnInit {
     currentTheme = 'dark';
 
     isLoggedIn: boolean;
+    email: string = null;
 
     constructor(
         private modalController: ModalController,
+        private alertController: AlertController,
         private customeTranslateService: CustomTranslateService,
         private translateService: TranslateService,
         private customThemeService: CustomThemeService,
@@ -39,8 +45,12 @@ export class AccountPage implements OnInit {
         this.storage
             .get('token')
             .then(token => {
-                if (token) this.isLoggedIn = true;
-                else this.isLoggedIn = false;
+                if (token) {
+                    this.isLoggedIn = true;
+                    this.storage.get('email').then(email => {
+                        this.email = email;
+                    });
+                } else this.isLoggedIn = false;
             })
             .catch(err => {
                 this.isLoggedIn = false;
@@ -55,7 +65,7 @@ export class AccountPage implements OnInit {
             id: 'loginModal',
         });
 
-        modal.onDidDismiss().then(data => {
+        modal.onWillDismiss().then(data => {
             this.checkLogged();
         });
 
@@ -109,9 +119,28 @@ export class AccountPage implements OnInit {
         });
     }
 
-    logoutUser() {
-        this.storage.remove('token').then(() => {
-            this.checkLogged();
+    async presentConfirmLogoutAlert() {
+        let confirmAlert = await this.alertController.create({
+            header: 'Warning',
+            subHeader: 'Are you sure to log out?',
+            buttons: [
+                {
+                    text: 'OK',
+                    handler: async () => {
+                        await this.storage.remove('token');
+                        await this.storage.remove('email');
+                        this.checkLogged();
+                    },
+                },
+                {
+                    text: 'Cancel',
+                },
+            ],
         });
+        await confirmAlert.present();
+    }
+
+    async logoutUser() {
+        this.presentConfirmLogoutAlert().then(() => {});
     }
 }
