@@ -33,7 +33,11 @@
             "forgotPassword": "Forgot password",
             "signIn": "Log In",
             "noAccountYet": "Haven't account yet",
-            "register": "Register"
+            "register": "Register",
+            "emailRequired": "Email Required",
+            "emailInvalid": "Email Invalid",
+            "passwordRequired": "Password Required",
+            "passwordMinlength": "Password at least 6 characters"
         },
         "registerPage": {
             "login": "Log In",
@@ -50,7 +54,7 @@
             "emailRequired": "Email Required",
             "emailInvalid": "Email Invalid",
             "passwordRequired": "Password Required",
-            "passwordMinlength": "Password at least 6 character"
+            "passwordMinlength": "Password at least 6 characters"
         },
         "settingPage": {
             "account": "Account",

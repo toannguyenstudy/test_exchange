@@ -4,7 +4,8 @@ import { RegisterPage } from '../register/register.page';
 import { myEnterAnimation } from '../../animations/enter';
 import { myLeaveAnimation } from '../../animations/leave';
 
-import { CustomTranslateService } from '../../services/custom-translate.service';
+import { TranslateService } from '@ngx-translate/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
     selector: 'app-login',
@@ -17,16 +18,62 @@ export class LoginPage implements OnInit {
 
     loginPage = null;
     ionBackdrop = null;
+
+    loginForm: FormGroup;
     constructor(
         private modalController: ModalController,
-        private customeTranslateService: CustomTranslateService,
+        private translateService: TranslateService,
+        private formBuilder: FormBuilder,
     ) {}
+
+    get emailErrorMessage() {
+        for (let err in this.loginForm.controls.email.errors) {
+            if (err == 'required') {
+                return this.translateService.instant(
+                    'accountTab.loginPage.emailRequired',
+                );
+            }
+            if (err == 'pattern') {
+                return this.translateService.instant(
+                    'accountTab.loginPage.emailInvalid',
+                );
+            }
+        }
+    }
+
+    get passwordErrorMessage() {
+        for (let err in this.loginForm.controls.password.errors) {
+            if (err == 'required') {
+                return this.translateService.instant(
+                    'accountTab.loginPage.passwordRequired',
+                );
+            }
+            if (err == 'minlength') {
+                return this.translateService.instant(
+                    'accountTab.loginPage.passwordMinlength',
+                );
+            }
+        }
+    }
 
     ngOnInit() {
         this.loginPage = document.getElementById('loginModal');
         this.ionBackdrop = document
             .getElementById('loginModal')
             .children.item(0);
+
+        this.loginForm = this.formBuilder.group({
+            email: [
+                '',
+                [
+                    Validators.required,
+                    Validators.pattern(
+                        '^[a-z][a-z0-9_.]{2,32}@[a-z0-9]{2,}(.[a-z0-9]{2,4}){2,3}$',
+                    ),
+                ],
+            ],
+            password: ['', [Validators.required, Validators.minLength(6)]],
+        });
     }
 
     handlePan(e) {

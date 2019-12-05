@@ -33,7 +33,11 @@
             "forgotPassword": "Quên mật khẩu",
             "signIn": "Đăng nhập",
             "noAccountYet": "Chưa có tài khoản",
-            "register": "Đăng ký"
+            "register": "Đăng ký",
+            "emailRequired": "Email phải được nhập",
+            "emailInvalid": "Email không hợp lệ",
+            "passwordRequired": "Password phải được nhập",
+            "passwordMinlength": "Password phải ít nhất 6 ký tự"
         },
         "registerPage": {
             "login": "Đăng nhập",
