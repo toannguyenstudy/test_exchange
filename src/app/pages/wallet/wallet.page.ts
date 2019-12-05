@@ -10,5 +10,11 @@ import { CustomTranslateService } from '../../services/custom-translate.service'
 export class WalletPage implements OnInit {
     constructor() {}
 
-    ngOnInit() {}
+    ngOnInit() {
+        console.log('wallet');
+    }
+
+    ionViewWillEnter() {
+        console.log('wallet enter');
+    }
 }
