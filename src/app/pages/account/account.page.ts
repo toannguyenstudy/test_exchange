@@ -41,6 +41,9 @@ export class AccountPage implements OnInit {
         // this.checkLogged();
     }
 
+    /**
+     * Refresh display with Logged In or Not
+     */
     ionViewWillEnter() {
         this.checkLogged();
     }
@@ -110,11 +113,12 @@ export class AccountPage implements OnInit {
             this.customeTranslateService.changeDefaultLanguage(lang);
             this.currentLanguage = lang;
         });
-        // setTimeout(() => {
-
-        // }, 2000);
     }
 
+    /**
+     * Change default theme of app
+     * @param lang selected theme : 'dark' | 'light'
+     */
     changeTheme(theme) {
         let currentLang = this.translateService.getDefaultLang();
         let message = '';
@@ -132,12 +136,18 @@ export class AccountPage implements OnInit {
         });
     }
 
+    /**
+     * Clear all storage with about us menu (for testing)
+     */
     clearAllStorage() {
         this.storage.clear().then(() => {
             alert('clear ok');
         });
     }
 
+    /**
+     * Show confirm logout alert
+     */
     async presentConfirmLogoutAlert() {
         let confirmAlert = await this.alertController.create({
             header: 'Warning',
@@ -160,6 +170,9 @@ export class AccountPage implements OnInit {
         await confirmAlert.present();
     }
 
+    /**
+     * User click to log out button
+     */
     async logoutUser() {
         this.presentConfirmLogoutAlert().then(() => {});
     }

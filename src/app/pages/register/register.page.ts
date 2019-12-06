@@ -7,6 +7,7 @@ import { TranslateService } from '@ngx-translate/core';
 import { UserService } from '../../services/user.service';
 
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { emailRegex } from '../../util/uitilities';
 
 @Component({
     selector: 'app-register',
@@ -61,15 +62,7 @@ export class RegisterPage implements OnInit {
 
     ngOnInit() {
         this.registerForm = this.formBuilder.group({
-            email: [
-                '',
-                [
-                    Validators.required,
-                    Validators.pattern(
-                        '^[a-z][a-z0-9_.]{2,32}@[a-z0-9]{2,}(.[a-z0-9]{2,4}){2,3}$',
-                    ),
-                ],
-            ],
+            email: ['', [Validators.required, Validators.pattern(emailRegex)]],
             password: ['', [Validators.required, Validators.minLength(6)]],
         });
     }

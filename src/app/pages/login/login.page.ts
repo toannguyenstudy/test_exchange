@@ -1,15 +1,17 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { ModalController } from '@ionic/angular';
-import { AlertController } from '@ionic/angular';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
+import { ModalController, AlertController } from '@ionic/angular';
 
 import { RegisterPage } from '../register/register.page';
 import { myEnterAnimation } from '../../animations/enter';
 import { myLeaveAnimation } from '../../animations/leave';
 
 import { TranslateService } from '@ngx-translate/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UserService } from 'src/app/services/user.service';
 import { Storage } from '@ionic/storage';
+
+import { emailRegex } from '../../util/uitilities';
 
 @Component({
     selector: 'app-login',
@@ -70,15 +72,7 @@ export class LoginPage implements OnInit {
             .children.item(0);
 
         this.loginForm = this.formBuilder.group({
-            email: [
-                '',
-                [
-                    Validators.required,
-                    Validators.pattern(
-                        '^[a-z][a-z0-9_.]{2,32}@[a-z0-9]{2,}(.[a-z0-9]{2,4}){2,3}$',
-                    ),
-                ],
-            ],
+            email: ['', [Validators.required, Validators.pattern(emailRegex)]],
             password: ['', [Validators.required, Validators.minLength(6)]],
         });
     }
