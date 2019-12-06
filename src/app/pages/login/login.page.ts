@@ -108,7 +108,7 @@ export class LoginPage implements OnInit {
     }
 
     async closeLoginModal(data) {
-        return await this.modalController.dismiss(data);
+        return await this.modalController.dismiss(data, 'error');
     }
 
     async goToRegister() {
@@ -120,9 +120,11 @@ export class LoginPage implements OnInit {
             leaveAnimation: myLeaveAnimation,
         });
 
+        //get data before register modal dismiss
         modal.onWillDismiss().then(data => {
             if (data.role == 'ok') {
-                this.modalController.dismiss('loginModal', 'ok', 'loginModal');
+                console.log('data loginPage: ', data);
+                this.modalController.dismiss(null, 'ok', 'loginModal');
             }
         });
 
@@ -139,7 +141,7 @@ export class LoginPage implements OnInit {
                     text: 'OK',
                     handler: () => {
                         if (isSuccess) {
-                            this.modalController.dismiss();
+                            this.modalController.dismiss(null, 'ok');
                         }
                     },
                 },

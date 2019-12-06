@@ -38,9 +38,16 @@ export class AccountPage implements OnInit {
 
     ngOnInit() {
         this.currentLanguage = this.translateService.getDefaultLang();
+        // this.checkLogged();
+    }
+
+    ionViewWillEnter() {
         this.checkLogged();
     }
 
+    /**
+     * Check user Logged In and change display menu
+     */
     checkLogged() {
         this.storage
             .get('token')
@@ -58,6 +65,9 @@ export class AccountPage implements OnInit {
             });
     }
 
+    /**
+     * Show Login page modal
+     */
     async openLoginModal() {
         const modal = await this.modalController.create({
             component: LoginPage,
@@ -66,12 +76,17 @@ export class AccountPage implements OnInit {
         });
 
         modal.onWillDismiss().then(data => {
+            console.log('accountPage data: ', data);
             this.checkLogged();
         });
 
         return await modal.present();
     }
 
+    /**
+     * show loading spinner
+     * @param message {string} title of loading spinner
+     */
     async presentLoading(message) {
         const loading = await this.loadingController.create({
             message,
@@ -82,6 +97,10 @@ export class AccountPage implements OnInit {
         const { role, data } = await loading.onDidDismiss();
     }
 
+    /**
+     * Change default language of app
+     * @param lang selected language : 'en' | 'vn'
+     */
     changeLanguage(lang) {
         let currentLang = this.translateService.getDefaultLang();
         let message = '';
@@ -129,6 +148,7 @@ export class AccountPage implements OnInit {
                     handler: async () => {
                         await this.storage.remove('token');
                         await this.storage.remove('email');
+                        await this.storage.remove('_id');
                         this.checkLogged();
                     },
                 },
