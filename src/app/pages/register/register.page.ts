@@ -117,6 +117,7 @@ export class RegisterPage implements OnInit {
                     this.presentAlert('Register Unsuccessful', result.message);
                 } else {
                     this.storage.set('email', result.data.email);
+                    this.storage.set('_id', result.data._id);
                     this.storage.set('token', result.data.token).then(() => {
                         this.presentAlert(
                             'Register Successful',

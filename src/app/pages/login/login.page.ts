@@ -158,6 +158,7 @@ export class LoginPage implements OnInit {
                 (result: { status: string; message: string; data: any }) => {
                     if (result.status === 'success') {
                         this.storage.set('email', result.data.email);
+                        this.storage.set('_id', result.data._id);
                         this.storage
                             .set('token', result.data.token)
                             .then(() => {
