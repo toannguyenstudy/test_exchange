@@ -28,7 +28,7 @@
                 <!-- #region Content with order lists -->
                 <ng-container *ngIf="openOrdersSell.length > 0">
                     <ion-list lines="none">
-                        <ion-list-header>
+                        <ion-list-header class="text-muted">
                             <ion-label>
                                 {{ 'exchangeTab.public.price' | translate }}
                             </ion-label>
@@ -122,7 +122,7 @@
             <div class="open-buy">
                 <ng-container *ngIf="openOrdersBuy.length > 0">
                     <ion-list lines="none">
-                        <ion-list-header>
+                        <ion-list-header class="text-muted">
                             <ion-label>
                                 {{ 'exchangeTab.public.price' | translate }}
                             </ion-label>

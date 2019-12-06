@@ -1,7 +1,7 @@
 <div class="container">
-    <!-- FORM BUY/SELL -->
+    <!-- #region FORM BUY/SELL -->
     <div class="row buy-sell-order">
-        <!-- FORM SELL -->
+        <!-- #region FORM SELL -->
         <div class="col-6">
             <label for="Price">
                 {{ 'exchangeTab.public.price' | translate }}
@@ -60,9 +60,9 @@
                 {{ 'exchangeTab.public.buy' | translate }}
             </button>
         </div>
-        <!-- END - FORM SELL -->
+        <!-- #endregion -->
 
-        <!-- FORM BUY -->
+        <!-- #region FORM BUY -->
         <div class="col-6">
             <label for="Price">
                 {{ 'exchangeTab.public.price' | translate }}
@@ -119,13 +119,13 @@
                 {{ 'exchangeTab.public.sell' | translate }}
             </button>
         </div>
-        <!-- END - FORM BUY -->
+        <!-- #endregion-->
     </div>
-    <!-- END - FORM BUY/SELL -->
+    <!-- #endregion -->
 
-    <!-- TABLE BUY SELL ORDER -->
+    <!-- #region TABLE BUY SELL ORDER -->
     <div class="row mt-3 buy-sell-order-table">
-        <!-- table for sell order -->
+        <!-- #region table for sell order -->
         <div class="col-6">
             <table class="table table-borderless sell-table">
                 <thead>
@@ -139,11 +139,10 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- style="background: linear-gradient(to left, #ff005e52 70%, transparent 0)" -->
                     <tr
                         *ngFor="let order of sellOrders"
                         [style.background]="
-                            'linear-gradient(to left, #c128445e ' +
+                            'linear-gradient(to left, #c1284438 ' +
                             (order.amount / maxSellAmount) * 100 +
                             '%, transparent 0)'
                         "
@@ -155,15 +154,12 @@
                             {{ order.amount | number: '1.4' }}
                         </td>
                     </tr>
-                    <!-- <tr>
-                        <td class="text-left price">230,000,000</td>
-                        <td class="text-right">0.1234567</td>
-                    </tr> -->
                 </tbody>
             </table>
         </div>
+        <!-- #endregion -->
 
-        <!-- table for buy order -->
+        <!-- #region table for buy order -->
         <div class="col-6">
             <table class="table table-borderless buy-table">
                 <thead>
@@ -180,7 +176,7 @@
                     <tr
                         *ngFor="let order of buyOrders"
                         [style.background]="
-                            'linear-gradient(to left, #138a1d4f ' +
+                            'linear-gradient(to left, #138a1d2e ' +
                             (order.amount / maxBuyAmount) * 100 +
                             '%, transparent 0)'
                         "
@@ -195,9 +191,11 @@
                 </tbody>
             </table>
         </div>
+        <!-- #endregion -->
     </div>
-    <!-- END - TABLE BUY SELL ORDER-->
+    <!-- #endregion -->
 
+    <!-- #region Change decimal -->
     <div class="row decimal">
         <div class="col">
             <ion-list lines="none">
@@ -234,4 +232,5 @@
             </ion-list>
         </div>
     </div>
+    <!-- #endregion -->
 </div>
